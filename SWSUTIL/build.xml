@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SWS_UTIL" default="all" basedir=".">
+
+	<property name="src.dir" value="${basedir}/src" />
+	<property name="classes.dir" value="${basedir}/bin" />
+	<path id="classpath"><fileset dir="${basedir}/lib" includes="*.jar"/></path>
+	<property name="target.name" value="sws-util.1.0.0.jar" />
+
+	<target name="jar">
+		<mkdir dir="${classes.dir}"/>
+		<delete><fileset dir="${classes.dir}" includes="**/*.class" /></delete>
+		<delete file="${basedir}/lib/${target.name}"/>
+		<javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath" encoding="euc-kr" debug="on"/>
+		<jar jarfile="${basedir}/lib/${target.name}" update="true">
+			<fileset dir="${classes.dir}" includes="**/*.class" />
+			<fileset dir="${src.dir}" includes="**/*.ser" />
+		</jar>
+	</target>
+	
+	<target name="all" depends="jar">
+		<copy file="${basedir}/lib/${target.name}" overwrite="true" todir="${basedir}/../Lotto/lib"/>
+		<copy file="${basedir}/lib/${target.name}" overwrite="true" todir="${basedir}/../SmiUtil/lib"/>
+	</target>
+</project>
