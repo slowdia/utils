@@ -5,9 +5,9 @@ import java.util.regex.Pattern;
 public class Validate {
 	
 	/**
-	 * ¾ËÆÄ¸ä°ú ¼ıÀÚ·Î ÀÌ·ç¾îÁ® ÀÖ´ÂÁö È®ÀÎÇÑ´Ù.
-	 * @param text ¹®ÀÚ¿­
-	 * @return ¾ËÆÄ¸ä°ú ¼ıÀÚ¸¸ Æ÷ÇÔµÇ¾úÀ¸¸é true, ±×·¸Áö ¾ÊÀ¸¸é false
+	 * ì•ŒíŒŒë©§ê³¼ ìˆ«ìë¡œ ì´ë£¨ì–´ì ¸ ìˆëŠ”ì§€ í™•ì¸í•œë‹¤.
+	 * @param text ë¬¸ìì—´
+	 * @return ì•ŒíŒŒë©§ê³¼ ìˆ«ìë§Œ í¬í•¨ë˜ì—ˆìœ¼ë©´ true, ê·¸ë ‡ì§€ ì•Šìœ¼ë©´ false
 	 */
 	public final static boolean isDigit(String str)
 	{
@@ -22,7 +22,7 @@ public class Validate {
     }
 
     /**
-     * ÀÌ¸ŞÀÏ ÁÖ¼ÒÀÇ À¯È¿¼ºÀ» °Ë»çÇÑ´Ù
+     * ì´ë©”ì¼ ì£¼ì†Œì˜ ìœ íš¨ì„±ì„ ê²€ì‚¬í•œë‹¤
      * @param email
      * @return
      */

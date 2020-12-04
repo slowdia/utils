@@ -1,4 +1,4 @@
-package org.sws.solution.mp3;
+package org.sws.app.mp3;
 
 import java.io.File;
 
@@ -7,7 +7,7 @@ import org.sws.util.common.Validate;
 public class MP3 {
 
 	public static void main(String args[]) {
-		MP3.rename("D:/MP3/멜론/");
+		MP3.rename(args[0]);
 	}
 	
 	private static void rename(String dir) {
