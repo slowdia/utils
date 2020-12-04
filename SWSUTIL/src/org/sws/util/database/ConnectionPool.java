@@ -28,8 +28,8 @@ public class ConnectionPool {
 	}
 	
 	/**
-	 * connectionPoolÀ» »ı¼ºÇÏ¿© dbcpNameÀ¸·Î µî·ÏÇÑ´Ù.
-	 * @param dbcpName ÀúÀåµÉ ÀÌ¸§
+	 * connectionPoolì„ ìƒì„±í•˜ì—¬ dbcpNameìœ¼ë¡œ ë“±ë¡í•œë‹¤.
+	 * @param dbcpName ì €ì¥ë  ì´ë¦„
 	 * @param driver
 	 * @param url
 	 * @param user
@@ -56,19 +56,19 @@ public class ConnectionPool {
 					new DriverManagerConnectionFactory(url, user, password)
 					, connectionPool
 					, null	/* Sstatement pool */
-					, validationQuery	/* Ä¿³Ø¼Ç Å×½ºÆ® Äõ¸®: Ä¿³Ø¼ÇÀÌ À¯È¿ÇÑÁö Å×½ºÆ®ÇÒ ¶§ »ç¿ëµÇ´Â Äõ¸® */
-					, false	/* Read only ¿©ºÎ */
-					, true	/* Auto commit ¿©ºÎ */
+					, validationQuery	/* ì»¤ë„¥ì…˜ í…ŒìŠ¤íŠ¸ ì¿¼ë¦¬: ì»¤ë„¥ì…˜ì´ ìœ íš¨í•œì§€ í…ŒìŠ¤íŠ¸í•  ë•Œ ì‚¬ìš©ë˜ëŠ” ì¿¼ë¦¬ */
+					, false	/* Read only ì—¬ë¶€ */
+					, true	/* Auto commit ì—¬ë¶€ */
 				);
 		
-		// PoolingÀ» À§ÇÑ JDBC µå¶óÀÌ¹ö »ı¼º ¹× µî·Ï
+		// Poolingì„ ìœ„í•œ JDBC ë“œë¼ì´ë²„ ìƒì„± ë° ë“±ë¡
 		if(this.driver == null) this.driver = new PoolingDriver();
 		this.driver.registerPool(dbcpName, connectionPool);
 		
 	}
 	
 	/**
-	 * Connection °´Ã¼¸¦ ¾ò´Â´Ù.
+	 * Connection ê°ì²´ë¥¼ ì–»ëŠ”ë‹¤.
 	 * @param dbcpName
 	 * @return
 	 * @throws Exception
@@ -180,7 +180,7 @@ public class ConnectionPool {
 	}
 
 	/**
-	 * À¯ÈŞ °´Ã¼ ÃàÃâ ½º·¹µåÀÇ ½ÇÇà°ú ÀÏ½ÃÁ¤Áö »çÀÌÀÇ ¹Ğ¸®¼¼ÄÁµå¸¦ ¾òÀ½.<br>
+	 * ìœ íœ´ ê°ì²´ ì¶•ì¶œ ìŠ¤ë ˆë“œì˜ ì‹¤í–‰ê³¼ ì¼ì‹œì •ì§€ ì‚¬ì´ì˜ ë°€ë¦¬ì„¸ì»¨ë“œë¥¼ ì–»ìŒ.<br>
 	 * Returns the number of milliseconds to sleep between runs of the idle object evictor thread.
 	 */
 	public long getTimeBetweenEvictionRunsMillis(String dbcpName) throws Exception
@@ -206,7 +206,7 @@ public class ConnectionPool {
 	}
 
 	/**
-	 * ÃÖ´ë ½ÇÇàµÇ´Â Ä¿³Ø¼Ç ¼ö¸¦ ÁöÁ¤ÇÑ´Ù.
+	 * ìµœëŒ€ ì‹¤í–‰ë˜ëŠ” ì»¤ë„¥ì…˜ ìˆ˜ë¥¼ ì§€ì •í•œë‹¤.
 	 * @param dbcpName
 	 * @param i
 	 * @throws Exception
@@ -219,7 +219,7 @@ public class ConnectionPool {
 	}
 	
 	/**
-	 * ÃÖ´ë idle Ä¿³Ø¼Ç ¼ö¸¦ ÁöÁ¤ÇÑ´Ù.
+	 * ìµœëŒ€ idle ì»¤ë„¥ì…˜ ìˆ˜ë¥¼ ì§€ì •í•œë‹¤.
 	 * @param dbcpName
 	 * @param i
 	 * @throws Exception
@@ -232,7 +232,7 @@ public class ConnectionPool {
 	}
 	
 	/**
-	 * ÃÖ¼Ò idle Ä¿³Ø¼Ç ¼ö¸¦ ÁöÁ¤ÇÑ´Ù.
+	 * ìµœì†Œ idle ì»¤ë„¥ì…˜ ìˆ˜ë¥¼ ì§€ì •í•œë‹¤.
 	 * @param dbcpName
 	 * @param i
 	 * @throws Exception
@@ -245,7 +245,7 @@ public class ConnectionPool {
 	}
 	
 	/**
-	 * ÃÖ´ë ´ë±â ÁßÀÎ Ä¿³Ø¼Ç ¼ö¸¦ ÁöÁ¤ÇÑ´Ù.
+	 * ìµœëŒ€ ëŒ€ê¸° ì¤‘ì¸ ì»¤ë„¥ì…˜ ìˆ˜ë¥¼ ì§€ì •í•œë‹¤.
 	 * @param dbcpName
 	 * @param i
 	 * @throws Exception

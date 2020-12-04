@@ -13,7 +13,7 @@ public class DBMS {
 	 * MSSQL database<br>
 	 * driver = com.microsoft.sqlserver.jdbc.SQLServerDriver<br>
 	 * url = jdbc:sqlserver://localhost:1433;databaseName=dbname;<br>
-	 * <br>±¸<br>
+	 * <br>êµ¬<br>
 	 * driver = com.microsoft.jdbc.sqlserver.SQLServerDriver<br>
 	 * url = jdbc:Microsoft:sqlserver://localhost:1433;databasename=dbname<br>
 	 */

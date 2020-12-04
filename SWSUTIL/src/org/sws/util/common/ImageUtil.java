@@ -21,13 +21,13 @@ import javax.swing.text.html.HTMLEditorKit;
 public class ImageUtil {
 	
 	/**
-	 * ¼Ò½º urlÀ» Ä¸ÃÄÇÏ¿© ÀÌ¹ÌÁö·Î ÀúÀåÇÑ´Ù.
-	 * @param srcUrl ¼Ò½º url
-	 * @param start_x Ä¸ÃÄ ½ÃÀÛ xÁÂÇ¥
-	 * @param start_y Ä¸ÃÄ ½ÃÀÛ yÁÂÇ¥
-	 * @param width Ä¸ÃÄ ³ĞÀÌ
-	 * @param height Ä¸ÃÄ ³ôÀÌ
-	 * @param destFile ÀúÀå ÆÄÀÏ¸í
+	 * ì†ŒìŠ¤ urlì„ ìº¡ì³í•˜ì—¬ ì´ë¯¸ì§€ë¡œ ì €ì¥í•œë‹¤.
+	 * @param srcUrl ì†ŒìŠ¤ url
+	 * @param start_x ìº¡ì³ ì‹œì‘ xì¢Œí‘œ
+	 * @param start_y ìº¡ì³ ì‹œì‘ yì¢Œí‘œ
+	 * @param width ìº¡ì³ ë„“ì´
+	 * @param height ìº¡ì³ ë†’ì´
+	 * @param destFile ì €ì¥ íŒŒì¼ëª…
 	 * @throws IOException
 	 */
 	public static void capture(String srcUrl, int start_x, int start_y, int width, int height, String destFile) throws IOException
@@ -47,9 +47,9 @@ public class ImageUtil {
 	}
 	
 	/**
-	 * ¼Ò½º url ÀÌ¹ÌÁö¸¦ ´Ù¿î·ÎµåÇÏ¿© ¿øº»°ú µ¿ÀÏ ÀÌ¸§À¸·Î ÀúÀåÇÑ´Ù.
-	 * @param srcUrl ¼Ò½º url
-	 * @param destDir ÀúÀå Æú´õ
+	 * ì†ŒìŠ¤ url ì´ë¯¸ì§€ë¥¼ ë‹¤ìš´ë¡œë“œí•˜ì—¬ ì›ë³¸ê³¼ ë™ì¼ ì´ë¦„ìœ¼ë¡œ ì €ì¥í•œë‹¤.
+	 * @param srcUrl ì†ŒìŠ¤ url
+	 * @param destDir ì €ì¥ í´ë”
 	 * @throws IOException
 	 */
 	public static void download(String srcUrl, String destDir) throws IOException
@@ -58,10 +58,10 @@ public class ImageUtil {
 	}
 	
 	/**
-	 * ¼Ò½º url ÀÌ¹ÌÁö¸¦ ´Ù¿î·ÎµåÇÏ¿© ¿øº»°ú µ¿ÀÏ ÀÌ¸§À¸·Î ÀúÀåÇÑ´Ù.
-	 * @param srcUrl ¼Ò½º url
-	 * @param destDir ÀúÀå Æú´õ
-	 * @param fileName ÀúÀå ÆÄÀÏ ¸í
+	 * ì†ŒìŠ¤ url ì´ë¯¸ì§€ë¥¼ ë‹¤ìš´ë¡œë“œí•˜ì—¬ ì›ë³¸ê³¼ ë™ì¼ ì´ë¦„ìœ¼ë¡œ ì €ì¥í•œë‹¤.
+	 * @param srcUrl ì†ŒìŠ¤ url
+	 * @param destDir ì €ì¥ í´ë”
+	 * @param fileName ì €ì¥ íŒŒì¼ ëª…
 	 * @throws IOException
 	 */
 	public static void download(String srcUrl, String destDir, String fileName) throws IOException
@@ -73,11 +73,11 @@ public class ImageUtil {
 	}
 
 	/**
-	 * ÀÌ¹ÌÁö Å©±â¸¦ º¯°æÇÑ´Ù.
-	 * @param srcFile ¼Ò½º ÆÄÀÏ ¸í
-	 * @param destFile ÀúÀå µÉ ÆÄÀÏ ¸í
-	 * @param nWidth º¯°æ °¡·Î Å©±â
-	 * @param nHight º¯°æ ¼¼·Î Å©±â
+	 * ì´ë¯¸ì§€ í¬ê¸°ë¥¼ ë³€ê²½í•œë‹¤.
+	 * @param srcFile ì†ŒìŠ¤ íŒŒì¼ ëª…
+	 * @param destFile ì €ì¥ ë  íŒŒì¼ ëª…
+	 * @param nWidth ë³€ê²½ ê°€ë¡œ í¬ê¸°
+	 * @param nHight ë³€ê²½ ì„¸ë¡œ í¬ê¸°
 	 * @throws IOException
 	 * @throws InterruptedException
 	 */
@@ -97,10 +97,10 @@ public class ImageUtil {
 	}
 	
 	/**
-	 * ¸ğ¼­¸®¸¦ ÁöÁ¤ »öÀ¸·Î Ä¥ÇÑ´Ù.
-	 * @param srcFile ¼Ò½º ÆÄÀÏ ¸í
-	 * @param color »ö»ó
-	 * @param nBorder ¼± ±½±â
+	 * ëª¨ì„œë¦¬ë¥¼ ì§€ì • ìƒ‰ìœ¼ë¡œ ì¹ í•œë‹¤.
+	 * @param srcFile ì†ŒìŠ¤ íŒŒì¼ ëª…
+	 * @param color ìƒ‰ìƒ
+	 * @param nBorder ì„  êµµê¸°
 	 * @throws IOException
 	 */
 	public static void rectImage(String srcFile, Color color, int nBorder) throws IOException
@@ -119,10 +119,10 @@ public class ImageUtil {
 	}
 
 	/**
-	 * ¸ğ¼­¸®¸¦ ÁöÁ¤ »öÀ¸·Î µÕ±Û°Ô Ã³¸® ÇÑ´Ù.
-	 * @param srcFile ¼Ò½º ÆÄÀÏ ¸í
-	 * @param color »ö»ó
-	 * @param nBorder ¼± ±½±â
+	 * ëª¨ì„œë¦¬ë¥¼ ì§€ì • ìƒ‰ìœ¼ë¡œ ë‘¥ê¸€ê²Œ ì²˜ë¦¬ í•œë‹¤.
+	 * @param srcFile ì†ŒìŠ¤ íŒŒì¼ ëª…
+	 * @param color ìƒ‰ìƒ
+	 * @param nBorder ì„  êµµê¸°
 	 * @throws IOException
 	 */
 	public static void roundRectImage(String srcFile, Color color, int nBorder) throws IOException
@@ -141,10 +141,10 @@ public class ImageUtil {
 	}
 	
 	/**
-	 * ¸ğ¼­¸®¿¡ ¶óÀÎÀ» ³Ö´Â´Ù.
-	 * @param srcFile ¼Ò½º ÆÄÀÏ ¸í
-	 * @param color »ö»ó
-	 * @param nBorder ¼± ±½±â
+	 * ëª¨ì„œë¦¬ì— ë¼ì¸ì„ ë„£ëŠ”ë‹¤.
+	 * @param srcFile ì†ŒìŠ¤ íŒŒì¼ ëª…
+	 * @param color ìƒ‰ìƒ
+	 * @param nBorder ì„  êµµê¸°
 	 * @throws IOException
 	 */
 	public static void rectLineImage(String srcFile, Color color, int nBorder) throws IOException

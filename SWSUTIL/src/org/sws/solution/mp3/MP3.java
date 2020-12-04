@@ -1,4 +1,4 @@
-package org.sws.util.mp3;
+package org.sws.solution.mp3;
 
 import java.io.File;
 
@@ -7,7 +7,7 @@ import org.sws.util.common.Validate;
 public class MP3 {
 
 	public static void main(String args[]) {
-		MP3.rename("D:/MP3/¸á·Ğ/");
+		MP3.rename("D:/MP3/ë©œë¡ /");
 	}
 	
 	private static void rename(String dir) {
@@ -17,7 +17,7 @@ public class MP3 {
 	}
 	
 	/**
-	 * ¼Ò½ºÆÄÀÏ¸íÀ» ¸ñÀû ÆÄÀÏ¸íÀ¸·Î º¯°æ, ¸ñÀû ÆÄÀÏÀÌ Áßº¹ÀÏ°æ¿ì´Â ¼Ò½ºÆÄÀÏÀ» Á¦°Å
+	 * ì†ŒìŠ¤íŒŒì¼ëª…ì„ ëª©ì  íŒŒì¼ëª…ìœ¼ë¡œ ë³€ê²½, ëª©ì  íŒŒì¼ì´ ì¤‘ë³µì¼ê²½ìš°ëŠ” ì†ŒìŠ¤íŒŒì¼ì„ ì œê±°
 	 * @param f
 	 * @param dest
 	 */
@@ -35,7 +35,7 @@ public class MP3 {
 	}
 	
 	/**
-	 * ÆÄÀÏ¸í¿¡ ¾ğ´õ¹Ù³ª µÎ¹ø¶ç¾î¾²±â °°Àº°Å ¾ø¾Ö±â
+	 * íŒŒì¼ëª…ì— ì–¸ë”ë°”ë‚˜ ë‘ë²ˆë„ì–´ì“°ê¸° ê°™ì€ê±° ì—†ì• ê¸°
 	 * @param dir
 	 */
 	private static void removeUnderbar(String dir) {
@@ -55,7 +55,7 @@ public class MP3 {
 	}
 	
 	/**
-	 * ¾Õ¿¡ ¼ø¹ø ºÙÀÎ°Å ¾ø¾Ö±â
+	 * ì•ì— ìˆœë²ˆ ë¶™ì¸ê±° ì—†ì• ê¸°
 	 * @param dir
 	 */
 	private static void removePostNum(String dir) {

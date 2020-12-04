@@ -6,8 +6,8 @@ public class HtmlUtil {
 
 	
 	/**
-	 * XSS º¸¾È À§ÇèÀÌ ÀÖ´Â ÅÂ±×¸¦ ÁÖ¼®Ã³¸®ÇÑ´Ù.<br>
-	 * È­ÀÌÆ® ¸®½ºÆ®·Î °ü¸®ÇÒ¼ö°¡ ¾ø±â ¶§¹®¿¡ ºí·¢ ¸®½ºÆ®·Î Ã³¸®ÇÑ´Ù.
+	 * XSS ë³´ì•ˆ ìœ„í—˜ì´ ìžˆëŠ” íƒœê·¸ë¥¼ ì£¼ì„ì²˜ë¦¬í•œë‹¤.<br>
+	 * í™”ì´íŠ¸ ë¦¬ìŠ¤íŠ¸ë¡œ ê´€ë¦¬í• ìˆ˜ê°€ ì—†ê¸° ë•Œë¬¸ì— ë¸”ëž™ ë¦¬ìŠ¤íŠ¸ë¡œ ì²˜ë¦¬í•œë‹¤.
 	 * @param str
 	 * @return
 	 */
@@ -26,8 +26,8 @@ public class HtmlUtil {
 	}
 	
 	/**
-	 * XSS º¸¾È À§ÇèÀÌ ÀÖ´Â ÅÂ±×¸¦ Á¦°ÅÇÑ´Ù.<br>
-	 * È­ÀÌÆ® ¸®½ºÆ®·Î °ü¸®ÇÒ¼ö°¡ ¾ø±â ¶§¹®¿¡ ºí·¢ ¸®½ºÆ®·Î Ã³¸®ÇÑ´Ù.
+	 * XSS ë³´ì•ˆ ìœ„í—˜ì´ ìžˆëŠ” íƒœê·¸ë¥¼ ì œê±°í•œë‹¤.<br>
+	 * í™”ì´íŠ¸ ë¦¬ìŠ¤íŠ¸ë¡œ ê´€ë¦¬í• ìˆ˜ê°€ ì—†ê¸° ë•Œë¬¸ì— ë¸”ëž™ ë¦¬ìŠ¤íŠ¸ë¡œ ì²˜ë¦¬í•œë‹¤.
 	 * @param src
 	 * @return
 	 */

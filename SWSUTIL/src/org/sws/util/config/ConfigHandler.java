@@ -5,7 +5,7 @@ import java.util.Properties;
 
 
 /**
- * ÇÁ·ÎÆÛÆ¼¿Í °ü·ÃµÈ ³»¿ëÀÌ ÀúÀåµÈ Àå¼Ò¿Í ¸ÅÃ¼¿¡ »ó°ü¾øÀÌ µ¿ÀÛÀ» ÇÒ ¼ö ÀÖµµ·Ï Á¤ÀÇÇÑ ÀÎÅÍÆäÀÌ½º
+ * í”„ë¡œí¼í‹°ì™€ ê´€ë ¨ëœ ë‚´ìš©ì´ ì €ì¥ëœ ì¥ì†Œì™€ ë§¤ì²´ì— ìƒê´€ì—†ì´ ë™ì‘ì„ í•  ìˆ˜ ìˆë„ë¡ ì •ì˜í•œ ì¸í„°í˜ì´ìŠ¤
  * @author ago
  *
  */
@@ -13,113 +13,113 @@ public interface ConfigHandler {
 
 
 	/** 
-	 * ÇÁ·ÎÆÛÆ¼ÀÇ Å° ¸®½ºÆ®¸¦ ³Ñ°ÜÁÜ
+	 * í”„ë¡œí¼í‹°ì˜ í‚¤ ë¦¬ìŠ¤íŠ¸ë¥¼ ë„˜ê²¨ì¤Œ
 	 */
 	public abstract Enumeration<?> getEntry();
 
 	/** 
-	 * ÇÁ·ÎÆÛÆ¼ ¼³Á¤ÆÄÀÏ °æ·Î¸¦ ¾òÀ½.
+	 * í”„ë¡œí¼í‹° ì„¤ì •íŒŒì¼ ê²½ë¡œë¥¼ ì–»ìŒ.
 	 */
 	public abstract String getResourceName();
 
 	/** 
-	 * ÇÁ·ÎÆÛÆ¼ ¼³Á¤ÆÄÀÏ ÃÖÁ¾ ¼öÁ¤ ½Ã°£À» ¾òÀ½
+	 * í”„ë¡œí¼í‹° ì„¤ì •íŒŒì¼ ìµœì¢… ìˆ˜ì • ì‹œê°„ì„ ì–»ìŒ
 	 */
 	public abstract long getLastModified();
 
 	/** 
-	 * ÇÁ·ÎÆÛÆ¼ °´Ã¼¸¦ ¾òÀ½.
+	 * í”„ë¡œí¼í‹° ê°ì²´ë¥¼ ì–»ìŒ.
 	 */
 	public abstract Properties getProperties();
 
 	/**
-	 * ÇÁ·ÎÆÛÆ¼ ÆÄÀÏÀ» ·Îµå½ÃÅ´
+	 * í”„ë¡œí¼í‹° íŒŒì¼ì„ ë¡œë“œì‹œí‚´
 	 */
 	public abstract void load(String charset) throws Exception;
 
 	/**
-	 * ÇÁ·ÎÆÛÆ¼¾È¿¡¼­ Ç×¸ñÀÇ °ªÀ» StringÀ¸·Î °¡Á®¿È
+	 * í”„ë¡œí¼í‹°ì•ˆì—ì„œ í•­ëª©ì˜ ê°’ì„ Stringìœ¼ë¡œ ê°€ì ¸ì˜´
 	 * @param key
 	 * @return
 	 */
 	public abstract String getString(String key);
 	
 	/**
-	 * ÇÁ·ÎÆÛÆ¼¾È¿¡¼­ Ç×¸ñÀÇ °ªÀ» StringÀ¸·Î °¡Á®¿È
+	 * í”„ë¡œí¼í‹°ì•ˆì—ì„œ í•­ëª©ì˜ ê°’ì„ Stringìœ¼ë¡œ ê°€ì ¸ì˜´
 	 * @param key
-	 * @param def null ´ëÃ¼ °ª
+	 * @param def null ëŒ€ì²´ ê°’
 	 * @return
 	 */
 	public abstract String getString(String key, String def);
 	
 	/**
-	 * ÇÁ·ÎÆÛÆ¼¾È¿¡¼­ Ç×¸ñÀÇ °ªÀ» ¼ıÀÚ·Î ¹Ù²Ù¾î¼­ °¡Á®¿È
+	 * í”„ë¡œí¼í‹°ì•ˆì—ì„œ í•­ëª©ì˜ ê°’ì„ ìˆ«ìë¡œ ë°”ê¾¸ì–´ì„œ ê°€ì ¸ì˜´
 	 * @param key
 	 * @return
 	 */
 	public abstract int getInt(String key);
 	
 	/**
-	 * ÇÁ·ÎÆÛÆ¼¾È¿¡¼­ Ç×¸ñÀÇ °ªÀ» ¼ıÀÚ·Î ¹Ù²Ù¾î¼­ °¡Á®¿È
+	 * í”„ë¡œí¼í‹°ì•ˆì—ì„œ í•­ëª©ì˜ ê°’ì„ ìˆ«ìë¡œ ë°”ê¾¸ì–´ì„œ ê°€ì ¸ì˜´
 	 * @param key
-	 * @param def null ´ëÃ¼ °ª
+	 * @param def null ëŒ€ì²´ ê°’
 	 * @return
 	 */
 	public abstract int getInt(String key, int def);
 	
 	/**
-	 * ÇÁ·ÎÆÛÆ¼¾È¿¡¼­ Ç×¸ñÀÇ °ªÀ» Long ÇüÀ¸·Î ¹Ù²Ù¾î¼­ °¡Á®¿È
+	 * í”„ë¡œí¼í‹°ì•ˆì—ì„œ í•­ëª©ì˜ ê°’ì„ Long í˜•ìœ¼ë¡œ ë°”ê¾¸ì–´ì„œ ê°€ì ¸ì˜´
 	 * @param key
 	 * @return
 	 */
 	public abstract long getLong(String key);
 	
 	/**
-	 * ÇÁ·ÎÆÛÆ¼¾È¿¡¼­ Ç×¸ñÀÇ °ªÀ» Long ÇüÀ¸·Î ¹Ù²Ù¾î¼­ °¡Á®¿È
+	 * í”„ë¡œí¼í‹°ì•ˆì—ì„œ í•­ëª©ì˜ ê°’ì„ Long í˜•ìœ¼ë¡œ ë°”ê¾¸ì–´ì„œ ê°€ì ¸ì˜´
 	 * @param key
-	 * @param def null ´ëÃ¼ °ª
+	 * @param def null ëŒ€ì²´ ê°’
 	 * @return
 	 */
 	public abstract long getLong(String key, long def);
 
 	/**
-	 * ÇÁ·ÎÆÛÆ¼¾È¿¡¼­ Ç×¸ñÀÇ °ªÀ» booleanÀ¸·Î ¹Ù²Ù¾î¼­ °¡Á®¿È
+	 * í”„ë¡œí¼í‹°ì•ˆì—ì„œ í•­ëª©ì˜ ê°’ì„ booleanìœ¼ë¡œ ë°”ê¾¸ì–´ì„œ ê°€ì ¸ì˜´
 	 * @param key
 	 * @return
 	 */
 	public abstract boolean getBoolean(String key);
 	
 	/**
-	 * ÇÁ·ÎÆÛÆ¼¾È¿¡¼­ Ç×¸ñÀÇ °ªÀ» booleanÀ¸·Î ¹Ù²Ù¾î¼­ °¡Á®¿È
+	 * í”„ë¡œí¼í‹°ì•ˆì—ì„œ í•­ëª©ì˜ ê°’ì„ booleanìœ¼ë¡œ ë°”ê¾¸ì–´ì„œ ê°€ì ¸ì˜´
 	 * @param key
-	 * @param def null ´ëÃ¼ °ª
+	 * @param def null ëŒ€ì²´ ê°’
 	 * @return
 	 */
 	public abstract boolean getBoolean(String key, boolean def);
 	
 	/**
-	 * ÇÁ·ÎÆÛÆ¼¾È¿¡¼­ String Ç×¸ñÀÇ °ªÀ» Ãß°¡
+	 * í”„ë¡œí¼í‹°ì•ˆì—ì„œ String í•­ëª©ì˜ ê°’ì„ ì¶”ê°€
 	 * @param key
 	 * @param value
 	 */
 	public abstract void setProperty(String key, String value);
 	
 	/**
-	 * ÇÁ·ÎÆÛÆ¼¾È¿¡¼­ int Ç×¸ñÀÇ °ªÀ» Ãß°¡
+	 * í”„ë¡œí¼í‹°ì•ˆì—ì„œ int í•­ëª©ì˜ ê°’ì„ ì¶”ê°€
 	 * @param key
 	 * @param value
 	 */
 	public abstract void setProperty(String key, int value);
 	
 	/**
-	 * ÇÁ·ÎÆÛÆ¼¾È¿¡¼­ long Ç×¸ñÀÇ °ªÀ» Ãß°¡
+	 * í”„ë¡œí¼í‹°ì•ˆì—ì„œ long í•­ëª©ì˜ ê°’ì„ ì¶”ê°€
 	 * @param key
 	 * @param value
 	 */
 	public abstract void setProperty(String key, long value);
 	
 	/**
-	 * ÇÁ·ÎÆÛÆ¼¾È¿¡¼­ boolean Ç×¸ñÀÇ °ªÀ» Ãß°¡
+	 * í”„ë¡œí¼í‹°ì•ˆì—ì„œ boolean í•­ëª©ì˜ ê°’ì„ ì¶”ê°€
 	 * @param key
 	 * @param value
 	 */
@@ -127,7 +127,7 @@ public interface ConfigHandler {
 
 
 	/**
-	 * ¼³Á¤µÈ ÇÁ·ÎÆÛÆ¼ Ç×¸ñÀ» Á¦°Å
+	 * ì„¤ì •ëœ í”„ë¡œí¼í‹° í•­ëª©ì„ ì œê±°
 	 * @param key
 	 */
 	public abstract void remove(String key);

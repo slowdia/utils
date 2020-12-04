@@ -20,7 +20,7 @@ public class DBUtil {
 	static Logger logger = Logger.getLogger(DBUtil.class);
 	
 	/**
-	 * Database ConnectionÀ» ÇØÁ¦ÇÑ´Ù.
+	 * Database Connectionì„ í•´ì œí•œë‹¤.
 	 * @param conn
 	 */
 	public static void close(Connection conn) {
@@ -33,7 +33,7 @@ public class DBUtil {
 	}
 	
 	/**
-	 * Statement °´Ã¼¸¦ ´İ´Â´Ù.
+	 * Statement ê°ì²´ë¥¼ ë‹«ëŠ”ë‹¤.
 	 * @param stmt
 	 */
 	public static void close(Statement stmt) {
@@ -46,7 +46,7 @@ public class DBUtil {
 	}
 	
 	/**
-	 * PreparedStatement °´Ã¼¸¦ ´İ´Â´Ù.
+	 * PreparedStatement ê°ì²´ë¥¼ ë‹«ëŠ”ë‹¤.
 	 * @param pstmt
 	 */
 	public static void close(PreparedStatement pstmt) {
@@ -59,7 +59,7 @@ public class DBUtil {
 	}
 	
 	/**
-	 * CallableStatement °´Ã¼¸¦ ´İ´Â´Ù.
+	 * CallableStatement ê°ì²´ë¥¼ ë‹«ëŠ”ë‹¤.
 	 * @param pstmt
 	 */
 	public static void close(CallableStatement cstmt) {
@@ -72,7 +72,7 @@ public class DBUtil {
 	}
 	
 	/**
-	 * ResultSet °´Ã¼¸¦ ´İ´Â´Ù.
+	 * ResultSet ê°ì²´ë¥¼ ë‹«ëŠ”ë‹¤.
 	 * @param rs
 	 */
 	public static void close(ResultSet rs) {
@@ -85,7 +85,7 @@ public class DBUtil {
 	}
 	
 	/**
-	 * Database jndi ¸íÀ» ÅëÇØ Connection °´Ã¼¸¦ ¾ò´Â´Ù.
+	 * Database jndi ëª…ì„ í†µí•´ Connection ê°ì²´ë¥¼ ì–»ëŠ”ë‹¤.
 	 * @param jndi
 	 * @return
 	 * @throws SQLException
@@ -99,7 +99,7 @@ public class DBUtil {
 	}
 	
 	/**
-	 * Database Á¢¼Ó Á¤º¸¸¦ ÅëÇÏ¿© Connection °´Ã¼¸¦ ¾ò´Â´Ù.
+	 * Database ì ‘ì† ì •ë³´ë¥¼ í†µí•˜ì—¬ Connection ê°ì²´ë¥¼ ì–»ëŠ”ë‹¤.
 	 * @param driver
 	 * @param url
 	 * @param user
@@ -116,7 +116,7 @@ public class DBUtil {
 	}
 	
 	/**
-	 * Æ®·£Àè¼ÇÀ» ½ÃÀÛÇÑ´Ù.<br>
+	 * íŠ¸ëœì­ì…˜ì„ ì‹œì‘í•œë‹¤.<br>
 	 * setAutoCommit(false);
 	 * @param conn
 	 * @throws SQLException
@@ -127,7 +127,7 @@ public class DBUtil {
 	}
 	
 	/**
-	 * Æ®·£Àè¼ÇÀ»À» Á¾·áÇÑ´Ù.<br>
+	 * íŠ¸ëœì­ì…˜ì„ì„ ì¢…ë£Œí•œë‹¤.<br>
 	 * setAutoCommit(true)
 	 * @param conn
 	 * @throws SQLException
@@ -138,7 +138,7 @@ public class DBUtil {
 	}
 	
 	/**
-	 * Connection¿¡¼­ ½ÇÇàÇÑ Äõ¸®¿¡ ´ëÇØ commitÀ» ½ÇÇàÇÑ´Ù.
+	 * Connectionì—ì„œ ì‹¤í–‰í•œ ì¿¼ë¦¬ì— ëŒ€í•´ commitì„ ì‹¤í–‰í•œë‹¤.
 	 * @param conn
 	 * @throws SQLException
 	 */
@@ -148,7 +148,7 @@ public class DBUtil {
 	}
 	
 	/**
-	 * Connection¿¡¼­ ½ÇÇàÇÑ Äõ¸®¿¡ ´ëÇØ rollbackÀ» ½ÇÇàÇÑ´Ù.
+	 * Connectionì—ì„œ ì‹¤í–‰í•œ ì¿¼ë¦¬ì— ëŒ€í•´ rollbackì„ ì‹¤í–‰í•œë‹¤.
 	 * @param conn
 	 * @throws SQLException
 	 */

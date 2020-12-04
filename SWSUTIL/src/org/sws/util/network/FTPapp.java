@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
 import org.sws.util.common.FileUtil;
 
 /**
- * FTP ¾÷·Îµå À¯Æ¿
+ * FTP ì—…ë¡œë“œ ìœ í‹¸
  * @author ago
  *
  */
@@ -24,15 +24,15 @@ public class FTPapp
 	static Logger logger = Logger.getLogger(FTPapp.class);
 	
 	/**
-	 * ¿ø°İ ¼­¹ö¿¡ Á¢¼ÓÇÏ°í Á¢¼ÓµÈ Ä¿³Ø¼ÇÀ» ¸®ÅÏÇÑ´Ù.
-	 * @param remoteIp ¿ø°İ IP
-	 * @param port Á¢¼Ó Æ÷Æ®
-	 * @param userId »ç¿ëÀÚ ¾ÆÀÌµğ
-	 * @param password »ç¿ëÀÚ ÆĞ½º¿öµå
-	 * @param encoding ÀÎÄÚµù Ä³¸¯ÅÍ ¼Â
-	 * @param defTimeout default Å¸ÀÓ¾Æ¿ô
+	 * ì›ê²© ì„œë²„ì— ì ‘ì†í•˜ê³  ì ‘ì†ëœ ì»¤ë„¥ì…˜ì„ ë¦¬í„´í•œë‹¤.
+	 * @param remoteIp ì›ê²© IP
+	 * @param port ì ‘ì† í¬íŠ¸
+	 * @param userId ì‚¬ìš©ì ì•„ì´ë””
+	 * @param password ì‚¬ìš©ì íŒ¨ìŠ¤ì›Œë“œ
+	 * @param encoding ì¸ì½”ë”© ìºë¦­í„° ì…‹
+	 * @param defTimeout default íƒ€ì„ì•„ì›ƒ
 	 * @param soTimeout 
-	 * @return FTP Ä¿³Ø¼Ç Å¬¶óÀÌ¾ğÆ®
+	 * @return FTP ì»¤ë„¥ì…˜ í´ë¼ì´ì–¸íŠ¸
 	 * @throws SocketException
 	 * @throws IOException
 	 */
@@ -52,16 +52,16 @@ public class FTPapp
 		ftpClient.login(userId, password);
 		ftpClient.setDefaultTimeout(defTimeout);
 		ftpClient.setSoTimeout(soTimeout);
-		ftpClient.setFileType(FTP.BINARY_FILE_TYPE);//ÀÌ¹ÌÁö±úÁü ¹æÁöÀ§
+		ftpClient.setFileType(FTP.BINARY_FILE_TYPE);//ì´ë¯¸ì§€ê¹¨ì§ ë°©ì§€ìœ„
 		
 		return ftpClient;
 	}
 	
 	/**
-	 * ¿ø°İ ¼­¹ö µğ·ºÅä¸® ³» ¸ğµç ÆÄÀÏÀ» ·ÎÄÃ µğ·ºÅä¸®¿¡ ´Ù¿î·Îµå ¹Ş´Â´Ù.
-	 * @param ftpClient FTP Ä¿³Ø¼Ç Å¬¶óÀÌ¾ğÆ®
-	 * @param localPath ·ÎÄÃ ÀúÀåÇÒ µğ·ºÅä¸®
-	 * @param remoteFile ¿ø°İ ¼­¹ö ÆÄÀÏ Àı´ë °æ·Î
+	 * ì›ê²© ì„œë²„ ë””ë ‰í† ë¦¬ ë‚´ ëª¨ë“  íŒŒì¼ì„ ë¡œì»¬ ë””ë ‰í† ë¦¬ì— ë‹¤ìš´ë¡œë“œ ë°›ëŠ”ë‹¤.
+	 * @param ftpClient FTP ì»¤ë„¥ì…˜ í´ë¼ì´ì–¸íŠ¸
+	 * @param localPath ë¡œì»¬ ì €ì¥í•  ë””ë ‰í† ë¦¬
+	 * @param remoteFile ì›ê²© ì„œë²„ íŒŒì¼ ì ˆëŒ€ ê²½ë¡œ
 	 * @return
 	 * @throws IOException
 	 */
@@ -78,9 +78,9 @@ public class FTPapp
 	}
 	
 	/**
-	 * BINARY_FILE_TYPEÀ¸·Î ¿ø°İ ¼­¹ö ÆÄÀÏÀ» ·ÎÄÃ µğ·ºÅä¸®¿¡ ´Ù¿î·Îµå ¹Ş´Â´Ù.
-	 * @param ftpClient FTP Ä¿³Ø¼Ç Å¬¶óÀÌ¾ğÆ®
-	 * @param localPath ·ÎÄÃ ÀúÀåÇÒ µğ·ºÅä¸®
+	 * BINARY_FILE_TYPEìœ¼ë¡œ ì›ê²© ì„œë²„ íŒŒì¼ì„ ë¡œì»¬ ë””ë ‰í† ë¦¬ì— ë‹¤ìš´ë¡œë“œ ë°›ëŠ”ë‹¤.
+	 * @param ftpClient FTP ì»¤ë„¥ì…˜ í´ë¼ì´ì–¸íŠ¸
+	 * @param localPath ë¡œì»¬ ì €ì¥í•  ë””ë ‰í† ë¦¬
 	 * @return
 	 * @throws IOException
 	 */
@@ -90,10 +90,10 @@ public class FTPapp
 	}
 	
 	/**
-	 * ¿ø°İ ¼­¹ö ÆÄÀÏÀ» ·ÎÄÃ µğ·ºÅä¸®¿¡ ´Ù¿î·Îµå ¹Ş´Â´Ù.
-	 * @param ftpClient FTP Ä¿³Ø¼Ç Å¬¶óÀÌ¾ğÆ®
-	 * @param localPath ·ÎÄÃ ÀúÀåÇÒ µğ·ºÅä¸®
-	 * @param remoteFile ¿ø°İ ¼­¹ö ÆÄÀÏ Àı´ë °æ·Î
+	 * ì›ê²© ì„œë²„ íŒŒì¼ì„ ë¡œì»¬ ë””ë ‰í† ë¦¬ì— ë‹¤ìš´ë¡œë“œ ë°›ëŠ”ë‹¤.
+	 * @param ftpClient FTP ì»¤ë„¥ì…˜ í´ë¼ì´ì–¸íŠ¸
+	 * @param localPath ë¡œì»¬ ì €ì¥í•  ë””ë ‰í† ë¦¬
+	 * @param remoteFile ì›ê²© ì„œë²„ íŒŒì¼ ì ˆëŒ€ ê²½ë¡œ
 	 * @return
 	 * @throws IOException
 	 */
@@ -103,10 +103,10 @@ public class FTPapp
 	}
 	
 	/**
-	 * BINARY_FILE_TYPEÀ¸·Î ¿ø°İ ¼­¹ö ÆÄÀÏÀ» ·ÎÄÃ µğ·ºÅä¸®¿¡ ´Ù¿î·Îµå ¹Ş´Â´Ù.
-	 * @param ftpClient FTP Ä¿³Ø¼Ç Å¬¶óÀÌ¾ğÆ®
-	 * @param localPath ·ÎÄÃ ÀúÀåÇÒ µğ·ºÅä¸®
-	 * @param remoteFile ¿ø°İ ¼­¹ö ÆÄÀÏ Àı´ë °æ·Î
+	 * BINARY_FILE_TYPEìœ¼ë¡œ ì›ê²© ì„œë²„ íŒŒì¼ì„ ë¡œì»¬ ë””ë ‰í† ë¦¬ì— ë‹¤ìš´ë¡œë“œ ë°›ëŠ”ë‹¤.
+	 * @param ftpClient FTP ì»¤ë„¥ì…˜ í´ë¼ì´ì–¸íŠ¸
+	 * @param localPath ë¡œì»¬ ì €ì¥í•  ë””ë ‰í† ë¦¬
+	 * @param remoteFile ì›ê²© ì„œë²„ íŒŒì¼ ì ˆëŒ€ ê²½ë¡œ
 	 * @return
 	 * @throws IOException
 	 */
@@ -116,10 +116,10 @@ public class FTPapp
 	}
 	
 	/**
-	 * ¿ø°İ ¼­¹ö ÆÄÀÏÀ» ·ÎÄÃ µğ·ºÅä¸®¿¡ ´Ù¿î·Îµå ¹Ş´Â´Ù.
-	 * @param ftpClient FTP Ä¿³Ø¼Ç Å¬¶óÀÌ¾ğÆ®
-	 * @param localPath ·ÎÄÃ ÀúÀåÇÒ µğ·ºÅä¸®
-	 * @param remoteFile ¿ø°İ ¼­¹ö ÆÄÀÏ Àı´ë °æ·Î
+	 * ì›ê²© ì„œë²„ íŒŒì¼ì„ ë¡œì»¬ ë””ë ‰í† ë¦¬ì— ë‹¤ìš´ë¡œë“œ ë°›ëŠ”ë‹¤.
+	 * @param ftpClient FTP ì»¤ë„¥ì…˜ í´ë¼ì´ì–¸íŠ¸
+	 * @param localPath ë¡œì»¬ ì €ì¥í•  ë””ë ‰í† ë¦¬
+	 * @param remoteFile ì›ê²© ì„œë²„ íŒŒì¼ ì ˆëŒ€ ê²½ë¡œ
 	 * @param fileType FTP file type
 	 * @return
 	 * @throws IOException
@@ -133,11 +133,11 @@ public class FTPapp
 	}
 
 	/**
-	 * BINARY_FILE_TYPEÀ¸·Î ¿ø°İ ¼­¹ö¿¡ Æú´õ¸¦ »ı¼ºÇÏ°í ÆÄÀÏÀ» ¾÷·Îµå ÇÑ´Ù.
-	 * @param ftpClient FTP Ä¿³Ø¼Ç Å¬¶óÀÌ¾ğÆ®
-	 * @param localFile ·ÎÄÃ ÆÄÀÏ Àı´ë °æ·Î
-	 * @param remoteFile ¿ø°İ Æú´õ³» ÇÏÀ§ µğ·ºÅä¸® Æ÷ÇÔ ÆÄÀÏ °æ·Î
-	 * @param remotePath ¿ø°İ ¼­¹ö ³» ±âº» µğ·ºÅä¸®(¾÷¹« µğ·ºÅä¸®)
+	 * BINARY_FILE_TYPEìœ¼ë¡œ ì›ê²© ì„œë²„ì— í´ë”ë¥¼ ìƒì„±í•˜ê³  íŒŒì¼ì„ ì—…ë¡œë“œ í•œë‹¤.
+	 * @param ftpClient FTP ì»¤ë„¥ì…˜ í´ë¼ì´ì–¸íŠ¸
+	 * @param localFile ë¡œì»¬ íŒŒì¼ ì ˆëŒ€ ê²½ë¡œ
+	 * @param remoteFile ì›ê²© í´ë”ë‚´ í•˜ìœ„ ë””ë ‰í† ë¦¬ í¬í•¨ íŒŒì¼ ê²½ë¡œ
+	 * @param remotePath ì›ê²© ì„œë²„ ë‚´ ê¸°ë³¸ ë””ë ‰í† ë¦¬(ì—…ë¬´ ë””ë ‰í† ë¦¬)
 	 * @return
 	 * @throws IOException
 	 */
@@ -147,11 +147,11 @@ public class FTPapp
 	}
 
 	/**
-	 * ¿ø°İ ¼­¹ö¿¡ Æú´õ¸¦ »ı¼ºÇÏ°í ÆÄÀÏÀ» ¾÷·Îµå ÇÑ´Ù.
-	 * @param ftpClient FTP Ä¿³Ø¼Ç Å¬¶óÀÌ¾ğÆ®
-	 * @param localFile ·ÎÄÃ ÆÄÀÏ Àı´ë °æ·Î
-	 * @param remoteFile ¿ø°İ Æú´õ³» ÇÏÀ§ µğ·ºÅä¸® Æ÷ÇÔ ÆÄÀÏ °æ·Î
-	 * @param remotePath ¿ø°İ ¼­¹ö ³» ±âº» µğ·ºÅä¸®(¾÷¹« µğ·ºÅä¸®)
+	 * ì›ê²© ì„œë²„ì— í´ë”ë¥¼ ìƒì„±í•˜ê³  íŒŒì¼ì„ ì—…ë¡œë“œ í•œë‹¤.
+	 * @param ftpClient FTP ì»¤ë„¥ì…˜ í´ë¼ì´ì–¸íŠ¸
+	 * @param localFile ë¡œì»¬ íŒŒì¼ ì ˆëŒ€ ê²½ë¡œ
+	 * @param remoteFile ì›ê²© í´ë”ë‚´ í•˜ìœ„ ë””ë ‰í† ë¦¬ í¬í•¨ íŒŒì¼ ê²½ë¡œ
+	 * @param remotePath ì›ê²© ì„œë²„ ë‚´ ê¸°ë³¸ ë””ë ‰í† ë¦¬(ì—…ë¬´ ë””ë ‰í† ë¦¬)
 	 * @param fileType FTP file type
 	 * @return
 	 * @throws IOException
@@ -162,10 +162,10 @@ public class FTPapp
 	}
 
 	/**
-	 * BINARY_FILE_TYPEÀ¸·Î ¿ø°İ ¼­¹ö¿¡ Æú´õ¸¦ »ı¼ºÇÏ°í ÆÄÀÏÀ» ¾÷·Îµå ÇÑ´Ù.
-	 * @param ftpClient FTP Ä¿³Ø¼Ç Å¬¶óÀÌ¾ğÆ®
-	 * @param localFile ·ÎÄÃ ÆÄÀÏ Àı´ë °æ·Î
-	 * @param remoteFile ¿ø°İ Æú´õ³» ÇÏÀ§ µğ·ºÅä¸® Æ÷ÇÔ ÆÄÀÏ °æ·Î
+	 * BINARY_FILE_TYPEìœ¼ë¡œ ì›ê²© ì„œë²„ì— í´ë”ë¥¼ ìƒì„±í•˜ê³  íŒŒì¼ì„ ì—…ë¡œë“œ í•œë‹¤.
+	 * @param ftpClient FTP ì»¤ë„¥ì…˜ í´ë¼ì´ì–¸íŠ¸
+	 * @param localFile ë¡œì»¬ íŒŒì¼ ì ˆëŒ€ ê²½ë¡œ
+	 * @param remoteFile ì›ê²© í´ë”ë‚´ í•˜ìœ„ ë””ë ‰í† ë¦¬ í¬í•¨ íŒŒì¼ ê²½ë¡œ
 	 * @return
 	 * @throws IOException
 	 */
@@ -175,11 +175,11 @@ public class FTPapp
 	}
 
 	/**
-	 * ¿ø°İ ¼­¹ö¿¡ Æú´õ¸¦ »ı¼ºÇÏ°í ÆÄÀÏÀ» ¾÷·Îµå ÇÑ´Ù.
-	 * @param ftpClient FTP Ä¿³Ø¼Ç Å¬¶óÀÌ¾ğÆ®
-	 * @param localFile ·ÎÄÃ ÆÄÀÏ Àı´ë °æ·Î
-	 * @param remoteFile ¿ø°İ Æú´õ³» ÇÏÀ§ µğ·ºÅä¸® Æ÷ÇÔ ÆÄÀÏ °æ·Î
-	 * @param remotePath ¿ø°İ ¼­¹ö ³» ±âº» µğ·ºÅä¸®(¾÷¹« µğ·ºÅä¸®)
+	 * ì›ê²© ì„œë²„ì— í´ë”ë¥¼ ìƒì„±í•˜ê³  íŒŒì¼ì„ ì—…ë¡œë“œ í•œë‹¤.
+	 * @param ftpClient FTP ì»¤ë„¥ì…˜ í´ë¼ì´ì–¸íŠ¸
+	 * @param localFile ë¡œì»¬ íŒŒì¼ ì ˆëŒ€ ê²½ë¡œ
+	 * @param remoteFile ì›ê²© í´ë”ë‚´ í•˜ìœ„ ë””ë ‰í† ë¦¬ í¬í•¨ íŒŒì¼ ê²½ë¡œ
+	 * @param remotePath ì›ê²© ì„œë²„ ë‚´ ê¸°ë³¸ ë””ë ‰í† ë¦¬(ì—…ë¬´ ë””ë ‰í† ë¦¬)
 	 * @param fileType FTP file type
 	 * @return
 	 * @throws IOException
@@ -215,8 +215,8 @@ public class FTPapp
 	}
 	
 	/**
-	 * ·Î±×¾Æ¿ô ÈÄ Á¢¼ÓÀ» ²÷´Â´Ù.
-	 * @param ftpClient FTP Ä¿³Ø¼Ç Å¬¶óÀÌ¾ğÆ®
+	 * ë¡œê·¸ì•„ì›ƒ í›„ ì ‘ì†ì„ ëŠëŠ”ë‹¤.
+	 * @param ftpClient FTP ì»¤ë„¥ì…˜ í´ë¼ì´ì–¸íŠ¸
 	 * @throws IOException
 	 */
 	public void close(FTPClient ftpClient) throws IOException
@@ -225,8 +225,8 @@ public class FTPapp
 	}
 	
 	/**
-	 * ·Î±×¾Æ¿ô ÈÄ Á¢¼ÓÀ» ²÷´Â´Ù.
-	 * @param ftpClient FTP Ä¿³Ø¼Ç Å¬¶óÀÌ¾ğÆ®
+	 * ë¡œê·¸ì•„ì›ƒ í›„ ì ‘ì†ì„ ëŠëŠ”ë‹¤.
+	 * @param ftpClient FTP ì»¤ë„¥ì…˜ í´ë¼ì´ì–¸íŠ¸
 	 * @throws IOException
 	 */
 	public void disconnect(FTPClient ftpClient) throws IOException
@@ -242,9 +242,9 @@ public class FTPapp
 	}
 	
 	/**
-	 * ¿ø°İ ¼­¹öÀÇ ÆÄÀÏÀ» »èÁ¦ÇÑ´Ù.
-	 * @param ftpClient FTP Ä¿³Ø¼Ç Å¬¶óÀÌ¾ğÆ®
-	 * @param remoteFile »èÁ¦ÇÒ ¿ø°İ ¼­¹ö ³» ÆÄÀÏ
+	 * ì›ê²© ì„œë²„ì˜ íŒŒì¼ì„ ì‚­ì œí•œë‹¤.
+	 * @param ftpClient FTP ì»¤ë„¥ì…˜ í´ë¼ì´ì–¸íŠ¸
+	 * @param remoteFile ì‚­ì œí•  ì›ê²© ì„œë²„ ë‚´ íŒŒì¼
 	 * @return
 	 * @throws IOException
 	 */
@@ -254,9 +254,9 @@ public class FTPapp
 	}
 	
 	/**
-	 * ¿ø°İ ¼­¹öÀÇ ÆÄÀÏÀ» »èÁ¦ÇÑ´Ù.
-	 * @param ftpClient FTP Ä¿³Ø¼Ç Å¬¶óÀÌ¾ğÆ®
-	 * @param remoteFile »èÁ¦ÇÒ ¿ø°İ ¼­¹ö ³» ÆÄÀÏ
+	 * ì›ê²© ì„œë²„ì˜ íŒŒì¼ì„ ì‚­ì œí•œë‹¤.
+	 * @param ftpClient FTP ì»¤ë„¥ì…˜ í´ë¼ì´ì–¸íŠ¸
+	 * @param remoteFile ì‚­ì œí•  ì›ê²© ì„œë²„ ë‚´ íŒŒì¼
 	 * @return
 	 * @throws IOException
 	 */

@@ -8,9 +8,9 @@ import java.util.GregorianCalendar;
 import java.util.Locale;
 
 /**
- * ³¯Â¥ Æ÷¸Ë À¯Æ¿
+ * ë‚ ì§œ í¬ë§· ìœ í‹¸
  * <br>-----------------------------------------
- * <br>Æ÷¸Ë ÆĞÅÏ  ->>  °á°ú
+ * <br>í¬ë§· íŒ¨í„´  ->>  ê²°ê³¼
  * <br>-----------------------------------------
  * <br>"yyyy.MM.dd G 'at' hh:mm:ss z"	->>  1996.07. 10 AD at 15:08:56 PDT
  * <br>"EEE, MMM d, ''yy"				->>  Wed, July 10, '96
@@ -24,7 +24,7 @@ import java.util.Locale;
 public class DateUtil {
 	
 	/**
-	 * ¿À´Ã ³¯½ÎÀÇ ¿¬µµ¸¦ ¸®ÅÏÇÑ´Ù.
+	 * ì˜¤ëŠ˜ ë‚ ì‹¸ì˜ ì—°ë„ë¥¼ ë¦¬í„´í•œë‹¤.
 	 * @return
 	 */
 	public static String getYear()
@@ -33,7 +33,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ¿À´Ã ³¯½ÎÀÇ ¿¬µµ¸¦ ¸®ÅÏÇÑ´Ù.
+	 * ì˜¤ëŠ˜ ë‚ ì‹¸ì˜ ì—°ë„ë¥¼ ë¦¬í„´í•œë‹¤.
 	 * @param locale
 	 * @return
 	 */
@@ -44,7 +44,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ¿À´Ã ³¯½ÎÀÇ ¿ù¸¦ ¸®ÅÏÇÑ´Ù.
+	 * ì˜¤ëŠ˜ ë‚ ì‹¸ì˜ ì›”ë¥¼ ë¦¬í„´í•œë‹¤.
 	 * @return
 	 */
 	public static String getMonth()
@@ -53,7 +53,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ¿À´Ã ³¯½ÎÀÇ ¿ù¸¦ ¸®ÅÏÇÑ´Ù.
+	 * ì˜¤ëŠ˜ ë‚ ì‹¸ì˜ ì›”ë¥¼ ë¦¬í„´í•œë‹¤.
 	 * @param locale
 	 * @return
 	 */
@@ -64,7 +64,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ¿À´Ã ³¯½ÎÀÇ ÀÏ¸¦ ¸®ÅÏÇÑ´Ù.
+	 * ì˜¤ëŠ˜ ë‚ ì‹¸ì˜ ì¼ë¥¼ ë¦¬í„´í•œë‹¤.
 	 * @return
 	 */
 	public static String getDay()
@@ -73,7 +73,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ¿À´Ã ³¯½ÎÀÇ ÀÏ¸¦ ¸®ÅÏÇÑ´Ù.
+	 * ì˜¤ëŠ˜ ë‚ ì‹¸ì˜ ì¼ë¥¼ ë¦¬í„´í•œë‹¤.
 	 * @param locale
 	 * @return
 	 */
@@ -84,7 +84,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ÇöÀç ½Ã°£ÀÇ ½Ã¸¦ ¸®ÅÏÇÑ´Ù.
+	 * í˜„ì¬ ì‹œê°„ì˜ ì‹œë¥¼ ë¦¬í„´í•œë‹¤.
 	 * @return
 	 */
 	public static String getHour()
@@ -93,7 +93,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ÇöÀç ½Ã°£ÀÇ ½Ã¸¦ ¸®ÅÏÇÑ´Ù.
+	 * í˜„ì¬ ì‹œê°„ì˜ ì‹œë¥¼ ë¦¬í„´í•œë‹¤.
 	 * @param locale
 	 * @return
 	 */
@@ -104,7 +104,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ÇöÀç ½Ã°£ÀÇ ½Ã¸¦ ¸®ÅÏÇÑ´Ù.
+	 * í˜„ì¬ ì‹œê°„ì˜ ì‹œë¥¼ ë¦¬í„´í•œë‹¤.
 	 * @return
 	 */
 	public static String getMinute()
@@ -113,7 +113,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ÇöÀç ½Ã°£ÀÇ ºĞÀ» ¸®ÅÏÇÑ´Ù.
+	 * í˜„ì¬ ì‹œê°„ì˜ ë¶„ì„ ë¦¬í„´í•œë‹¤.
 	 * @param locale
 	 * @return
 	 */
@@ -124,7 +124,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ÇöÀç ½Ã°£ÀÇ ÃÊÀ» ¸®ÅÏÇÑ´Ù.
+	 * í˜„ì¬ ì‹œê°„ì˜ ì´ˆì„ ë¦¬í„´í•œë‹¤.
 	 * @return
 	 */
 	public static String getSecond()
@@ -133,7 +133,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ÇöÀç ½Ã°£ÀÇ ÃÊÀ» ¸®ÅÏÇÑ´Ù.
+	 * í˜„ì¬ ì‹œê°„ì˜ ì´ˆì„ ë¦¬í„´í•œë‹¤.
 	 * @param locale
 	 * @return
 	 */
@@ -144,7 +144,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ÇöÀç ½Ã°£ÀÇ ¹Ğ¸®ÃÊÀ» ¸®ÅÏÇÑ´Ù.
+	 * í˜„ì¬ ì‹œê°„ì˜ ë°€ë¦¬ì´ˆì„ ë¦¬í„´í•œë‹¤.
 	 * @return
 	 */
 	public static String getMilliSecond()
@@ -153,7 +153,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ÇöÀç ½Ã°£ÀÇ ¹Ğ¸®ÃÊÀ» ¸®ÅÏÇÑ´Ù.
+	 * í˜„ì¬ ì‹œê°„ì˜ ë°€ë¦¬ì´ˆì„ ë¦¬í„´í•œë‹¤.
 	 * @param locale
 	 * @return
 	 */
@@ -164,7 +164,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ÇöÀç ¿ùÀÇ ¸¶Áö¸· ³¯Â¥¸¦ ±¸ÇÑ´Ù.
+	 * í˜„ì¬ ì›”ì˜ ë§ˆì§€ë§‰ ë‚ ì§œë¥¼ êµ¬í•œë‹¤.
 	 * @return
 	 */
 	public static int getLastDayOfMonth()
@@ -174,7 +174,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ÁöÁ¤µÈ ¿¬/¿ù ÀÇ ¸¶Áö¸· ³¯Â¥¸¦ ±¸ÇÑ´Ù.
+	 * ì§€ì •ëœ ì—°/ì›” ì˜ ë§ˆì§€ë§‰ ë‚ ì§œë¥¼ êµ¬í•œë‹¤.
 	 * @param year
 	 * @param month
 	 * @return
@@ -186,7 +186,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ¿À´Ã ³¯Â¥¸¦ Æ÷¸Ë¿¡ ¸ÂÃß¾î ¹®ÀÚ¿­·Î ¸®ÅÏÇÑ´Ù.
+	 * ì˜¤ëŠ˜ ë‚ ì§œë¥¼ í¬ë§·ì— ë§ì¶”ì–´ ë¬¸ìì—´ë¡œ ë¦¬í„´í•œë‹¤.
 	 * @param format
 	 * @return
 	 */
@@ -196,7 +196,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ¿À´Ã ³¯Â¥¸¦ Æ÷¸Ë¿¡ ¸ÂÃß¾î ¹®ÀÚ¿­·Î ¸®ÅÏÇÑ´Ù.
+	 * ì˜¤ëŠ˜ ë‚ ì§œë¥¼ í¬ë§·ì— ë§ì¶”ì–´ ë¬¸ìì—´ë¡œ ë¦¬í„´í•œë‹¤.
 	 * @param format
 	 * @param locale
 	 * @return
@@ -208,7 +208,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * java.util.Date Çü½ÄÀ» java.sql.Date Çü½ÄÀ¸·Î º¯È¯ÇÏ¿© ¸®ÅÏ
+	 * java.util.Date í˜•ì‹ì„ java.sql.Date í˜•ì‹ìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ë¦¬í„´
 	 * @return
 	 */
 	public static java.sql.Date getSqlDate()
@@ -217,8 +217,8 @@ public class DateUtil {
 	}
 	
 	/**
-	 * java.util.Date Çü½ÄÀ» Calendar Çü½ÄÀ¸·Î º¯È¯ÇÏ¿© ¸®ÅÏ
-	 * @param date java.sql.Date Çü º¯È¯ ÇÒ ³¯Â¥
+	 * java.util.Date í˜•ì‹ì„ Calendar í˜•ì‹ìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ë¦¬í„´
+	 * @param date java.sql.Date í˜• ë³€í™˜ í•  ë‚ ì§œ
 	 * @return
 	 */
 	public static Calendar getCalendar(Date date) throws ParseException
@@ -229,8 +229,8 @@ public class DateUtil {
 	}
 	
 	/**
-	 * java.util.Date Çü½ÄÀ» java.sql.Date Çü½ÄÀ¸·Î º¯È¯ÇÏ¿© ¸®ÅÏ
-	 * @param date Çü º¯È¯ ÇÒ ³¯Â¥
+	 * java.util.Date í˜•ì‹ì„ java.sql.Date í˜•ì‹ìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ë¦¬í„´
+	 * @param date í˜• ë³€í™˜ í•  ë‚ ì§œ
 	 * @return
 	 */
 	public static java.sql.Date getSqlDate(Date date)
@@ -239,7 +239,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ÆÄ¶ó¸ŞÅÍ ³¯Â¥¸¦ Æ÷¸Ë¿¡ ¸ÂÃß¾î ¹®ÀÚ¿­·Î ¸®ÅÏÇÑ´Ù.
+	 * íŒŒë¼ë©”í„° ë‚ ì§œë¥¼ í¬ë§·ì— ë§ì¶”ì–´ ë¬¸ìì—´ë¡œ ë¦¬í„´í•œë‹¤.
 	 * @param date
 	 * @return
 	 */
@@ -249,8 +249,8 @@ public class DateUtil {
 	}
 	
 	/**
-	 * java.sql.Date Çü½ÄÀ» java.util.Date Çü½ÄÀ¸·Î º¯È¯ÇÏ¿© ¸®ÅÏ
-	 * @param date java.sql.Date Çü º¯È¯ ÇÒ ³¯Â¥
+	 * java.sql.Date í˜•ì‹ì„ java.util.Date í˜•ì‹ìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ë¦¬í„´
+	 * @param date java.sql.Date í˜• ë³€í™˜ í•  ë‚ ì§œ
 	 * @return
 	 */
 	public static Date getDate(java.sql.Date date)
@@ -259,7 +259,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ¿À´Ã ³¯Â¥¸¦ Æ÷¸Ë¿¡ ¸ÂÃß¾î ¹®ÀÚ¿­·Î ¸®ÅÏÇÑ´Ù.
+	 * ì˜¤ëŠ˜ ë‚ ì§œë¥¼ í¬ë§·ì— ë§ì¶”ì–´ ë¬¸ìì—´ë¡œ ë¦¬í„´í•œë‹¤.
 	 * @param format
 	 * @return
 	 */
@@ -270,8 +270,8 @@ public class DateUtil {
 	}
 	
 	/**
-	 * String Çü½ÄÀ» Calendar Çü½ÄÀ¸·Î º¯È¯ÇÏ¿© ¸®ÅÏ
-	 * @param date Çü º¯È¯ ÇÒ ³¯Â¥
+	 * String í˜•ì‹ì„ Calendar í˜•ì‹ìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ë¦¬í„´
+	 * @param date í˜• ë³€í™˜ í•  ë‚ ì§œ
 	 * @param format
 	 * @return
 	 * @throws ParseException 
@@ -284,8 +284,8 @@ public class DateUtil {
 	}
 	
 	/**
-	 * String Çü½ÄÀ» java.util.Date Çü½ÄÀ¸·Î º¯È¯ÇÏ¿© ¸®ÅÏ
-	 * @param date Çü º¯È¯ ÇÒ ³¯Â¥
+	 * String í˜•ì‹ì„ java.util.Date í˜•ì‹ìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ë¦¬í„´
+	 * @param date í˜• ë³€í™˜ í•  ë‚ ì§œ
 	 * @param format
 	 * @return
 	 * @throws ParseException 
@@ -297,7 +297,7 @@ public class DateUtil {
 	}
 
 	/**
-	 * yyyy³â MM¿ù ddÀÏ Çü½ÄÀ¸·Î º¯°æÇÏ¿© ¸®ÅÏÇÑ´Ù.
+	 * yyyyë…„ MMì›” ddì¼ í˜•ì‹ìœ¼ë¡œ ë³€ê²½í•˜ì—¬ ë¦¬í„´í•œë‹¤.
 	 * @param date
 	 * @param format
 	 * @return
@@ -306,14 +306,14 @@ public class DateUtil {
 	{
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(getDate(date, format));
-		return cal.get(Calendar.YEAR) + "³â " + (cal.get(Calendar.MONTH) +1) + "¿ù " + cal.get(Calendar.DAY_OF_MONTH) + "ÀÏ";
+		return cal.get(Calendar.YEAR) + "ë…„ " + (cal.get(Calendar.MONTH) +1) + "ì›” " + cal.get(Calendar.DAY_OF_MONTH) + "ì¼";
 	}
 	
 	/**
-	 * ¿À´Ã³¯Â¥·Î ºÎÅÍ ±â°£ ÀÌÀü ¶Ç´Â ÀÌÈÄ ³¯Â¥¸¦ Æ÷¸Ë¿¡ ¸Â°Ô º¯°æÇÏ¿© ¸®ÅÏÇÑ´Ù.
-	 * @param format ³¯Â¥ Æ÷¸Ë
+	 * ì˜¤ëŠ˜ë‚ ì§œë¡œ ë¶€í„° ê¸°ê°„ ì´ì „ ë˜ëŠ” ì´í›„ ë‚ ì§œë¥¼ í¬ë§·ì— ë§ê²Œ ë³€ê²½í•˜ì—¬ ë¦¬í„´í•œë‹¤.
+	 * @param format ë‚ ì§œ í¬ë§·
 	 * @param field Calendar field
-	 * @param period °ú°Å³¯Â¥¸é À½¼ö, ¹Ì·¡ ³¯Â¥¸é ¾ç¼ö
+	 * @param period ê³¼ê±°ë‚ ì§œë©´ ìŒìˆ˜, ë¯¸ë˜ ë‚ ì§œë©´ ì–‘ìˆ˜
 	 * @return
 	 */
 	public static String getDate(String format, int field, int period)
@@ -322,10 +322,10 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ¿À´Ã³¯Â¥·Î ºÎÅÍ ±â°£ ÀÌÀü ¶Ç´Â ÀÌÈÄ ³¯Â¥¸¦ Æ÷¸Ë¿¡ ¸Â°Ô º¯°æÇÏ¿© ¸®ÅÏÇÑ´Ù.
-	 * @param format ³¯Â¥ Æ÷¸Ë
+	 * ì˜¤ëŠ˜ë‚ ì§œë¡œ ë¶€í„° ê¸°ê°„ ì´ì „ ë˜ëŠ” ì´í›„ ë‚ ì§œë¥¼ í¬ë§·ì— ë§ê²Œ ë³€ê²½í•˜ì—¬ ë¦¬í„´í•œë‹¤.
+	 * @param format ë‚ ì§œ í¬ë§·
 	 * @param field Calendar field
-	 * @param period °ú°Å³¯Â¥¸é À½¼ö, ¹Ì·¡ ³¯Â¥¸é ¾ç¼ö
+	 * @param period ê³¼ê±°ë‚ ì§œë©´ ìŒìˆ˜, ë¯¸ë˜ ë‚ ì§œë©´ ì–‘ìˆ˜
 	 * @return
 	 */
 	public static String getDate(String format, int field, int period, Locale locale)
@@ -337,12 +337,12 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ÇöÀç ³¯Â¥¿ÍÀÇ Â÷ÀÌ¸¦ ±¸ÇÑ´Ù.<br>
-	 * °è»ê ½Ã ÇÏÀ§ ´ÜÀ§´Â ¹«½ÃÇÑ´Ù.
-	 * @param date ºñ±³ÇÒ ³¯Â¥
-	 * @param format ºñ±³ÇÒ ³¯Â¥ÀÇ Æ÷¸Ë
-	 * @param field Â÷ÀÌ¸¦ ±¸ÇÒ ´ÜÀ§ - Calendar field
-	 * @return °ú°Å ÀÏÀÚ´Â -Á¤¼ö, ¹Ì·¡ÀÏÀÚ´Â +Á¤¼ö
+	 * í˜„ì¬ ë‚ ì§œì™€ì˜ ì°¨ì´ë¥¼ êµ¬í•œë‹¤.<br>
+	 * ê³„ì‚° ì‹œ í•˜ìœ„ ë‹¨ìœ„ëŠ” ë¬´ì‹œí•œë‹¤.
+	 * @param date ë¹„êµí•  ë‚ ì§œ
+	 * @param format ë¹„êµí•  ë‚ ì§œì˜ í¬ë§·
+	 * @param field ì°¨ì´ë¥¼ êµ¬í•  ë‹¨ìœ„ - Calendar field
+	 * @return ê³¼ê±° ì¼ìëŠ” -ì •ìˆ˜, ë¯¸ë˜ì¼ìëŠ” +ì •ìˆ˜
 	 * @throws ParseException 
 	 */
 	public static long getPeriod(String date, String format, int field) throws ParseException
@@ -351,11 +351,11 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ÇöÀç ³¯Â¥¿ÍÀÇ Â÷ÀÌ¸¦ ±¸ÇÑ´Ù.<br>
-	 * °è»ê ½Ã ÇÏÀ§ ´ÜÀ§´Â ¹«½ÃÇÑ´Ù.
-	 * @param date ºñ±³ÇÒ ³¯Â¥
-	 * @param field Â÷ÀÌ¸¦ ±¸ÇÒ ´ÜÀ§ - Calendar field
-	 * @return °ú°Å ÀÏÀÚ´Â -Á¤¼ö, ¹Ì·¡ÀÏÀÚ´Â +Á¤¼ö
+	 * í˜„ì¬ ë‚ ì§œì™€ì˜ ì°¨ì´ë¥¼ êµ¬í•œë‹¤.<br>
+	 * ê³„ì‚° ì‹œ í•˜ìœ„ ë‹¨ìœ„ëŠ” ë¬´ì‹œí•œë‹¤.
+	 * @param date ë¹„êµí•  ë‚ ì§œ
+	 * @param field ì°¨ì´ë¥¼ êµ¬í•  ë‹¨ìœ„ - Calendar field
+	 * @return ê³¼ê±° ì¼ìëŠ” -ì •ìˆ˜, ë¯¸ë˜ì¼ìëŠ” +ì •ìˆ˜
 	 * @throws ParseException 
 	 */
 	public static long getPeriod(Date date, int field) throws ParseException

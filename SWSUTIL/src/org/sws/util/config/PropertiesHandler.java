@@ -8,24 +8,24 @@ import java.util.Properties;
 
 
 /**
- * ÇÁ·ÎÆÛÆ¼ ¼³Á¤ÆÄÀÏÀ» ÀĞ°í ¾²´Âµ¥ ÇÊ¿äÇÑ ÁÖ¿ä ¸Ş¼Òµå¸¦ Á¤ÀÇ.
+ * í”„ë¡œí¼í‹° ì„¤ì •íŒŒì¼ì„ ì½ê³  ì“°ëŠ”ë° í•„ìš”í•œ ì£¼ìš” ë©”ì†Œë“œë¥¼ ì •ì˜.
  * @author ago
  *
  */
 public class PropertiesHandler implements ConfigHandler {
 
-	/** ¼³Á¤ ÀúÀå¼Ò */
+	/** ì„¤ì • ì €ì¥ì†Œ */
 	private Properties properties = new Properties();
 
-	/** ¼³Á¤ÆÄÀÏ ÀüÃ¼°æ·Î */
+	/** ì„¤ì •íŒŒì¼ ì „ì²´ê²½ë¡œ */
 	private String resourceName;
 	
 	private long lastModified;
 
 	/**
-	 * »ı¼ºÀÚ
-	 * ÁöÁ¤ °æ·Î¿¡ ´ëÇÑ ¼³Á¤ÆÄÀÏÀ» ÀĞ¾î¼­ ÇÁ·ÎÆÛÆ¼¿¡ ·ÎµåÇÔ.
-	 * @param resourceName ¼³Á¤ÆÄÀÏÀÇ ÀüÃ¼°æ·Î.
+	 * ìƒì„±ì
+	 * ì§€ì • ê²½ë¡œì— ëŒ€í•œ ì„¤ì •íŒŒì¼ì„ ì½ì–´ì„œ í”„ë¡œí¼í‹°ì— ë¡œë“œí•¨.
+	 * @param resourceName ì„¤ì •íŒŒì¼ì˜ ì „ì²´ê²½ë¡œ.
 	 */
 	public PropertiesHandler(String resourceName) throws Exception
 	{
@@ -34,10 +34,10 @@ public class PropertiesHandler implements ConfigHandler {
 	}
 
 	/**
-	 * »ı¼ºÀÚ
-	 * ÁöÁ¤ °æ·Î¿¡ ´ëÇÑ ¼³Á¤ÆÄÀÏÀ» ÀĞ¾î¼­ ÇÁ·ÎÆÛÆ¼¿¡ ·ÎµåÇÔ.
-	 * @param resourceName ¼³Á¤ÆÄÀÏÀÇ ÀüÃ¼°æ·Î.
-	 * @param charset ¼³Á¤ÆÄÀÏÀÇ Ä³¸¯ÅÍ ¼Â.
+	 * ìƒì„±ì
+	 * ì§€ì • ê²½ë¡œì— ëŒ€í•œ ì„¤ì •íŒŒì¼ì„ ì½ì–´ì„œ í”„ë¡œí¼í‹°ì— ë¡œë“œí•¨.
+	 * @param resourceName ì„¤ì •íŒŒì¼ì˜ ì „ì²´ê²½ë¡œ.
+	 * @param charset ì„¤ì •íŒŒì¼ì˜ ìºë¦­í„° ì…‹.
 	 */
 	public PropertiesHandler(String resourceName, String charset) throws Exception
 	{

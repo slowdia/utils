@@ -38,14 +38,14 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	
 	/**
 	 * Entity Constructor
-	 * @param ignoreCase Å°°ªÀÇ ´ë¼Ò¹®ÀÚ¸¦ µ¿ÀÏ Ã³¸® ¿©ºÎ, true:µ¿ÀÏ, false:´ë¼Ò¹®ÀÚ±¸ºĞ
+	 * @param ignoreCase í‚¤ê°’ì˜ ëŒ€ì†Œë¬¸ìë¥¼ ë™ì¼ ì²˜ë¦¬ ì—¬ë¶€, true:ë™ì¼, false:ëŒ€ì†Œë¬¸ìêµ¬ë¶„
 	 */
 	public Entity(boolean ignoreCase) {
 		ignoreCaseKey = ignoreCase;
 	}
 	
 	/**
-	 * Å°¸¦ ´ë¼Ò¹®ÀÚ ±¸ºĞÀ» Àû¿ëÇÏ¿© Àç»ı¼º
+	 * í‚¤ë¥¼ ëŒ€ì†Œë¬¸ì êµ¬ë¶„ì„ ì ìš©í•˜ì—¬ ì¬ìƒì„±
 	 * @param key
 	 * @return
 	 */
@@ -57,7 +57,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 
 	/**
-	 * ±âÁ¸ Entity¿¡ paramemter Entity µ¥ÀÌÅÍ¸¦ Ãß°¡ÇÑ´Ù.
+	 * ê¸°ì¡´ Entityì— paramemter Entity ë°ì´í„°ë¥¼ ì¶”ê°€í•œë‹¤.
 	 * @param param
 	 */
 	public void addEntity(Entity param)
@@ -74,7 +74,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 
 	/**
-	 * Hashtable µ¥ÀÌÅÍ¸¦ Entity¿¡ Ãß°¡ÇÑ´Ù.
+	 * Hashtable ë°ì´í„°ë¥¼ Entityì— ì¶”ê°€í•œë‹¤.
 	 * @param hashtable
 	 * @param fromCharset
 	 * @param toCharset
@@ -99,7 +99,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 
 	/**
-	 * HashMap µ¥ÀÌÅÍ¸¦ Entity¿¡ Ãß°¡ÇÑ´Ù.
+	 * HashMap ë°ì´í„°ë¥¼ Entityì— ì¶”ê°€í•œë‹¤.
 	 * @param hashMap
 	 * @param fromCharset
 	 * @param toCharset
@@ -124,7 +124,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 
 	/**
-	 * ResultSet ¿¡¼­ ÄÃ·³ ÀÌ¸§À» key·Î ÇØ¼­ ±× °ªÀ» Entity¿¡ ÀúÀåÇÑ´Ù.
+	 * ResultSet ì—ì„œ ì»¬ëŸ¼ ì´ë¦„ì„ keyë¡œ í•´ì„œ ê·¸ ê°’ì„ Entityì— ì €ì¥í•œë‹¤.
 	 * @param rs
 	 * @throws SQLException
 	 */
@@ -142,10 +142,10 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 
 	/**
-	 * ResultSet ¿¡¼­ ÄÃ·³ ÀÌ¸§À» key·Î ÇØ¼­ ±× °ªÀ» Entity ¿¡ ÀúÀå
+	 * ResultSet ì—ì„œ ì»¬ëŸ¼ ì´ë¦„ì„ keyë¡œ í•´ì„œ ê·¸ ê°’ì„ Entity ì— ì €ì¥
 	 * @param rs
-	 * @param fromCharset DB µ¥ÀÌÅÍ Ä³¸¯ÅÍ ¼Â
-	 * @param toCharset º¯°æµÉ Ä³¸¯ÅÍ ¼Â
+	 * @param fromCharset DB ë°ì´í„° ìºë¦­í„° ì…‹
+	 * @param toCharset ë³€ê²½ë  ìºë¦­í„° ì…‹
 	 * @throws Exception
 	 */
 	public void addResultSet(ResultSet rs, String fromCharset, String toCharset) throws Exception
@@ -162,7 +162,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * HttpServletRequest ÀÇ ÆÄ¶ó¸ŞÅÍµéÀ» Entity¿¡ ÀÔ·ÂÇÑ´Ù.
+	 * HttpServletRequest ì˜ íŒŒë¼ë©”í„°ë“¤ì„ Entityì— ì…ë ¥í•œë‹¤.
 	 * @param request HttpServletRequest
 	 * @throws Exception
 	 */
@@ -183,10 +183,10 @@ public class Entity extends HashMap<String, Object> implements Serializable {
     }
 	
 	/**
-	 * HttpServletRequest ÀÇ ÆÄ¶ó¸ŞÅÍµéÀ» Entity¿¡ ÀÔ·ÂÇÑ´Ù.
+	 * HttpServletRequest ì˜ íŒŒë¼ë©”í„°ë“¤ì„ Entityì— ì…ë ¥í•œë‹¤.
 	 * @param request HttpServletRequest
-	 * @param fromCharset ÇöÀç µ¥ÀÌÅÍÀÇ Ä³¸¯ÅÍ ¼Â
-	 * @param toCharset º¯°æ µÉ Ä³¸¯ÅÍ ¼Â
+	 * @param fromCharset í˜„ì¬ ë°ì´í„°ì˜ ìºë¦­í„° ì…‹
+	 * @param toCharset ë³€ê²½ ë  ìºë¦­í„° ì…‹
 	 * @throws Exception
 	 */
     public void addRequestParameter(HttpServletRequest request, String fromCharset, String toCharset) throws Exception
@@ -210,7 +210,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
     }
 	
 	/**
-	 * String µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÑ´Ù.
+	 * String ë°ì´í„°ë¥¼ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -220,7 +220,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * String ¹è¿­ µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÑ´Ù.
+	 * String ë°°ì—´ ë°ì´í„°ë¥¼ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -230,7 +230,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * ¹ÙÀÌÆ® µ¥ÀÌÅÍ¸¦ StringÀ¸·Î º¯È¯ÇÏ¿© ÀÔ·ÂÇÑ´Ù.
+	 * ë°”ì´íŠ¸ ë°ì´í„°ë¥¼ Stringìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -240,7 +240,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * ¹ÙÀÌÆ® ¹è¿­ µ¥ÀÌÅÍ¸¦ StringÀ¸·Î º¯È¯ÇÏ¿© ÀÔ·ÂÇÑ´Ù.
+	 * ë°”ì´íŠ¸ ë°°ì—´ ë°ì´í„°ë¥¼ Stringìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -250,8 +250,8 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * BLOB µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÑ´Ù.<br>
-	 * BLOB Ã³¸®½Ã byte ¹è¿­ ±×´ë·Î ÀÔ·Â
+	 * BLOB ë°ì´í„°ë¥¼ ì…ë ¥í•œë‹¤.<br>
+	 * BLOB ì²˜ë¦¬ì‹œ byte ë°°ì—´ ê·¸ëŒ€ë¡œ ì…ë ¥
 	 * @param key
 	 * @param value
 	 */
@@ -261,7 +261,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * char µ¥ÀÌÅÍ¸¦ StringÀ¸·Î º¯È¯ÇÏ¿© ÀÔ·ÂÇÑ´Ù.
+	 * char ë°ì´í„°ë¥¼ Stringìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -271,7 +271,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * char ¹è¿­ µ¥ÀÌÅÍ¸¦ StringÀ¸·Î º¯È¯ÇÏ¿© ÀÔ·ÂÇÑ´Ù.
+	 * char ë°°ì—´ ë°ì´í„°ë¥¼ Stringìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -281,7 +281,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * boolean µ¥ÀÌÅÍ¸¦ StringÀ¸·Î º¯È¯ÇÏ¿© ÀÔ·ÂÇÑ´Ù.
+	 * boolean ë°ì´í„°ë¥¼ Stringìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -291,7 +291,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * short µ¥ÀÌÅÍ¸¦ StringÀ¸·Î º¯È¯ÇÏ¿© ÀÔ·ÂÇÑ´Ù.
+	 * short ë°ì´í„°ë¥¼ Stringìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -301,7 +301,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * int µ¥ÀÌÅÍ¸¦ StringÀ¸·Î º¯È¯ÇÏ¿© ÀÔ·ÂÇÑ´Ù.
+	 * int ë°ì´í„°ë¥¼ Stringìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -311,7 +311,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * float µ¥ÀÌÅÍ¸¦ StringÀ¸·Î º¯È¯ÇÏ¿© ÀÔ·ÂÇÑ´Ù.
+	 * float ë°ì´í„°ë¥¼ Stringìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -321,7 +321,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * double µ¥ÀÌÅÍ¸¦ StringÀ¸·Î º¯È¯ÇÏ¿© ÀÔ·ÂÇÑ´Ù.
+	 * double ë°ì´í„°ë¥¼ Stringìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -331,7 +331,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * long µ¥ÀÌÅÍ¸¦ StringÀ¸·Î º¯È¯ÇÏ¿© ÀÔ·ÂÇÑ´Ù.
+	 * long ë°ì´í„°ë¥¼ Stringìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -341,7 +341,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * Date µ¥ÀÌÅÍ¸¦ String ÇüÅÂÈ£ º¯È¯ÇÏ¿© ÀÔ·ÂÇÑ´Ù.<br>
+	 * Date ë°ì´í„°ë¥¼ String í˜•íƒœí˜¸ ë³€í™˜í•˜ì—¬ ì…ë ¥í•œë‹¤.<br>
 	 * format : yyyy-MM-dd HH24:mi:ss
 	 * @param key
 	 * @param value
@@ -355,7 +355,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * Vector µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÑ´Ù.
+	 * Vector ë°ì´í„°ë¥¼ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -365,7 +365,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * ArrayList µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÑ´Ù.
+	 * ArrayList ë°ì´í„°ë¥¼ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -375,7 +375,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * Hashtable µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÑ´Ù.
+	 * Hashtable ë°ì´í„°ë¥¼ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -385,7 +385,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * HashMap µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÑ´Ù.
+	 * HashMap ë°ì´í„°ë¥¼ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -395,7 +395,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * Entity µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÑ´Ù.
+	 * Entity ë°ì´í„°ë¥¼ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -405,7 +405,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * Object µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÑ´Ù.
+	 * Object ë°ì´í„°ë¥¼ ì…ë ¥í•œë‹¤.
 	 * @param key
 	 * @param value
 	 */
@@ -415,7 +415,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * String ÇüÅÂÀÇ µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
+	 * String í˜•íƒœì˜ ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
 	 * @param key
 	 * @return
 	 */
@@ -439,7 +439,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * String ¹è¿­ ÇüÅÂÀÇ µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
+	 * String ë°°ì—´ í˜•íƒœì˜ ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
 	 * @param key
 	 * @return
 	 */
@@ -461,7 +461,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * byte ÇüÅÂÀÇ µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
+	 * byte í˜•íƒœì˜ ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
 	 * @param key
 	 * @return
 	 */
@@ -476,7 +476,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * byte ¹è¿­ ÇüÅÂÀÇ µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
+	 * byte ë°°ì—´ í˜•íƒœì˜ ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
 	 * @param key
 	 * @return
 	 */
@@ -491,7 +491,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * char ÇüÅÂÀÇ µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
+	 * char í˜•íƒœì˜ ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
 	 * @param key
 	 * @return
 	 */
@@ -506,7 +506,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * char ¹è¿­ ÇüÅÂÀÇ µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
+	 * char ë°°ì—´ í˜•íƒœì˜ ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
 	 * @param key
 	 * @return
 	 */
@@ -521,7 +521,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * boolean µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
+	 * boolean ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
 	 * @param key
 	 * @return
 	 */
@@ -544,7 +544,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * short µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
+	 * short ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
 	 * @param key
 	 * @return
 	 */
@@ -559,7 +559,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * int µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
+	 * int ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
 	 * @param key
 	 * @return
 	 */
@@ -574,7 +574,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * float µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
+	 * float ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
 	 * @param key
 	 * @return
 	 */
@@ -589,7 +589,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * double µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
+	 * double ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
 	 * @param key
 	 * @return
 	 */
@@ -604,7 +604,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * long µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
+	 * long ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
 	 * @param key
 	 * @return
 	 */
@@ -619,7 +619,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * Date µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.<br>
+	 * Date ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.<br>
 	 * format : yyyy-MM-dd HH24:mi:ss
 	 * @param key
 	 * @return
@@ -643,9 +643,9 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * Date µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
-	 * @param key µ¥ÀÌÅÍ ÃßÃâ Å°
-	 * @param format ³¯Â¥ Ãâ·Â Æ÷¸Ë
+	 * Date ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
+	 * @param key ë°ì´í„° ì¶”ì¶œ í‚¤
+	 * @param format ë‚ ì§œ ì¶œë ¥ í¬ë§·
 	 * @return
 	 */
 	public java.util.Date getDate(String key, String format)
@@ -667,8 +667,8 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * Vector µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
-	 * @param key µ¥ÀÌÅÍ ÃßÃâ Å°
+	 * Vector ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
+	 * @param key ë°ì´í„° ì¶”ì¶œ í‚¤
 	 * @return
 	 */
 	public Vector<Object> getVector(String key)
@@ -685,8 +685,8 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * ArrayList µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
-	 * @param key µ¥ÀÌÅÍ ÃßÃâ Å°
+	 * ArrayList ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
+	 * @param key ë°ì´í„° ì¶”ì¶œ í‚¤
 	 * @return
 	 */
 	public ArrayList<Object> getArrayList(String key)
@@ -703,8 +703,8 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * ArrayList µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
-	 * @param key µ¥ÀÌÅÍ ÃßÃâ Å°
+	 * ArrayList ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
+	 * @param key ë°ì´í„° ì¶”ì¶œ í‚¤
 	 * @return
 	 */
 	public Hashtable<String, Object> getHashtable(String key)
@@ -721,8 +721,8 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * HashMap µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
-	 * @param key µ¥ÀÌÅÍ ÃßÃâ Å°
+	 * HashMap ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
+	 * @param key ë°ì´í„° ì¶”ì¶œ í‚¤
 	 * @return
 	 */
 	public HashMap<String, Object> getHashMap(String key) {
@@ -738,8 +738,8 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * Entity µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
-	 * @param key µ¥ÀÌÅÍ ÃßÃâ Å°
+	 * Entity ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
+	 * @param key ë°ì´í„° ì¶”ì¶œ í‚¤
 	 * @return
 	 */
 	public Entity getEntity(String key)
@@ -756,8 +756,8 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * Entity µ¥ÀÌÅÍ¸¦ ¾ò´Â´Ù.
-	 * @param key µ¥ÀÌÅÍ ÃßÃâ Å°
+	 * Entity ë°ì´í„°ë¥¼ ì–»ëŠ”ë‹¤.
+	 * @param key ë°ì´í„° ì¶”ì¶œ í‚¤
 	 * @return
 	 */
 	public Object getObject(String key)
@@ -774,7 +774,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * Å°·Î ÀúÀåµÈ µ¥ÀÌÅÍ¸¦ ¿£Æ¼Æ¼¿¡¼­ Á¦°ÅÇÑ´Ù.
+	 * í‚¤ë¡œ ì €ì¥ëœ ë°ì´í„°ë¥¼ ì—”í‹°í‹°ì—ì„œ ì œê±°í•œë‹¤.
 	 * @param key
 	 */
 	public void remove(String key)
@@ -783,7 +783,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * °Ë»ö°ªÀ» µ¥ÀÌÅÍ·Î ÀÏÄ¡ÇÏ´Â ¿£Æ¼Æ¼ÀÇ Ã¹¹øÂ° Å°¸¦ Ã£´Â´Ù.
+	 * ê²€ìƒ‰ê°’ì„ ë°ì´í„°ë¡œ ì¼ì¹˜í•˜ëŠ” ì—”í‹°í‹°ì˜ ì²«ë²ˆì§¸ í‚¤ë¥¼ ì°¾ëŠ”ë‹¤.
 	 * @param searchValue
 	 * @return
 	 */
@@ -807,8 +807,8 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * °Ë»ö°ªÀ» µ¥ÀÌÅÍ·Î ÀÏÄ¡ÇÏ´Â ¿£Æ¼Æ¼ÀÇ Å° ¸®½ºÆ®¸¦ Ã£´Â´Ù.
-	 * @param searchValue °Ë»ö µ¥ÀÌÅÍ
+	 * ê²€ìƒ‰ê°’ì„ ë°ì´í„°ë¡œ ì¼ì¹˜í•˜ëŠ” ì—”í‹°í‹°ì˜ í‚¤ ë¦¬ìŠ¤íŠ¸ë¥¼ ì°¾ëŠ”ë‹¤.
+	 * @param searchValue ê²€ìƒ‰ ë°ì´í„°
 	 * @return
 	 */
 	public ArrayList<String> getKeys(String searchValue)
@@ -831,7 +831,7 @@ public class Entity extends HashMap<String, Object> implements Serializable {
 	}
 	
 	/**
-	 * ¿£Æ¼Æ¼ÀÇ Å° ¸®½ºÆ®¸¦ Ã£´Â´Ù.
+	 * ì—”í‹°í‹°ì˜ í‚¤ ë¦¬ìŠ¤íŠ¸ë¥¼ ì°¾ëŠ”ë‹¤.
 	 * @return
 	 */
 	public ArrayList<String> getKeys()

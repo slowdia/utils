@@ -15,10 +15,10 @@ public class Base64
 {
 	
 	/**
-	 * ÀÔ·ÂµÈ ¹®ÀÚ¿­ inputstreamÀ» ÀÎÄÚµùÇÏ¿© outputstream¿¡ ÀÔ·ÂÇÑ´Ù.
-	 * @param inputstream ÀÎÄÚµù ÇÒ inputstream
-	 * @param outputstream ÀÎÄÚµùµÈ ¹®ÀÚ¿­À» Ãâ·ÂÇÒ outputstream
-	 * @param lineLength ÁÙ³»¸²ÀÌ µé¾î°¡´Â ±æÀÌ
+	 * ì…ë ¥ëœ ë¬¸ìì—´ inputstreamì„ ì¸ì½”ë”©í•˜ì—¬ outputstreamì— ì…ë ¥í•œë‹¤.
+	 * @param inputstream ì¸ì½”ë”© í•  inputstream
+	 * @param outputstream ì¸ì½”ë”©ëœ ë¬¸ìì—´ì„ ì¶œë ¥í•  outputstream
+	 * @param lineLength ì¤„ë‚´ë¦¼ì´ ë“¤ì–´ê°€ëŠ” ê¸¸ì´
 	 * @throws IOException
 	 */
 	public static void encode(InputStream inputstream, OutputStream outputstream, int lineLength)
@@ -33,7 +33,7 @@ public class Base64
 			encodeBlock(src, j, desc);
 			outputstream.write(desc);
 			i += 4;
-			if(lineLength != 0 && lineLength <= i) {	// ´º¶óÀÎÀ» °­Á¦ÀûÀ¸·Î ÇØÁÖ´Â °Í..
+			if(lineLength != 0 && lineLength <= i) {	// ë‰´ë¼ì¸ì„ ê°•ì œì ìœ¼ë¡œ í•´ì£¼ëŠ” ê²ƒ..
 				outputstream.write(13);
 				outputstream.write(10);
 				i = 0;
@@ -42,9 +42,9 @@ public class Base64
 	}
 
 	/**
-	 * ÀÔ·ÂµÈ ¹ÙÀÌÆ®¹è¿­ ¹®ÀÚ¿­À» ÀÎÄÚµåÇÏ¿© ¹ÙÀÌÆ®¹è¿­·Î ¹İÈ¯ÇÑ´Ù.
-	 * @param src µğÄÚµù °ª
-	 * @return ÀÎÄÚµù °ª
+	 * ì…ë ¥ëœ ë°”ì´íŠ¸ë°°ì—´ ë¬¸ìì—´ì„ ì¸ì½”ë“œí•˜ì—¬ ë°”ì´íŠ¸ë°°ì—´ë¡œ ë°˜í™˜í•œë‹¤.
+	 * @param src ë””ì½”ë”© ê°’
+	 * @return ì¸ì½”ë”© ê°’
 	 * @throws IOException
 	 */
 	public static byte[] encode(byte src[]) throws IOException
@@ -53,10 +53,10 @@ public class Base64
 	}
 
 	/**
-	 * ÀÔ·ÂµÈ ¹ÙÀÌÆ®¹è¿­ ¹®ÀÚ¿­À» ÀÎÄÚµåÇÏ¿© ¹ÙÀÌÆ®¹è¿­·Î ¹İÈ¯ÇÑ´Ù.
-	 * @param src µğÄÚµù °ª
-	 * @return ÀÎÄÚµù °ª
-	 * @param lineLength ÁÙ³»¸²ÀÌ µé¾î°¡´Â ±æÀÌ
+	 * ì…ë ¥ëœ ë°”ì´íŠ¸ë°°ì—´ ë¬¸ìì—´ì„ ì¸ì½”ë“œí•˜ì—¬ ë°”ì´íŠ¸ë°°ì—´ë¡œ ë°˜í™˜í•œë‹¤.
+	 * @param src ë””ì½”ë”© ê°’
+	 * @return ì¸ì½”ë”© ê°’
+	 * @param lineLength ì¤„ë‚´ë¦¼ì´ ë“¤ì–´ê°€ëŠ” ê¸¸ì´
 	 * @throws IOException
 	 */
 	public static byte[] encode(byte src[], int lineLength) throws IOException
@@ -68,9 +68,9 @@ public class Base64
 	}
 
 	/**
-	 * ÀÔ·ÂµÈ µğÄÚµù °ªÀ» ÀÎÄÚµùÇÏ¿© ¹İÈ¯ÇÑ´Ù.
-	 * @param data µğÄÚµù ¹®ÀÚ¿­
-	 * @return ÀÎÄÚµù ¹®ÀÚ¿­
+	 * ì…ë ¥ëœ ë””ì½”ë”© ê°’ì„ ì¸ì½”ë”©í•˜ì—¬ ë°˜í™˜í•œë‹¤.
+	 * @param data ë””ì½”ë”© ë¬¸ìì—´
+	 * @return ì¸ì½”ë”© ë¬¸ìì—´
 	 */
 	public static String encode(String src) throws IOException
 	{
@@ -78,10 +78,10 @@ public class Base64
 	}
 
 	/**
-	 * ÀÔ·ÂµÈ µğÄÚµù °ªÀ» ÀÎÄÚµùÇÏ¿© ¹İÈ¯ÇÑ´Ù.
-	 * @param data µğÄÚµù ¹®ÀÚ¿­
-	 * @param lineLength ÁÙ³»¸²ÀÌ µé¾î°¡´Â ±æÀÌ
-	 * @return ÀÎÄÚµù ¹®ÀÚ¿­
+	 * ì…ë ¥ëœ ë””ì½”ë”© ê°’ì„ ì¸ì½”ë”©í•˜ì—¬ ë°˜í™˜í•œë‹¤.
+	 * @param data ë””ì½”ë”© ë¬¸ìì—´
+	 * @param lineLength ì¤„ë‚´ë¦¼ì´ ë“¤ì–´ê°€ëŠ” ê¸¸ì´
+	 * @return ì¸ì½”ë”© ë¬¸ìì—´
 	 */
 	public static String encode(String src, int lineLength) throws IOException
 	{
@@ -91,10 +91,10 @@ public class Base64
 	}
 
 	/**
-	 * ÀÔ·ÂµÈ µğÄÚµù °ªÀ» ÀÎÄÚµùÇÏ¿© ¹İÈ¯ÇÑ´Ù.
-	 * @param src µğÄÚµù ÇÒ ¹®ÀÚ¿­
-	 * @param charset ¹®ÀÚ¿­À» ¹ÙÀÌÆ®¹è¿­·Î º¯È°ÇÒ¶§ »ç¿ëÇÒ Ä³¸¯ÅÍ ¼Â
-	 * @return ÀÎÄÚµùµÈ ¹®ÀÚ¿­
+	 * ì…ë ¥ëœ ë””ì½”ë”© ê°’ì„ ì¸ì½”ë”©í•˜ì—¬ ë°˜í™˜í•œë‹¤.
+	 * @param src ë””ì½”ë”© í•  ë¬¸ìì—´
+	 * @param charset ë¬¸ìì—´ì„ ë°”ì´íŠ¸ë°°ì—´ë¡œ ë³€í™œí• ë•Œ ì‚¬ìš©í•  ìºë¦­í„° ì…‹
+	 * @return ì¸ì½”ë”©ëœ ë¬¸ìì—´
 	 */
 	public static String encode(String src, String charset) throws IOException
 	{
@@ -102,10 +102,10 @@ public class Base64
 	}
 
 	/**
-	 * ÀÔ·ÂµÈ µğÄÚµù °ªÀ» ÀÎÄÚµùÇÏ¿© ¹İÈ¯ÇÑ´Ù.
-	 * @param src µğÄÚµù ÇÒ ¹®ÀÚ¿­
-	 * @param charset ¹®ÀÚ¿­À» ¹ÙÀÌÆ®¹è¿­·Î º¯È°ÇÒ¶§ »ç¿ëÇÒ Ä³¸¯ÅÍ ¼Â
-	 * @param lineLength ÁÙ³»¸²ÀÌ µé¾î°¡´Â ±æÀÌ
+	 * ì…ë ¥ëœ ë””ì½”ë”© ê°’ì„ ì¸ì½”ë”©í•˜ì—¬ ë°˜í™˜í•œë‹¤.
+	 * @param src ë””ì½”ë”© í•  ë¬¸ìì—´
+	 * @param charset ë¬¸ìì—´ì„ ë°”ì´íŠ¸ë°°ì—´ë¡œ ë³€í™œí• ë•Œ ì‚¬ìš©í•  ìºë¦­í„° ì…‹
+	 * @param lineLength ì¤„ë‚´ë¦¼ì´ ë“¤ì–´ê°€ëŠ” ê¸¸ì´
 	 * @return
 	 * @throws IOException
 	 */
@@ -119,8 +119,8 @@ public class Base64
 	}
 
 	/**
-	 * 3¹ÙÀÌÆ® ¹®ÀÚ¸¦ 4¹ÙÀÌÆ® ÀÎÄÚµùµÈ ¹ÙÀÌÆ® ¹è¿­·Î º¯È¯ÇÏ¿© ÀÔ·Â<br>
-	 * ºí·° ÇÏ³ª¸¦ ÀÎÄÚµùÇÑ´Ù.
+	 * 3ë°”ì´íŠ¸ ë¬¸ìë¥¼ 4ë°”ì´íŠ¸ ì¸ì½”ë”©ëœ ë°”ì´íŠ¸ ë°°ì—´ë¡œ ë³€í™˜í•˜ì—¬ ì…ë ¥<br>
+	 * ë¸”ëŸ­ í•˜ë‚˜ë¥¼ ì¸ì½”ë”©í•œë‹¤.
 	 * @param src
 	 * @param i
 	 * @param desc
@@ -168,8 +168,8 @@ public class Base64
 	}
 
 	/**
-	 * base64 ¹ÙÀÌÆ® ¹®ÀÚ °ËÁõ<br>
-	 * ÁÙ³»¸²ÀÌ³ª ºóÄ­ °°Àº°Å ¾ø¾Ö´Â°ÅÀÓ
+	 * base64 ë°”ì´íŠ¸ ë¬¸ì ê²€ì¦<br>
+	 * ì¤„ë‚´ë¦¼ì´ë‚˜ ë¹ˆì¹¸ ê°™ì€ê±° ì—†ì• ëŠ”ê±°ì„
 	 * @param byte0
 	 * @return
 	 */
@@ -204,11 +204,11 @@ public class Base64
 	}
 
 	/**
-	 * 4¹ÙÀÌÆ® ÀÎÄÚµù ¹ÙÀÌÆ® ¹è¿­À» 3¹ÙÀÌÆ® µğÄÚµå ¹ÙÀÌÆ® ¹è¿­·Î º¯È¯ÇÏ°í º¯È¯µÈ °á°úÀÇ ±æÀÌ¸¦ ¸®ÅÏ<br>
-	 * ºí·° ÇÏ³ª¸¦ µğÄÚµùÇÑ´Ù.
+	 * 4ë°”ì´íŠ¸ ì¸ì½”ë”© ë°”ì´íŠ¸ ë°°ì—´ì„ 3ë°”ì´íŠ¸ ë””ì½”ë“œ ë°”ì´íŠ¸ ë°°ì—´ë¡œ ë³€í™˜í•˜ê³  ë³€í™˜ëœ ê²°ê³¼ì˜ ê¸¸ì´ë¥¼ ë¦¬í„´<br>
+	 * ë¸”ëŸ­ í•˜ë‚˜ë¥¼ ë””ì½”ë”©í•œë‹¤.
 	 * @param src
 	 * @param dest
-	 * @return µğÄÚµùµÈ ¹è¿­ ±æÀÌ
+	 * @return ë””ì½”ë”©ëœ ë°°ì—´ ê¸¸ì´
 	 */
 	private static final int decodeBlock(byte src[], byte dest[])
 	{
@@ -247,10 +247,10 @@ public class Base64
 	}
 	
 	/**
-	 * ÀÔ·ÂµÈ ½ºÆ®¸²À» µğÄÚµå ÇÏ¿© Ãâ·Â ½ºÆ®¸²À¸·Î µ¥ÀÌÅÍ¸¦ Àü´ŞÇÔ.
-	 * @param inputstream µğÄÚµåÇÒ ´ë»ó
-	 * @param outputstream µğÄÚµå Ãâ·ÂÀ» ¹İÈ¯ÇÒ ´ë»ó
-	 * @throws IOException µğÄÚµù¿¡ ½ÇÆĞÇßÀ» °æ¿ì¿¡ ¿¹¿Ü¸¦ ¹İÈ¯
+	 * ì…ë ¥ëœ ìŠ¤íŠ¸ë¦¼ì„ ë””ì½”ë“œ í•˜ì—¬ ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œ ë°ì´í„°ë¥¼ ì „ë‹¬í•¨.
+	 * @param inputstream ë””ì½”ë“œí•  ëŒ€ìƒ
+	 * @param outputstream ë””ì½”ë“œ ì¶œë ¥ì„ ë°˜í™˜í•  ëŒ€ìƒ
+	 * @throws IOException ë””ì½”ë”©ì— ì‹¤íŒ¨í–ˆì„ ê²½ìš°ì— ì˜ˆì™¸ë¥¼ ë°˜í™˜
 	 */
 	public static void decode(InputStream inputstream, OutputStream outputstream)
 		throws IOException
@@ -283,9 +283,9 @@ public class Base64
 	}
 
 	/**
-	 * base64 ÀÎÄÚµå ¹ÙÀÌÆ® ¹è¿­À» µğÄÚµåÇÏ¿© ¹ÙÀÌÆ® ¹è¿­·Î ¹İÈ¯ÇÑ´Ù.
-	 * @param src base64 ÀÎÄÚµå µÈ ¹ÙÀÌÆ® ¹è¿­
-	 * @return µğÄÚµå µÈ ¹ÙÀÌÆ® ¹è¿­
+	 * base64 ì¸ì½”ë“œ ë°”ì´íŠ¸ ë°°ì—´ì„ ë””ì½”ë“œí•˜ì—¬ ë°”ì´íŠ¸ ë°°ì—´ë¡œ ë°˜í™˜í•œë‹¤.
+	 * @param src base64 ì¸ì½”ë“œ ëœ ë°”ì´íŠ¸ ë°°ì—´
+	 * @return ë””ì½”ë“œ ëœ ë°”ì´íŠ¸ ë°°ì—´
 	 * @throws IOException
 	 */
 	public static byte[] decode(byte src[]) throws IOException
@@ -297,9 +297,9 @@ public class Base64
 	}
 
 	/**
-	 * ÀÔ·ÂµÈ µ¥ÀÌÅÍ ½ºÆ®¸µÀ» ¹ÙÀÌÆ® ¹è¿­·Î º¯È¯ÇÏ¿© base64 µğÄÚµùÀ» ÇÑ ÈÄ Ä³¸¯ÅÍ ¼ÂÀ» Àû¿ëÇÏ¿© ½ºÆ®¸µÀ¸·Î º¯È¯ÇÑ´Ù.
-	 * @param src base64 ÀÎÄÚµùµÈ ¹®ÀÚ¿­
-	 * @param charset »ı¼ºµÉ String¿¡ Àû¿ëµÉ ¹®ÀÚ¼Â
+	 * ì…ë ¥ëœ ë°ì´í„° ìŠ¤íŠ¸ë§ì„ ë°”ì´íŠ¸ ë°°ì—´ë¡œ ë³€í™˜í•˜ì—¬ base64 ë””ì½”ë”©ì„ í•œ í›„ ìºë¦­í„° ì…‹ì„ ì ìš©í•˜ì—¬ ìŠ¤íŠ¸ë§ìœ¼ë¡œ ë³€í™˜í•œë‹¤.
+	 * @param src base64 ì¸ì½”ë”©ëœ ë¬¸ìì—´
+	 * @param charset ìƒì„±ë  Stringì— ì ìš©ë  ë¬¸ìì…‹
 	 * @return
 	 */
 	public static String decode(String src, String charset)
@@ -317,8 +317,8 @@ public class Base64
 	}
 
 	/**
-	 * ÀÔ·ÂµÈ µ¥ÀÌÅÍ ½ºÆ®¸µÀ» ¹ÙÀÌÆ® ¹è¿­·Î º¯È¯ÇÏ¿© base64 µğÄÚµùÀ» ÇÑ ÈÄ Ä³¸¯ÅÍ ¼ÂÀ» Àû¿ëÇÏ¿© ½ºÆ®¸µÀ¸·Î º¯È¯ÇÑ´Ù.
-	 * @param data base64ÀÎÄÚµùµÈ ¹®ÀÚ¿­
+	 * ì…ë ¥ëœ ë°ì´í„° ìŠ¤íŠ¸ë§ì„ ë°”ì´íŠ¸ ë°°ì—´ë¡œ ë³€í™˜í•˜ì—¬ base64 ë””ì½”ë”©ì„ í•œ í›„ ìºë¦­í„° ì…‹ì„ ì ìš©í•˜ì—¬ ìŠ¤íŠ¸ë§ìœ¼ë¡œ ë³€í™˜í•œë‹¤.
+	 * @param data base64ì¸ì½”ë”©ëœ ë¬¸ìì—´
 	 * @return
 	 */
 	public static String decode(String src)

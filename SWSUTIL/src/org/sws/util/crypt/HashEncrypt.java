@@ -4,7 +4,7 @@ import java.io.InputStream;
 import java.security.MessageDigest;
 
 /**
- * ´Ü¹æÇâ ÇØ½Ã ¾ÏÈ£È­
+ * ë‹¨ë°©í–¥ í•´ì‹œ ì•”í˜¸í™”
  * @author ago
  *
  */
@@ -14,9 +14,9 @@ public class HashEncrypt {
 	private static final String DEFAULT_ALGORITHM = "SHA-256";
 	
 	/**
-	 * ±âº» ¾Ë°í¸®ÁòÀ» ÀÌ¿ëÇÏ¿© ÇØ½¬ ¾ÏÈ£È­ÇÑ´Ù.
-	 * @param input ¾ÏÈ£È­ ÇÒ ¼Ò½º byte[]
-	 * @return ¾ÏÈ£È­ µÈ µ¥ÀÌÅÍ byte[]
+	 * ê¸°ë³¸ ì•Œê³ ë¦¬ì¦˜ì„ ì´ìš©í•˜ì—¬ í•´ì‰¬ ì•”í˜¸í™”í•œë‹¤.
+	 * @param input ì•”í˜¸í™” í•  ì†ŒìŠ¤ byte[]
+	 * @return ì•”í˜¸í™” ëœ ë°ì´í„° byte[]
 	 * @throws Exception
 	 */
 	public static byte[] getHash(byte[] input) throws Exception
@@ -25,10 +25,10 @@ public class HashEncrypt {
 	}
 	
 	/**
-	 * ÁöÁ¤µÈ ¾Ë°í¸®ÁòÀ» ÀÌ¿ëÇÏ¿© ÇØ½¬ ¾ÏÈ£È­ÇÑ´Ù.
-	 * @param input ¾ÏÈ£È­ ÇÒ ¼Ò½º byte[]
-	 * @param algorithm Àû¿ëÇÒ ÇØ½Ã ¾Ë°í¸®Áò
-	 * @return ¾ÏÈ£È­ µÈ µ¥ÀÌÅÍ byte[]
+	 * ì§€ì •ëœ ì•Œê³ ë¦¬ì¦˜ì„ ì´ìš©í•˜ì—¬ í•´ì‰¬ ì•”í˜¸í™”í•œë‹¤.
+	 * @param input ì•”í˜¸í™” í•  ì†ŒìŠ¤ byte[]
+	 * @param algorithm ì ìš©í•  í•´ì‹œ ì•Œê³ ë¦¬ì¦˜
+	 * @return ì•”í˜¸í™” ëœ ë°ì´í„° byte[]
 	 * @throws Exception
 	 */
 	public static byte[] getHash(byte[] input, String algorithm) throws Exception
@@ -38,9 +38,9 @@ public class HashEncrypt {
 	}
 
 	/**
-	 * ±âº» ¾Ë°í¸®ÁòÀ» ÀÌ¿ëÇÏ¿© ÇØ½¬ ¾ÏÈ£È­ÇÑ´Ù.
-	 * @param input ¾ÏÈ£È­ ÇÒ ¼Ò½º InputStream
-	 * @return ¾ÏÈ£È­ µÈ µ¥ÀÌÅÍ byte[]
+	 * ê¸°ë³¸ ì•Œê³ ë¦¬ì¦˜ì„ ì´ìš©í•˜ì—¬ í•´ì‰¬ ì•”í˜¸í™”í•œë‹¤.
+	 * @param input ì•”í˜¸í™” í•  ì†ŒìŠ¤ InputStream
+	 * @return ì•”í˜¸í™” ëœ ë°ì´í„° byte[]
 	 * @throws Exception
 	 */
 	public static byte[] getHash(InputStream input) throws Exception 
@@ -49,10 +49,10 @@ public class HashEncrypt {
 	}
 
 	/**
-	 * ÁöÁ¤µÈ ¾Ë°í¸®ÁòÀ» ÀÌ¿ëÇÏ¿© ÇØ½¬ ¾ÏÈ£È­ÇÑ´Ù.
-	 * @param input ¾ÏÈ£È­ ÇÒ ¼Ò½º InputStream
-	 * @param algorithm Àû¿ëÇÒ ÇØ½Ã ¾Ë°í¸®Áò
-	 * @return ¾ÏÈ£È­ µÈ µ¥ÀÌÅÍ byte[]
+	 * ì§€ì •ëœ ì•Œê³ ë¦¬ì¦˜ì„ ì´ìš©í•˜ì—¬ í•´ì‰¬ ì•”í˜¸í™”í•œë‹¤.
+	 * @param input ì•”í˜¸í™” í•  ì†ŒìŠ¤ InputStream
+	 * @param algorithm ì ìš©í•  í•´ì‹œ ì•Œê³ ë¦¬ì¦˜
+	 * @return ì•”í˜¸í™” ëœ ë°ì´í„° byte[]
 	 * @throws Exception
 	 */
 	public static byte[] getHash(InputStream input, String algorithm) throws Exception 
@@ -67,9 +67,9 @@ public class HashEncrypt {
 	}
 	
 	/**
-	 * ±âº» ¾Ë°í¸®ÁòÀ» ÀÌ¿ëÇÏ¿© ÇØ½¬ ¾ÏÈ£È­ÇÑ´Ù.
-	 * @param input ¾ÏÈ£È­ ÇÒ ¼Ò½º byte[]
-	 * @return ¾ÏÈ£È­ µÈ µ¥ÀÌÅÍ String
+	 * ê¸°ë³¸ ì•Œê³ ë¦¬ì¦˜ì„ ì´ìš©í•˜ì—¬ í•´ì‰¬ ì•”í˜¸í™”í•œë‹¤.
+	 * @param input ì•”í˜¸í™” í•  ì†ŒìŠ¤ byte[]
+	 * @return ì•”í˜¸í™” ëœ ë°ì´í„° String
 	 * @throws Exception
 	 */
 	public static String getHashString(byte[] input) throws Exception
@@ -78,10 +78,10 @@ public class HashEncrypt {
 	}
 	
 	/**
-	 * ÁöÁ¤µÈ ¾Ë°í¸®ÁòÀ» ÀÌ¿ëÇÏ¿© ÇØ½¬ ¾ÏÈ£È­ÇÑ´Ù.
-	 * @param input ¾ÏÈ£È­ ÇÒ ¼Ò½º byte[]
-	 * @param algorithm Àû¿ëÇÒ ÇØ½Ã ¾Ë°í¸®Áò
-	 * @return ¾ÏÈ£È­ µÈ µ¥ÀÌÅÍ String
+	 * ì§€ì •ëœ ì•Œê³ ë¦¬ì¦˜ì„ ì´ìš©í•˜ì—¬ í•´ì‰¬ ì•”í˜¸í™”í•œë‹¤.
+	 * @param input ì•”í˜¸í™” í•  ì†ŒìŠ¤ byte[]
+	 * @param algorithm ì ìš©í•  í•´ì‹œ ì•Œê³ ë¦¬ì¦˜
+	 * @return ì•”í˜¸í™” ëœ ë°ì´í„° String
 	 * @throws Exception
 	 */
 	public static String getHashString(byte[] input, String algorithm) throws Exception
@@ -96,9 +96,9 @@ public class HashEncrypt {
 	}
 	
 	/**
-	 * ±âº» ¾Ë°í¸®ÁòÀ» ÀÌ¿ëÇÏ¿© ÇØ½¬ ¾ÏÈ£È­ÇÑ´Ù.
-	 * @param input ¾ÏÈ£È­ ÇÒ ¼Ò½º String
-	 * @return ¾ÏÈ£È­ µÈ µ¥ÀÌÅÍ String
+	 * ê¸°ë³¸ ì•Œê³ ë¦¬ì¦˜ì„ ì´ìš©í•˜ì—¬ í•´ì‰¬ ì•”í˜¸í™”í•œë‹¤.
+	 * @param input ì•”í˜¸í™” í•  ì†ŒìŠ¤ String
+	 * @return ì•”í˜¸í™” ëœ ë°ì´í„° String
 	 * @throws Exception
 	 */
 	public static String getHashString(String input) throws Exception
@@ -107,10 +107,10 @@ public class HashEncrypt {
 	}
 	
 	/**
-	 * ÁöÁ¤µÈ ¾Ë°í¸®ÁòÀ» ÀÌ¿ëÇÏ¿© ÇØ½¬ ¾ÏÈ£È­ÇÑ´Ù.
-	 * @param input ¾ÏÈ£È­ ÇÒ ¼Ò½º String
-	 * @param algorithm Àû¿ëÇÒ ÇØ½Ã ¾Ë°í¸®Áò
-	 * @return ¾ÏÈ£È­ µÈ µ¥ÀÌÅÍ String
+	 * ì§€ì •ëœ ì•Œê³ ë¦¬ì¦˜ì„ ì´ìš©í•˜ì—¬ í•´ì‰¬ ì•”í˜¸í™”í•œë‹¤.
+	 * @param input ì•”í˜¸í™” í•  ì†ŒìŠ¤ String
+	 * @param algorithm ì ìš©í•  í•´ì‹œ ì•Œê³ ë¦¬ì¦˜
+	 * @return ì•”í˜¸í™” ëœ ë°ì´í„° String
 	 * @throws Exception
 	 */
 	public static String getHashString(String input, String algorithm) throws Exception
@@ -119,10 +119,10 @@ public class HashEncrypt {
 	}
 	
 	/**
-	 * ±âº» ¾Ë°í¸®ÁòÀ» ÀÌ¿ëÇÏ¿© ÇØ½¬ ¾ÏÈ£È­ÇÑ´Ù.
-	 * @param input ¾ÏÈ£È­ ÇÒ ¼Ò½º String
-	 * @param charset input StringÀÇ Ä³¸¯ÅÍ ¼Â
-	 * @return ¾ÏÈ£È­ µÈ µ¥ÀÌÅÍ String
+	 * ê¸°ë³¸ ì•Œê³ ë¦¬ì¦˜ì„ ì´ìš©í•˜ì—¬ í•´ì‰¬ ì•”í˜¸í™”í•œë‹¤.
+	 * @param input ì•”í˜¸í™” í•  ì†ŒìŠ¤ String
+	 * @param charset input Stringì˜ ìºë¦­í„° ì…‹
+	 * @return ì•”í˜¸í™” ëœ ë°ì´í„° String
 	 * @throws Exception
 	 */
 	public static String getHashHexString(String input, String charset) throws Exception
@@ -131,11 +131,11 @@ public class HashEncrypt {
 	}
 	
 	/**
-	 * ÁöÁ¤µÈ ¾Ë°í¸®ÁòÀ» ÀÌ¿ëÇÏ¿© ÇØ½¬ ¾ÏÈ£È­ÇÑ´Ù.
-	 * @param input ¾ÏÈ£È­ ÇÒ ¼Ò½º String
-	 * @param charset input StringÀÇ Ä³¸¯ÅÍ ¼Â
-	 * @param algorithm Àû¿ëÇÒ ÇØ½Ã ¾Ë°í¸®Áò
-	 * @return ¾ÏÈ£È­ µÈ µ¥ÀÌÅÍ String
+	 * ì§€ì •ëœ ì•Œê³ ë¦¬ì¦˜ì„ ì´ìš©í•˜ì—¬ í•´ì‰¬ ì•”í˜¸í™”í•œë‹¤.
+	 * @param input ì•”í˜¸í™” í•  ì†ŒìŠ¤ String
+	 * @param charset input Stringì˜ ìºë¦­í„° ì…‹
+	 * @param algorithm ì ìš©í•  í•´ì‹œ ì•Œê³ ë¦¬ì¦˜
+	 * @return ì•”í˜¸í™” ëœ ë°ì´í„° String
 	 * @throws Exception
 	 */
 	public static String getHashHexString(String input, String charset, String algorithm) throws Exception

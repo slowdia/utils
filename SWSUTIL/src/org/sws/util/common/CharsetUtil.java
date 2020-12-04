@@ -3,9 +3,9 @@ package org.sws.util.common;
 public class CharsetUtil {
 	
 	/**
-	 * ¹®ÀÚ¿­ÀÇ UTF-8 BOM(Byte Order Mark) ¾ø¾Ø ÈÄ ¹®ÀÚ¿­ ¹İÈ¯
-	 * @param src ¼Ò½º ¹®ÀÚ¿­
-	 * @return Á¤Á¦µÈ ¹®ÀÚ¿­
+	 * ë¬¸ìì—´ì˜ UTF-8 BOM(Byte Order Mark) ì—†ì•¤ í›„ ë¬¸ìì—´ ë°˜í™˜
+	 * @param src ì†ŒìŠ¤ ë¬¸ìì—´
+	 * @return ì •ì œëœ ë¬¸ìì—´
 	 */
 	public static String removeBom(String src) {
 		String line = src;

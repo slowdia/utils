@@ -9,9 +9,9 @@ import com.ibm.icu.util.Calendar;
 public class Lunar {
 	
 	/**
-	 * ¾ç·ÂÀ» À½·ÂÀ¸·Î ¹Ù²Û´Ù
+	 * ì–‘ë ¥ì„ ìŒë ¥ìœ¼ë¡œ ë°”ê¾¼ë‹¤
 	 * @param date
-	 * @return day : ¿¬-¿ù-ÀÏ, leap : À±´Þ¿©ºÎ
+	 * @return day : ì—°-ì›”-ì¼, leap : ìœ¤ë‹¬ì—¬ë¶€
 	 */
 	public static Entity getDate(Date date) {
 		LunarCalendar cal = LunarCalendar.getInstance();
@@ -27,9 +27,9 @@ public class Lunar {
 	}
 	
 	/**
-	 * ¾ç·ÂÀ» À½·ÂÀ¸·Î ¹Ù²Û´Ù
+	 * ì–‘ë ¥ì„ ìŒë ¥ìœ¼ë¡œ ë°”ê¾¼ë‹¤
 	 * @param date
-	 * @return day : ¿¬-¿ù-ÀÏ, leap : À±´Þ¿©ºÎ
+	 * @return day : ì—°-ì›”-ì¼, leap : ìœ¤ë‹¬ì—¬ë¶€
 	 */
 	public static Entity getDate(Calendar calendar) {
 		LunarCalendar cal = LunarCalendar.getInstance();
@@ -48,10 +48,10 @@ public class Lunar {
 		Calendar cal = Calendar.getInstance();
 		cal.set(2019, 1, 5); // 2019-02-05 >> 2019-01-01
 		Entity entity = Lunar.getDate(cal);
-		System.out.println(entity.get("day") + (entity.getInt("leap")==1?" À±´Þ":""));
+		System.out.println(entity.get("day") + (entity.getInt("leap")==1?" ìœ¤ë‹¬":""));
 		entity = Lunar.getDate(new Date());
-		System.out.println(entity.get("day") + (entity.getInt("leap")==1?" À±´Þ":""));
+		System.out.println(entity.get("day") + (entity.getInt("leap")==1?" ìœ¤ë‹¬":""));
 		entity = Lunar.getDate(Calendar.getInstance());
-		System.out.println(entity.get("day") + (entity.getInt("leap")==1?" À±´Þ":""));
+		System.out.println(entity.get("day") + (entity.getInt("leap")==1?" ìœ¤ë‹¬":""));
 	}
 }

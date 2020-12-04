@@ -19,10 +19,10 @@ public class MultiPartUpload {
 	private MultipartRequest multiPart = null;
 	
 	/**
-	 * ÆÄÀÏÀ» ¾÷·Îµå ÇÑ´Ù.
+	 * íŒŒì¼ì„ ì—…ë¡œë“œ í•œë‹¤.
 	 * @param request HttpServletRequest
-	 * @param saveDirectory ¾÷·Îµå ÆÄÀÏ ÀúÀå Æú´õ
-	 * @param maxPostSize ¾÷·Îµå ÆÄÀÏ ÃÖ´ë »çÀÌÁî
+	 * @param saveDirectory ì—…ë¡œë“œ íŒŒì¼ ì €ì¥ í´ë”
+	 * @param maxPostSize ì—…ë¡œë“œ íŒŒì¼ ìµœëŒ€ ì‚¬ì´ì¦ˆ
 	 * @throws Exception
 	 */
 	public MultiPartUpload(HttpServletRequest request
@@ -34,11 +34,11 @@ public class MultiPartUpload {
 	}
 	
 	/**
-	 * ÆÄÀÏÀ» ¾÷·Îµå ÇÑ´Ù.
+	 * íŒŒì¼ì„ ì—…ë¡œë“œ í•œë‹¤.
 	 * @param request HttpServletRequest
-	 * @param saveDirectory ¾÷·Îµå ÆÄÀÏ ÀúÀå Æú´õ
-	 * @param maxPostSize ¾÷·Îµå ÆÄÀÏ ÃÖ´ë »çÀÌÁî
-	 * @param encoding ÆÄÀÏ ÀÎÄÚµù Ä³¸¯ÅÍ ¼Â
+	 * @param saveDirectory ì—…ë¡œë“œ íŒŒì¼ ì €ì¥ í´ë”
+	 * @param maxPostSize ì—…ë¡œë“œ íŒŒì¼ ìµœëŒ€ ì‚¬ì´ì¦ˆ
+	 * @param encoding íŒŒì¼ ì¸ì½”ë”© ìºë¦­í„° ì…‹
 	 * @throws Exception
 	 */
 	public MultiPartUpload(HttpServletRequest request
@@ -51,11 +51,11 @@ public class MultiPartUpload {
 	}
 	
 	/**
-	 * ÆÄÀÏÀ» ¾÷·Îµå ÇÑ´Ù.
+	 * íŒŒì¼ì„ ì—…ë¡œë“œ í•œë‹¤.
 	 * @param request HttpServletRequest
-	 * @param saveDirectory ¾÷·Îµå ÆÄÀÏ ÀúÀå Æú´õ
-	 * @param maxPostSize ¾÷·Îµå ÆÄÀÏ ÃÖ´ë »çÀÌÁî
-	 * @param allowExts ¾÷·Îµå Çã¿ë È®ÀåÀÚ - null ÀÌ¸é Ã¼Å© ¾ÈÇÔ
+	 * @param saveDirectory ì—…ë¡œë“œ íŒŒì¼ ì €ì¥ í´ë”
+	 * @param maxPostSize ì—…ë¡œë“œ íŒŒì¼ ìµœëŒ€ ì‚¬ì´ì¦ˆ
+	 * @param allowExts ì—…ë¡œë“œ í—ˆìš© í™•ì¥ì - null ì´ë©´ ì²´í¬ ì•ˆí•¨
 	 * @throws Exception
 	 */
 	public MultiPartUpload(HttpServletRequest request
@@ -68,12 +68,12 @@ public class MultiPartUpload {
 	}
 	
 	/**
-	 * ÆÄÀÏÀ» ¾÷·Îµå ÇÑ´Ù.
+	 * íŒŒì¼ì„ ì—…ë¡œë“œ í•œë‹¤.
 	 * @param request HttpServletRequest
-	 * @param saveDirectory ¾÷·Îµå ÆÄÀÏ ÀúÀå Æú´õ
-	 * @param maxPostSize ¾÷·Îµå ÆÄÀÏ ÃÖ´ë »çÀÌÁî
-	 * @param encoding ÆÄÀÏ ÀÎÄÚµù Ä³¸¯ÅÍ ¼Â
-	 * @param allowExts ¾÷·Îµå Çã¿ë È®ÀåÀÚ - null ÀÌ¸é Ã¼Å© ¾ÈÇÔ
+	 * @param saveDirectory ì—…ë¡œë“œ íŒŒì¼ ì €ì¥ í´ë”
+	 * @param maxPostSize ì—…ë¡œë“œ íŒŒì¼ ìµœëŒ€ ì‚¬ì´ì¦ˆ
+	 * @param encoding íŒŒì¼ ì¸ì½”ë”© ìºë¦­í„° ì…‹
+	 * @param allowExts ì—…ë¡œë“œ í—ˆìš© í™•ì¥ì - null ì´ë©´ ì²´í¬ ì•ˆí•¨
 	 * @throws Exception
 	 */
 	public MultiPartUpload(HttpServletRequest request
@@ -89,7 +89,7 @@ public class MultiPartUpload {
 		
 		multiPart = new MultipartRequest(request, saveDirectory, maxPostSize, encoding, new FileRenamePolicy() {
 				public File rename(File f){
-					// ¾÷·Îµå Æú´õ¿¡ µ¿ÀÏÇÑ ÆÄÀÏ¸íÀÇ ÆÄÀÏÀÌ ÀÖÀ» °æ¿ì index¸¦ Ãß°¡ÇÏ¿© ÆÄÀÏ¸í º¯°æÇÏ±â
+					// ì—…ë¡œë“œ í´ë”ì— ë™ì¼í•œ íŒŒì¼ëª…ì˜ íŒŒì¼ì´ ìˆì„ ê²½ìš° indexë¥¼ ì¶”ê°€í•˜ì—¬ íŒŒì¼ëª… ë³€ê²½í•˜ê¸°
 	  				try {
 	  					int index = 1;
 	  					File file = f;
@@ -122,7 +122,7 @@ public class MultiPartUpload {
 	  		}
 	  	);
 
-		// Çã¿ë È®ÀåÀÚ °ËÁõ
+		// í—ˆìš© í™•ì¥ì ê²€ì¦
 		if(allowExts != null) {
 			boolean delete = false;
 			File file = null;
@@ -133,7 +133,7 @@ public class MultiPartUpload {
 					delete = true;
 				}
 			}
-			// Çã¿ëµÇÁö ¾ÊÀº È®ÀåÀÚ Æ÷ÇÔµÈ °æ¿ì ÀüÃ¼ ÆÄÀÏ »èÁ¦
+			// í—ˆìš©ë˜ì§€ ì•Šì€ í™•ì¥ì í¬í•¨ëœ ê²½ìš° ì „ì²´ íŒŒì¼ ì‚­ì œ
 			if(delete) {
 				enums = getFileNames();
 				while (enums.hasMoreElements()) {
@@ -244,7 +244,7 @@ public class MultiPartUpload {
 	}  
 	
 	/**
-	 * Unique key »ı¼º ·ÎÁ÷
+	 * Unique key ìƒì„± ë¡œì§
 	 * DATETIME(yyyyMMddHHmmssSSS;17) + IncNum(000~999;3)
 	 * @return
 	 */

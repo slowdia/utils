@@ -93,9 +93,9 @@ public class SqlMap implements SqlMapClient {
 	}
 	
 	/**
-	 * ¸Ê ÇüÅÂ·Î ¹İÈ¯µÇ´Â µ¥ÀÌÅÍ¸¦ Entity·Î º¯È¯ÇÏ¿© ¸®ÅÏ
-	 * @param arg0 Äõ¸® ÀÌ¸§
-	 * @param arg1 ÆÄ¶óÆäÅÍ
+	 * ë§µ í˜•íƒœë¡œ ë°˜í™˜ë˜ëŠ” ë°ì´í„°ë¥¼ Entityë¡œ ë³€í™˜í•˜ì—¬ ë¦¬í„´
+	 * @param arg0 ì¿¼ë¦¬ ì´ë¦„
+	 * @param arg1 íŒŒë¼í˜í„°
 	 * @param arg2
 	 * @return
 	 * @throws SQLException
@@ -109,9 +109,9 @@ public class SqlMap implements SqlMapClient {
 	}
 	
 	/**
-	 * ¸Ê ÇüÅÂ·Î ¹İÈ¯µÇ´Â µ¥ÀÌÅÍ¸¦ Entity·Î º¯È¯ÇÏ¿© ¸®ÅÏ
-	 * @param arg0 Äõ¸® ÀÌ¸§
-	 * @param arg1 ÆÄ¶óÆäÅÍ
+	 * ë§µ í˜•íƒœë¡œ ë°˜í™˜ë˜ëŠ” ë°ì´í„°ë¥¼ Entityë¡œ ë³€í™˜í•˜ì—¬ ë¦¬í„´
+	 * @param arg0 ì¿¼ë¦¬ ì´ë¦„
+	 * @param arg1 íŒŒë¼í˜í„°
 	 * @param arg2
 	 * @param arg3
 	 * @return

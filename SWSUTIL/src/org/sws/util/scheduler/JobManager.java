@@ -24,11 +24,11 @@ public class JobManager{
 	}
 	
 	/**
-	 * ¹èÄ¡ÀâÀ» µî·ÏÇÑ´Ù.
-	 * @param jobName ÀÛ¾÷ ÀÌ¸§
-	 * @param group ±×·ì ¸í
-	 * @param clasz JobÅ¬·¡½º¸¦ »ó¼Ó¹ŞÀº ½ÇÇà Å¬·¡½º
-	 * @param schedule clon Çü½ÄÀÇ ¹èÄ¡ ½ÃÄÉÁì
+	 * ë°°ì¹˜ì¡ì„ ë“±ë¡í•œë‹¤.
+	 * @param jobName ì‘ì—… ì´ë¦„
+	 * @param group ê·¸ë£¹ ëª…
+	 * @param clasz Jobí´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ì€ ì‹¤í–‰ í´ë˜ìŠ¤
+	 * @param schedule clon í˜•ì‹ì˜ ë°°ì¹˜ ì‹œì¼€ì¥´
 	 * @throws SchedulerException 
 	 */
 	public static void addJob(String jobName, String group, Class clasz, String schedule) throws SchedulerException
@@ -57,13 +57,13 @@ public class JobManager{
 	}
 	
 	/**
-	 * ÀÛ¾÷À» »èÁ¦ÇÑ´Ù.
+	 * ì‘ì—…ì„ ì‚­ì œí•œë‹¤.
 	 * @param jobName
 	 * @throws SchedulerException
 	 */
 	public static void removeJob(String jobName) throws SchedulerException
 	{
 		Scheduler scheduler = (Scheduler)jobs.getObject(jobName);
-		scheduler.clear(); // TODO ÀÌ·¸°Ô ÇÏ¸é ÀÛ¾÷ÀÌ ÇØÁ¦ µÇ´ÂÁö È®ÀÎÇØºÁ¾ßÇÔ
+		scheduler.clear(); // TODO ì´ë ‡ê²Œ í•˜ë©´ ì‘ì—…ì´ í•´ì œ ë˜ëŠ”ì§€ í™•ì¸í•´ë´ì•¼í•¨
 	}
 }

@@ -11,7 +11,7 @@ public class ImageDownload {
 
 	public static void main(String args[]) {
 		if(args.length < 3 || args[0].equalsIgnoreCase("help")) {
-			System.out.println("È¸Â÷, ÆäÀÌÁöURL, ÀúÀå Æú´õ¸¦ ¼ø¼­´ë·Î ÀÔ·ÂÇÏ¼¼¿ä.");
+			System.out.println("íšŒì°¨, í˜ì´ì§€URL, ì €ì¥ í´ë”ë¥¼ ìˆœì„œëŒ€ë¡œ ì…ë ¥í•˜ì„¸ìš”.");
 			return;
 		}
 		ImageDownload.getOnepiec(args[0], args[1], args.length > 2 ? args[2]:null);
@@ -52,8 +52,8 @@ public class ImageDownload {
 			}
 			String[] files = new String[file_list.size()];
 			file_list.toArray(files);
-			System.out.println(abs_path + File.separatorChar + "¿øÇÇ½º "+posting_num+"±Ç.zip");
-			FileUtil.compress(files, abs_path + File.separatorChar + "¿øÇÇ½º "+posting_num+"±Ç.zip");
+			System.out.println(abs_path + File.separatorChar + "ì›í”¼ìŠ¤ "+posting_num+"ê¶Œ.zip");
+			FileUtil.compress(files, abs_path + File.separatorChar + "ì›í”¼ìŠ¤ "+posting_num+"ê¶Œ.zip");
 			for(String s : files) {
 				new File(s).delete();
 			}

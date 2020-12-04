@@ -16,9 +16,9 @@ import oracle.sql.CLOB;
 public class OracleUtil extends BaseTypeHandler {
 	
 	/**
-	 * BLOBB ÇüÅÂÀÇ ÄÃ·³ µ¥ÀÌÅÍ¸¦ ÀĞ¾îµé¿© byte ¹è¿­·Î ¸®ÅÏÇÑ´Ù.
-	 * @param rs ResultSet °´Ã¼
-	 * @param column BLOB ÄÃ·³ ¸í
+	 * BLOBB í˜•íƒœì˜ ì»¬ëŸ¼ ë°ì´í„°ë¥¼ ì½ì–´ë“¤ì—¬ byte ë°°ì—´ë¡œ ë¦¬í„´í•œë‹¤.
+	 * @param rs ResultSet ê°ì²´
+	 * @param column BLOB ì»¬ëŸ¼ ëª…
 	 * @return
 	 * @throws SQLException
 	 * @throws IOException
@@ -42,9 +42,9 @@ public class OracleUtil extends BaseTypeHandler {
 	}
 
 	/**
-	 * CLOB ÇüÅÂÀÇ ÄÃ·³ µ¥ÀÌÅÍ¸¦ ÀĞ¾îµé¿© StringÀ¸·Î ¸®ÅÏÇÑ´Ù.
-	 * @param rs ResultSet °´Ã¼
-	 * @param column CLOB ÄÃ·³ ¸í
+	 * CLOB í˜•íƒœì˜ ì»¬ëŸ¼ ë°ì´í„°ë¥¼ ì½ì–´ë“¤ì—¬ Stringìœ¼ë¡œ ë¦¬í„´í•œë‹¤.
+	 * @param rs ResultSet ê°ì²´
+	 * @param column CLOB ì»¬ëŸ¼ ëª…
 	 * @return
 	 * @throws SQLException
 	 * @throws IOException
@@ -120,9 +120,9 @@ public class OracleUtil extends BaseTypeHandler {
 	}
 	
 	/**
-	 * Clob °´Ã¼·Î ºÎÅÍ ÄÁÅÙÃ÷ StringÀ» ÀĞ¾î¼­ ¸®ÅÏÇÑ´Ù.
-	 * @param clob Clob °´Ã¼
-	 * @param bufferSize Clob °´Ã¼·Î ºÎÅÍ ÀĞÀ» ¹öÆÛ »çÀÌÁî, 0º¸´Ù ÀÛ°Å³ª °°À¸¸é default : 2048
+	 * Clob ê°ì²´ë¡œ ë¶€í„° ì»¨í…ì¸  Stringì„ ì½ì–´ì„œ ë¦¬í„´í•œë‹¤.
+	 * @param clob Clob ê°ì²´
+	 * @param bufferSize Clob ê°ì²´ë¡œ ë¶€í„° ì½ì„ ë²„í¼ ì‚¬ì´ì¦ˆ, 0ë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ìœ¼ë©´ default : 2048
 	 * @return
 	 * @throws SQLException
 	 */
@@ -133,7 +133,7 @@ public class OracleUtil extends BaseTypeHandler {
 		StringBuffer sb = new StringBuffer();
 		for(long pos = 1; pos < clob.length(); pos += bufferSize) {
 			if((pos + bufferSize) > clob.length())
-				bufferSize = (int)(clob.length() - pos);// ¸¶Áö¸· ³²Àº¾ç °è»ê
+				bufferSize = (int)(clob.length() - pos);// ë§ˆì§€ë§‰ ë‚¨ì€ì–‘ ê³„ì‚°
 			sb.append(clob.getSubString(pos, bufferSize));
 		}
 		return sb.toString();

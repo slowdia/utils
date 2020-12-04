@@ -19,7 +19,7 @@ public class LunarCalendar extends ChineseCalendar {
 	}
 	
 	/**
-	 * ¿¬µµ ¼ÂÆÃ - ÀÔ·ÂµÈ ¿¬µµ + 2637 ÇÑ °ªÀ» ÀÔ·Â
+	 * ì—°ë„ ì…‹íŒ… - ì…ë ¥ëœ ì—°ë„ + 2637 í•œ ê°’ì„ ì…ë ¥
 	 * @param year
 	 */
 	public void setYear(int year) {
@@ -27,7 +27,7 @@ public class LunarCalendar extends ChineseCalendar {
 	}
 	
 	/**
-	 * ¿¬µµ
+	 * ì—°ë„
 	 * @return
 	 */
 	public int getYear() {
@@ -35,7 +35,7 @@ public class LunarCalendar extends ChineseCalendar {
 	}
 	
 	/**
-	 * ÀÔ·ÂµÈ ¿ù¿¡ -1 ÇØ¼­ ¼ÂÆÃ
+	 * ì…ë ¥ëœ ì›”ì— -1 í•´ì„œ ì…‹íŒ…
 	 * @return
 	 */
 	public void setMonth(int month) {
@@ -43,7 +43,7 @@ public class LunarCalendar extends ChineseCalendar {
 	}
 	
 	/**
-	 * ¿¬ÀÇ ¿ù  1~12 ¿ù  (+1 µÈ °á°ú °ª)
+	 * ì—°ì˜ ì›”  1~12 ì›”  (+1 ëœ ê²°ê³¼ ê°’)
 	 * @return
 	 */
 	public int getMonth() {
@@ -51,7 +51,7 @@ public class LunarCalendar extends ChineseCalendar {
 	}
 	
 	/**
-	 * ¿ùÀÇ ÇØ´ç ÀÏÀÚ ¼ÂÆÃ
+	 * ì›”ì˜ í•´ë‹¹ ì¼ì ì…‹íŒ…
 	 * @return
 	 */
 	public void setDay(int day) {
@@ -59,7 +59,7 @@ public class LunarCalendar extends ChineseCalendar {
 	}
 	
 	/**
-	 * ÇØ´ç¿ùÀÇ ÀÏÀÚ
+	 * í•´ë‹¹ì›”ì˜ ì¼ì
 	 * @return
 	 */
 	public int getDay() {

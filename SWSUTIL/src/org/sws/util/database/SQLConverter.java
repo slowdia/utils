@@ -2,13 +2,13 @@ package org.sws.util.database;
 
 import org.apache.log4j.Logger;
 
-public class Converter {
+public class SQLConverter {
 
-	static Logger logger = Logger.getLogger(Converter.class);
+	static Logger logger = Logger.getLogger(SQLConverter.class);
 	
 	/**
-	 * DBMSº°·Î ½Ã°£ ÄÃ·³ÀÇ Ãâ·Â µ¥ÀÌÅÍ¸¦ ¾ò±â À§ÇÑ SQL±¸¹®À» ¸¸µé¾î ÁØ´Ù.<br>
-	 * date/datetime/timestamp => yyyy-mm-dd hh24:mi:ss ÇüÅÂ·Î º¯°æÇÏ´Â ±¸¹®
+	 * DBMSë³„ë¡œ ì‹œê°„ ì»¬ëŸ¼ì˜ ì¶œë ¥ ë°ì´í„°ë¥¼ ì–»ê¸° ìœ„í•œ SQLêµ¬ë¬¸ì„ ë§Œë“¤ì–´ ì¤€ë‹¤.<br>
+	 * date/datetime/timestamp => yyyy-mm-dd hh24:mi:ss í˜•íƒœë¡œ ë³€ê²½í•˜ëŠ” êµ¬ë¬¸
 	 * @param column
 	 * @param dbmsType
 	 * @return ex> ORACLE : TO_CHAR(COLUMN,'yyyy-mm-dd hh24:mi:ss')
@@ -32,8 +32,8 @@ public class Converter {
 	}
 	
 	/**
-	 * DBMSº°·Î ³¯Â¥ ½ºÆ®¸µÀ» DB¿¡ »ğÀÔÇÏ±â À§ÇÑ SQL±¸¹®À» ¸¸µç´Ù.<br>
-	 * yyyy-mm-dd hh24:mi:ss => date/datetime/timestamp ÇüÅÂ·Î º¯°æÇÏ´Â ±¸¹®
+	 * DBMSë³„ë¡œ ë‚ ì§œ ìŠ¤íŠ¸ë§ì„ DBì— ì‚½ì…í•˜ê¸° ìœ„í•œ SQLêµ¬ë¬¸ì„ ë§Œë“ ë‹¤.<br>
+	 * yyyy-mm-dd hh24:mi:ss => date/datetime/timestamp í˜•íƒœë¡œ ë³€ê²½í•˜ëŠ” êµ¬ë¬¸
 	 * @param strDate
 	 * @param dbmsType
 	 * @return ex> ORACLE : TO_DATE('2018-01-01 12:59:59','yyyy-mm-dd hh24:mi:ss')
@@ -57,8 +57,8 @@ public class Converter {
 	}
 	
 	/**
-	 * DBMSº°·Î ÇöÀç³¯Â¥¸¦ ¾ò±â À§ÇÑ SQL±¸¹®À» ¸¸µç´Ù.<br>
-	 * SYSDATE, GETDATE(), NOW() µîµî
+	 * DBMSë³„ë¡œ í˜„ì¬ë‚ ì§œë¥¼ ì–»ê¸° ìœ„í•œ SQLêµ¬ë¬¸ì„ ë§Œë“ ë‹¤.<br>
+	 * SYSDATE, GETDATE(), NOW() ë“±ë“±
 	 * @param dbmsType
 	 * @return ex> ORACLE : SYSDATE
 	 */

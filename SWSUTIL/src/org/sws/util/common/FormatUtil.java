@@ -5,10 +5,10 @@ import java.text.DecimalFormat;
 public class FormatUtil {
 	
 	/**
-	 * ¼ýÀÚÀÇ °æ¿ì ÀÚ¸®¼ö¸¦ ¸ÂÃß±â À§ÇÏ¿© ¾Õ¿¡ Æ¯Á¤ ¹®ÀÚ·Î Ã¤¿ö¼­ StringÀ¸·Î ¸®ÅÏ
-	 * @param num ¿øº» ¼ýÀÚ
-	 * @param minLen ÃÖ¼Ò ±æÀÌ
-	 * @param prefix Ã¤¿ï ¹®ÀÚ
+	 * ìˆ«ìžì˜ ê²½ìš° ìžë¦¬ìˆ˜ë¥¼ ë§žì¶”ê¸° ìœ„í•˜ì—¬ ì•žì— íŠ¹ì • ë¬¸ìžë¡œ ì±„ì›Œì„œ Stringìœ¼ë¡œ ë¦¬í„´
+	 * @param num ì›ë³¸ ìˆ«ìž
+	 * @param minLen ìµœì†Œ ê¸¸ì´
+	 * @param prefix ì±„ìš¸ ë¬¸ìž
 	 * @return
 	 */
 	public String addPrefix(int num, int minLen, char prefix)
@@ -21,36 +21,36 @@ public class FormatUtil {
 	}
 	
 	/**
-	 * ¹®ÀÚ¿­À» ÀÏÁ¤±æÀÌ ¸¸Å­¸¸ º¸¿©ÁÖ°í
-	 * ±× ±æÀÌ¿¡ ÃÊ°úµÇ´Â ¹®ÀÚ¿­ÀÏ °æ¿ì "..."¸¦ µ¡ºÙ¿© º¸¿©ÁÜ.
-	 * @param src ¼Ò½º ¹®ÀÚ¿­
-	 * @param limit Á¦ÇÑ ±æÀÌ
+	 * ë¬¸ìžì—´ì„ ì¼ì •ê¸¸ì´ ë§Œí¼ë§Œ ë³´ì—¬ì£¼ê³ 
+	 * ê·¸ ê¸¸ì´ì— ì´ˆê³¼ë˜ëŠ” ë¬¸ìžì—´ì¼ ê²½ìš° "..."ë¥¼ ë§ë¶™ì—¬ ë³´ì—¬ì¤Œ.
+	 * @param src ì†ŒìŠ¤ ë¬¸ìžì—´
+	 * @param limit ì œí•œ ê¸¸ì´
 	 * @return
 	 */
-	public static String fixLength(String src, int limit) {
-		return fixLength(src, limit, "...");
+	public static String cutString(String src, int limit) {
+		return cutString(src, limit, "...");
 	}
 	
 	/**
-	 * ¹®ÀÚ¿­À» ÀÏÁ¤±æÀÌ ¸¸Å­¸¸ º¸¿©ÁÖ°í
-	 * ±× ±æÀÌ¿¡ ÃÊ°úµÇ´Â ¹®ÀÚ¿­ÀÏ °æ¿ì Æ¯Á¤¹®ÀÚ¸¦ µ¡ºÙ¿© º¸¿©ÁÜ.
-	 * @param src ¼Ò½º ¹®ÀÚ¿­
-	 * @param limit Á¦ÇÑ ±æÀÌ
-	 * @param postfix µ¡ºÙÀÏ ¹®ÀÚ¿­.
+	 * ë¬¸ìžì—´ì„ ì¼ì •ê¸¸ì´ ë§Œí¼ë§Œ ë³´ì—¬ì£¼ê³ 
+	 * ê·¸ ê¸¸ì´ì— ì´ˆê³¼ë˜ëŠ” ë¬¸ìžì—´ì¼ ê²½ìš° íŠ¹ì •ë¬¸ìžë¥¼ ë§ë¶™ì—¬ ë³´ì—¬ì¤Œ.
+	 * @param src ì†ŒìŠ¤ ë¬¸ìžì—´
+	 * @param limit ì œí•œ ê¸¸ì´
+	 * @param postfix ë§ë¶™ì¼ ë¬¸ìžì—´.
 	 * @return
 	 */
-	public static String fixLength(String src, int limit, String postfix) {	
+	public static String cutString(String src, int limit, String suffix) {	
 		char[] charArray = src.toCharArray();
 		
 		if (limit >= charArray.length)
 			return src;
-		return new String(charArray, 0, limit).concat(postfix);
+		return new String(charArray, 0, limit).concat(suffix);
 	}
 	
 	/**
-	 * ÅëÈ­ Ç¥±â
-	 * @param cur ±Ý¾×
-	 * @param format ex> "###,##0"
+	 * í†µí™” í‘œê¸°
+	 * @param cur ê¸ˆì•¡
+	 * @param format ex> "###,##0.0"
 	 * @return
 	 */
 	public static String getCurrency (String cur, String format) {
@@ -58,8 +58,8 @@ public class FormatUtil {
 	}
 	
 	/**
-	 * ÅëÈ­ Ç¥±â
-	 * @param cur ±Ý¾×
+	 * í†µí™” í‘œê¸°
+	 * @param cur ê¸ˆì•¡
 	 * @param format ex> "###,##0"
 	 * @return
 	 */
@@ -68,9 +68,9 @@ public class FormatUtil {
 	}
 	
 	/**
-	 * ÅëÈ­ Ç¥±â
-	 * @param cur ±Ý¾×
-	 * @param format ex> "###,##0"
+	 * í†µí™” í‘œê¸°
+	 * @param cur ê¸ˆì•¡
+	 * @param format ex> "###,##0.0"
 	 * @return
 	 */
 	public static String getCurrency (double cur, String format) {
@@ -78,9 +78,9 @@ public class FormatUtil {
 	}
 	
 	/**
-	 * ÅëÈ­ Ç¥±â
-	 * @param cur ±Ý¾×
-	 * @param format ex> "###,##0"
+	 * í†µí™” í‘œê¸°
+	 * @param cur ê¸ˆì•¡
+	 * @param format ex> "###,##0.0"
 	 * @return
 	 */
 	public static String getCurrency (long cur, String format) {

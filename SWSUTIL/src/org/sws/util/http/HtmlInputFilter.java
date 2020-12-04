@@ -18,42 +18,42 @@ public class HtmlInputFilter {
 	
 	protected Map<String,List<String>> vAllowed;
 	
-	/** ÅÂ±× °³¼ö */
+	/** íƒœê·¸ ê°œìˆ˜ */
 	protected Map<String,Integer> vTagCounts;
 	
-	/** ´ãÁö ¾Ê´Â ÅÂ±× */
+	/** ë‹´ì§€ ì•ŠëŠ” íƒœê·¸ */
 	protected String[] vNoClosingTags;
 	
-	/** ÀÚÃ¼·Î ´ã´Â ÅÂ±× */
+	/** ìì²´ë¡œ ë‹´ëŠ” íƒœê·¸ */
 	protected String[] vSelfClosingTags;
 	
-	/** º°µµ·Î ´ã´Â ÅÂ±× */
+	/** ë³„ë„ë¡œ ë‹´ëŠ” íƒœê·¸ */
 	protected String[] vNeedClosingTags;
 	
-	/** Çã¿ëµÈ ¼Ó¼ºÅÂ±× */
+	/** í—ˆìš©ëœ ì†ì„±íƒœê·¸ */
 	protected String[] vProtocolAtts;
 	
-	/** Çã¿ëµÈ ÇÁ·ÎÅäÄİ ÅÂ±× */
+	/** í—ˆìš©ëœ í”„ë¡œí† ì½œ íƒœê·¸ */
 	protected String[] vAllowedProtocols;
 	
-	/** Çã¿ëµÈ ¿£Æ¼Æ¼ */
+	/** í—ˆìš©ëœ ì—”í‹°í‹° */
 	protected String[] vAllowedEntities;
 	
-	/** ³»¿ëÀÌ ¾øÀ¸¸é »èÁ¦ÇÒ ÅÂ±× */
+	/** ë‚´ìš©ì´ ì—†ìœ¼ë©´ ì‚­ì œí•  íƒœê·¸ */
 	protected String[] vRemoveBlanks;
 		
 	protected boolean vDebug;
 	
 	/**
-	 * ±âº» »ı¼ºÀÚ
+	 * ê¸°ë³¸ ìƒì„±ì
 	 */
 	public HtmlInputFilter(){
 		this(false);
 	}
 
 	/**
-	 * »ı¼ºÀÚ
-	 * @param debug µğ¹ö±ë ÇÒ °ÍÀÎÁö ¿©ºÎ
+	 * ìƒì„±ì
+	 * @param debug ë””ë²„ê¹… í•  ê²ƒì¸ì§€ ì—¬ë¶€
 	 */
 	public HtmlInputFilter(boolean debug) {
 		vDebug = debug;
@@ -110,13 +110,13 @@ public class HtmlInputFilter {
 	}
 	
 	/**
-	 * ¸®¼Â
+	 * ë¦¬ì…‹
 	 */
 	protected void reset(){
 		vTagCounts = new HashMap<String,Integer>();
 	}
 	/**
-	 * µğ¹ö±ë ¸Ş½ÃÁö ÇÁ¸°Æ®
+	 * ë””ë²„ê¹… ë©”ì‹œì§€ í”„ë¦°íŠ¸
 	 * @param msg
 	 */
 	protected void debug( String msg ){
@@ -126,7 +126,7 @@ public class HtmlInputFilter {
 	}
 	
 	/**
-	 * ¼ıÀÚ¸¦ StringÀ¸·Î º¯°æ
+	 * ìˆ«ìë¥¼ Stringìœ¼ë¡œ ë³€ê²½
 	 * @param decimal
 	 * @ return
 	 */
@@ -135,7 +135,7 @@ public class HtmlInputFilter {
 	}
 	
 	/**
-	 * ÅÂ±×·Î »ç¿ëµÇ´Â Æ¯¼ö¹®ÀÚ Ä¡È¯
+	 * íƒœê·¸ë¡œ ì‚¬ìš©ë˜ëŠ” íŠ¹ìˆ˜ë¬¸ì ì¹˜í™˜
 	 * @param s
 	 * @return
 	 */
@@ -173,7 +173,7 @@ public class HtmlInputFilter {
 	}
 	
 	/**
-	 * ÁÖ¼® ±¸¹® Ã³¸®
+	 * ì£¼ì„ êµ¬ë¬¸ ì²˜ë¦¬
 	 * @param s
 	 * @return
 	 */
@@ -191,7 +191,7 @@ public class HtmlInputFilter {
 	}
 	
 	/**
-	 * ÅÂ±× ¿À·ù ¼öÁ¤???
+	 * íƒœê·¸ ì˜¤ë¥˜ ìˆ˜ì •???
 	 * @param s
 	 * @return
 	 */
@@ -209,7 +209,7 @@ public class HtmlInputFilter {
 	}
 	
 	/**
-	 * Çã¿ëµÇÁö ¾ÊÀº ÅÂ±× »èÁ¦
+	 * í—ˆìš©ë˜ì§€ ì•Šì€ íƒœê·¸ ì‚­ì œ
 	 * @param s
 	 * @return
 	 */
@@ -236,7 +236,7 @@ public class HtmlInputFilter {
 	}
 	
 	/**
-	 * ºñ¾îÀÖ´Â ÅÂ±× Á¦°Å
+	 * ë¹„ì–´ìˆëŠ” íƒœê·¸ ì œê±°
 	 * @param s
 	 * @return
 	 */
@@ -249,7 +249,7 @@ public class HtmlInputFilter {
 	}
 	
 	/**
-	 * regex_pattern ÆĞÅÏ¿¡ ÇØ´çÇÏ´Â ½ºÆ®¸µÀ» replacement ½ºÆ®¸µÀ¸·Î º¯°æ
+	 * regex_pattern íŒ¨í„´ì— í•´ë‹¹í•˜ëŠ” ìŠ¤íŠ¸ë§ì„ replacement ìŠ¤íŠ¸ë§ìœ¼ë¡œ ë³€ê²½
 	 * @param regex_pattern
 	 * @param replacement
 	 * @param s
@@ -262,7 +262,7 @@ public class HtmlInputFilter {
 	}
 	
 	/**
-	 * Ã¼Å©ÇÏ¿© Çã¿ëµÇÁö ¾ÊÀº ÅÂ±×/¼Ó¼º/ÇÁ·ÎÅäÄİ »èÁ¦
+	 * ì²´í¬í•˜ì—¬ í—ˆìš©ë˜ì§€ ì•Šì€ íƒœê·¸/ì†ì„±/í”„ë¡œí† ì½œ ì‚­ì œ
 	 * @param s
 	 * @return
 	 */
@@ -293,19 +293,19 @@ public class HtmlInputFilter {
 			if (vAllowed.containsKey( name )) {
 				String params = "";
 				
-				//º»·¡´Â 'È÷+¤¾'±îÁö Ã¼Å©ÇØ¾ß ÇÏ³ª euc-krÀº 'Èş'±îÁö¸¸ °¡´É
-				Pattern p2 = Pattern.compile("([a-z0-9°¡-Èş]+)=([\"'])(.*?)\\2", REGEX_FLAGS_SI);
-				Pattern p3 = Pattern.compile("([a-z0-9°¡-Èş]+)(=)([^\"\\s']+)", REGEX_FLAGS_SI);
+				//ë³¸ë˜ëŠ” 'íˆ+ã…'ê¹Œì§€ ì²´í¬í•´ì•¼ í•˜ë‚˜ euc-krì€ 'í'ê¹Œì§€ë§Œ ê°€ëŠ¥
+				Pattern p2 = Pattern.compile("([a-z0-9ê°€-í]+)=([\"'])(.*?)\\2", REGEX_FLAGS_SI);
+				Pattern p3 = Pattern.compile("([a-z0-9ê°€-í]+)(=)([^\"\\s']+)", REGEX_FLAGS_SI);
 				Matcher m2 = p2.matcher( body );
 				Matcher m3 = p3.matcher( body );
 				List<String> paramNames = new ArrayList<String>();
 				List<String> paramValues = new ArrayList<String>();
 				while (m2.find()) {
-					paramNames.add(m2.group(1)); //([a-z0-9°¡-Èş]+)
+					paramNames.add(m2.group(1)); //([a-z0-9ê°€-í]+)
 					paramValues.add(m2.group(3)); //(.*?)
 				}
 				while (m3.find()) {
-					paramNames.add(m3.group(1)); //([a-z0-9°¡-Èş]+)
+					paramNames.add(m3.group(1)); //([a-z0-9ê°€-í]+)
 					paramValues.add(m3.group(3)); //([^\"\\s']+)
 				}
 				
@@ -363,7 +363,7 @@ public class HtmlInputFilter {
 	}
 	
 	/**
-	 * Çã¿ëµÈ ÇÁ·ÎÅäÄİ ¿Ü¿¡´Â Á¦°Å
+	 * í—ˆìš©ëœ í”„ë¡œí† ì½œ ì™¸ì—ëŠ” ì œê±°
 	 * @param s
 	 * @return
 	 */
@@ -382,7 +382,7 @@ public class HtmlInputFilter {
 	}
 	
 	/**
-	 * ¿£Æ¼Æ¼ µğÄÚµå
+	 * ì—”í‹°í‹° ë””ì½”ë“œ
 	 * @param s
 	 * @return
 	 */
@@ -426,7 +426,7 @@ public class HtmlInputFilter {
 	}
 
 	/**
-	 * ¿£Æ¼Æ¼ °ËÁõ
+	 * ì—”í‹°í‹° ê²€ì¦
 	 * @param s
 	 * @return
 	 */
@@ -470,7 +470,7 @@ public class HtmlInputFilter {
 	}
 	
 	/**
-	 * Çã¿ëµÈ ¿£Æ¼Æ¼ÀÎÁö È®ÀÎÇÏ¿© Çã¿ëµÇÁö ¾ÊÀº ¿£Æ¼Æ¼´Â ; ¸¦ &amp; ·Î º¯°æ
+	 * í—ˆìš©ëœ ì—”í‹°í‹°ì¸ì§€ í™•ì¸í•˜ì—¬ í—ˆìš©ë˜ì§€ ì•Šì€ ì—”í‹°í‹°ëŠ” ; ë¥¼ &amp; ë¡œ ë³€ê²½
 	 * @param preamble
 	 * @param term
 	 * @return
@@ -492,7 +492,7 @@ public class HtmlInputFilter {
 	}
 	
 	/**
-	 * ¹è¿­¿¡ Æ÷ÇÔµÇ¾ú´ÂÁö ¿©ºÎ È®ÀÎ
+	 * ë°°ì—´ì— í¬í•¨ë˜ì—ˆëŠ”ì§€ ì—¬ë¶€ í™•ì¸
 	 * @param s
 	 * @param array
 	 * @return

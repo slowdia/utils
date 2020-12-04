@@ -3,9 +3,9 @@ package org.sws.util.crypt;
 public class Unicode {
 
 	/**
-	 * ¹®ÀÚ¸¦ À¯´ÏÄÚµå·Î ÀÎÄÚµùÇÑ´Ù.
-	 * @param	¹®ÀÚ¿­
-	 * @return   º¯°æµÈ À¯´ÏÄÚµå
+	 * ë¬¸ìë¥¼ ìœ ë‹ˆì½”ë“œë¡œ ì¸ì½”ë”©í•œë‹¤.
+	 * @param	ë¬¸ìì—´
+	 * @return   ë³€ê²½ëœ ìœ ë‹ˆì½”ë“œ
 	 */
 	public static String encode(String src)
 	{
@@ -19,9 +19,9 @@ public class Unicode {
 	}
 
 	/**
-	 * À¯´ÏÄÚµå¸¦ ¹®ÀÚ·Î µğÄÚµùÇÑ´Ù.
-	 * @param	À¯´ÏÄÚµå
-	 * @return   º¯°æµÈ ¹®ÀÚ¿­
+	 * ìœ ë‹ˆì½”ë“œë¥¼ ë¬¸ìë¡œ ë””ì½”ë”©í•œë‹¤.
+	 * @param	ìœ ë‹ˆì½”ë“œ
+	 * @return   ë³€ê²½ëœ ë¬¸ìì—´
 	 */
 	public static String decode(String src)
 	{

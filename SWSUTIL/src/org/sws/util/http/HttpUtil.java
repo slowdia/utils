@@ -32,9 +32,9 @@ public class HttpUtil {
 	}
 
 	/**
-	 * URL·Î ºÎÅÍ ÄÁÅÙÃ÷(html ¼Ò½ºÄÚµå)¸¦ °¡Á®¿Â´Ù.
-	 * @param srcUrl http ¶Ç´Â https url
-	 * @return html ¼Ò½ºÄÚµå
+	 * URLë¡œ ë¶€í„° ì»¨í…ì¸ (html ì†ŒìŠ¤ì½”ë“œ)ë¥¼ ê°€ì ¸ì˜¨ë‹¤.
+	 * @param srcUrl http ë˜ëŠ” https url
+	 * @return html ì†ŒìŠ¤ì½”ë“œ
 	 * @throws Exception
 	 */
 	public static String getContents(String srcUrl) throws Exception
@@ -43,10 +43,10 @@ public class HttpUtil {
 	}
 
 	/**
-	 * URL·Î ºÎÅÍ ÄÁÅÙÃ÷(html ¼Ò½ºÄÚµå)¸¦ °¡Á®¿Â´Ù.
-	 * @param srcUrl http ¶Ç´Â https url
-	 * @param charset Ä³¸¯ÅÍ ¼Â
-	 * @return html ¼Ò½ºÄÚµå
+	 * URLë¡œ ë¶€í„° ì»¨í…ì¸ (html ì†ŒìŠ¤ì½”ë“œ)ë¥¼ ê°€ì ¸ì˜¨ë‹¤.
+	 * @param srcUrl http ë˜ëŠ” https url
+	 * @param charset ìºë¦­í„° ì…‹
+	 * @return html ì†ŒìŠ¤ì½”ë“œ
 	 * @throws Exception
 	 */
 	public static String getContents(String srcUrl, String charset) throws Exception
@@ -76,9 +76,9 @@ public class HttpUtil {
 	}
 	
 	/**
-	 * À¥À¸·Î ºÎÅÍ ÆÄÀÏÀ» ´Ù¿î·Îµå ¹Ş´Â´Ù.
-	 * @param url ´Ù¿î·ÎµåÇÒ ÆÄÀÏ URL
-	 * @param save_full_Name ÀúÀå °æ·Î Æ÷ÇÔ ÆÄÀÏ¸í
+	 * ì›¹ìœ¼ë¡œ ë¶€í„° íŒŒì¼ì„ ë‹¤ìš´ë¡œë“œ ë°›ëŠ”ë‹¤.
+	 * @param url ë‹¤ìš´ë¡œë“œí•  íŒŒì¼ URL
+	 * @param save_full_Name ì €ì¥ ê²½ë¡œ í¬í•¨ íŒŒì¼ëª…
 	 * @return
 	 * @throws MalformedURLException
 	 * @throws IOException
@@ -119,12 +119,12 @@ public class HttpUtil {
 	}
 	
 	/**
-	* ÄíÅ°¸¦ »ı¼ºÇÑ´Ù.¸¸µç´Ù
+	* ì¿ í‚¤ë¥¼ ìƒì„±í•œë‹¤.ë§Œë“ ë‹¤
 	*
 	* @param response HttpServletResponse
-	* @param name ÄíÅ°ÀÇ ÀÌ¸§
-	* @param value ÄíÅ°ÀÇ °ª
-	* @param expiry À¯È¿ÇÒ ½Ã°£(ºĞ)
+	* @param name ì¿ í‚¤ì˜ ì´ë¦„
+	* @param value ì¿ í‚¤ì˜ ê°’
+	* @param expiry ìœ íš¨í•  ì‹œê°„(ë¶„)
 	*/
 	public static void setCookie(HttpServletResponse response, String name, String value, int expiry) throws Exception
 	{
@@ -136,10 +136,10 @@ public class HttpUtil {
 	}
 	
 	/**
-	 * ÁöÁ¤µÈ Å°°ª¿¡ ´ëÇÑ ÄíÅ°ÀÇ °ªÀ» ²¨³» ¿Â´Ù
+	 * ì§€ì •ëœ í‚¤ê°’ì— ëŒ€í•œ ì¿ í‚¤ì˜ ê°’ì„ êº¼ë‚´ ì˜¨ë‹¤
 	 * @param request HttpServletRequest
-	 * @param cookieName °¡Á®¿Ã ÄíÅ°ÀÇ ÀÌ¸§
-	 * @return ÄíÅ°ÀÇ °ª
+	 * @param cookieName ê°€ì ¸ì˜¬ ì¿ í‚¤ì˜ ì´ë¦„
+	 * @return ì¿ í‚¤ì˜ ê°’
 	 */
 	public static String getCookie(HttpServletRequest request, String cookieName) throws Exception
 	{
@@ -156,8 +156,8 @@ public class HttpUtil {
 	}
 	
 	/**
-	 * ÆÄ¶ó¸ŞÅÍ ¹®ÀÚ¿­À» ÆÄ½ÌÇÏ¿© ¿£Æ¼Æ¼·Î ¹İÈ¯ÇÑ´Ù.
-	 * @param param ÆÄ¶ó¸ŞÅÍ ¹®ÀÚ¿­
+	 * íŒŒë¼ë©”í„° ë¬¸ìì—´ì„ íŒŒì‹±í•˜ì—¬ ì—”í‹°í‹°ë¡œ ë°˜í™˜í•œë‹¤.
+	 * @param param íŒŒë¼ë©”í„° ë¬¸ìì—´
 	 * @return
 	 */
 	public static Entity parseParameters(String param)
@@ -176,8 +176,8 @@ public class HttpUtil {
 	}
 	
 	/**
-	 * ¿£Æ¼Æ¼ÀÇ °ªÀ» ÆÄ¶ó¸ŞÅÍ ¶óÀÎÀ¸·Î »ı¼ºÇÏ¿© ¹İÈ¯ÇÑ´Ù.
-	 * @param param ÆÄ¶ó¸ŞÅÍ ¿£Æ¼Æ¼
+	 * ì—”í‹°í‹°ì˜ ê°’ì„ íŒŒë¼ë©”í„° ë¼ì¸ìœ¼ë¡œ ìƒì„±í•˜ì—¬ ë°˜í™˜í•œë‹¤.
+	 * @param param íŒŒë¼ë©”í„° ì—”í‹°í‹°
 	 * @return
 	 */
 	public static String toParameters(Entity param)
@@ -192,8 +192,8 @@ public class HttpUtil {
 	}
 	
 	/**
-	 * ¹®ÀÚ¿­À» utf-8 Ä³¸¯ÅÍ ¼ÂÀ¸·Î url encoding ÇÑ´Ù
-	 * @param value ÀÎÄÚµùÇÒ ¹®ÀÚ¿­
+	 * ë¬¸ìì—´ì„ utf-8 ìºë¦­í„° ì…‹ìœ¼ë¡œ url encoding í•œë‹¤
+	 * @param value ì¸ì½”ë”©í•  ë¬¸ìì—´
 	 * @return
 	 * @throws UnsupportedEncodingException
 	 */
@@ -203,9 +203,9 @@ public class HttpUtil {
 	}
 	
 	/**
-	 * ¹®ÀÚ¿­À» Ä³¸¯ÅÍ ¼ÂÀ¸·Î url encoding ÇÑ´Ù
-	 * @param value ÀÎÄÚµùÇÒ ¹®ÀÚ¿­
-	 * @param charset ÀÎÄÚµù Ä³¸¯ÅÍ ¼Â
+	 * ë¬¸ìì—´ì„ ìºë¦­í„° ì…‹ìœ¼ë¡œ url encoding í•œë‹¤
+	 * @param value ì¸ì½”ë”©í•  ë¬¸ìì—´
+	 * @param charset ì¸ì½”ë”© ìºë¦­í„° ì…‹
 	 * @return
 	 * @throws UnsupportedEncodingException
 	 */
@@ -215,8 +215,8 @@ public class HttpUtil {
 	}
 	
 	/**
-	 * ¹®ÀÚ¿­À» utf-8 Ä³¸¯ÅÍ ¼ÂÀ¸·Î url decoding ÇÑ´Ù
-	 * @param value µğÄÚµùÇÒ ¹®ÀÚ¿­
+	 * ë¬¸ìì—´ì„ utf-8 ìºë¦­í„° ì…‹ìœ¼ë¡œ url decoding í•œë‹¤
+	 * @param value ë””ì½”ë”©í•  ë¬¸ìì—´
 	 * @return
 	 * @throws UnsupportedEncodingException
 	 */
@@ -226,9 +226,9 @@ public class HttpUtil {
 	}
 	
 	/**
-	 * ¹®ÀÚ¿­À» Ä³¸¯ÅÍ ¼ÂÀ¸·Î url decoding ÇÑ´Ù
-	 * @param value µğÄÚµùÇÒ ¹®ÀÚ¿­
-	 * @param charset µğÄÚµù Ä³¸¯ÅÍ ¼Â
+	 * ë¬¸ìì—´ì„ ìºë¦­í„° ì…‹ìœ¼ë¡œ url decoding í•œë‹¤
+	 * @param value ë””ì½”ë”©í•  ë¬¸ìì—´
+	 * @param charset ë””ì½”ë”© ìºë¦­í„° ì…‹
 	 * @return
 	 * @throws UnsupportedEncodingException
 	 */
@@ -238,7 +238,7 @@ public class HttpUtil {
 	}
 	
 	/**
-	 * HttpServletRequestÀÇ ContentTypeÀÌ multipart/form-data ÀÎÁö È®ÀÎ
+	 * HttpServletRequestì˜ ContentTypeì´ multipart/form-data ì¸ì§€ í™•ì¸
 	 * @param req
 	 * @return
 	 */

@@ -7,28 +7,28 @@ import org.sws.util.entity.Entity;
 
 
 /**
- * ¼³Á¤ Á¤º¸ °ü¸®
+ * ì„¤ì • ì •ë³´ ê´€ë¦¬
  * @author ago
  *
  */
 public class ConfigManager {
 
-	/** ¼³Á¤ ÀúÀå¼Ò */
+	/** ì„¤ì • ì €ì¥ì†Œ */
 	private static Entity configs;
 	
-	/** ConfigManager °´Ã¼ */
+	/** ConfigManager ê°ì²´ */
 	private static ConfigManager instance;
 	
 	/**
-	 * ±âº» »ı¼ºÀÚ
+	 * ê¸°ë³¸ ìƒì„±ì
 	 */
 	private ConfigManager() {
 		configs = new Entity();
 	}
 
 	/**
-	 * ConfigManager ÀÎ½ºÅº½º¸¦ ¾ò±â, ½Ì±ÛÅæ
-	 * @return ConfigManager °´Ã¼
+	 * ConfigManager ì¸ìŠ¤íƒ„ìŠ¤ë¥¼ ì–»ê¸°, ì‹±ê¸€í†¤
+	 * @return ConfigManager ê°ì²´
 	 */
 	public static ConfigManager getInstance()
 	{
@@ -39,9 +39,9 @@ public class ConfigManager {
 	}
 
 	/**
-	 * Å°¿¡ ÇØ´çÇÏ´Â ÇÁ·ÎÆÛÆ¼¸¦ ¾òÀ½
-	 * @param key ¼³Á¤ Å°
-	 * @param config ¼³Á¤ µ¥ÀÌÅÍ
+	 * í‚¤ì— í•´ë‹¹í•˜ëŠ” í”„ë¡œí¼í‹°ë¥¼ ì–»ìŒ
+	 * @param key ì„¤ì • í‚¤
+	 * @param config ì„¤ì • ë°ì´í„°
 	 * @return
 	 */
 	public void setConfig(String key, ConfigHandler value)
@@ -50,8 +50,8 @@ public class ConfigManager {
 	}
 
 	/**
-	 * Å°¸¦ ÀÌ¸§À¸·Î °®´Â config ¸¦ Á¦°ÅÇÑ´Ù.
-	 * @param key ¼³Á¤ Å°
+	 * í‚¤ë¥¼ ì´ë¦„ìœ¼ë¡œ ê°–ëŠ” config ë¥¼ ì œê±°í•œë‹¤.
+	 * @param key ì„¤ì • í‚¤
 	 * @return
 	 */
 	public void remove(String key)
@@ -60,9 +60,9 @@ public class ConfigManager {
 	}
 
 	/**
-	 * Å°¿¡ ÇØ´çÇÏ´Â ÇÁ·ÎÆÛÆ¼¸¦ ¾òÀ½
-	 * @param key ¼³Á¤ÆÄÀÏ Å°°ª.
-	 * @return ConfigHandler °´Ã¼.
+	 * í‚¤ì— í•´ë‹¹í•˜ëŠ” í”„ë¡œí¼í‹°ë¥¼ ì–»ìŒ
+	 * @param key ì„¤ì •íŒŒì¼ í‚¤ê°’.
+	 * @return ConfigHandler ê°ì²´.
 	 */
 	public ConfigHandler getConfig(String key)
 	{
@@ -75,7 +75,7 @@ public class ConfigManager {
 	}
 	
 	/**
-	 * ÆÄÀÏÀ» ÀĞ¾î ÆÄÀÏ ÀÌ¸§À» Å°·ÎÇÏ¿© config¸¦ ÀúÀåÇÑ´Ù.
+	 * íŒŒì¼ì„ ì½ì–´ íŒŒì¼ ì´ë¦„ì„ í‚¤ë¡œí•˜ì—¬ configë¥¼ ì €ì¥í•œë‹¤.
 	 * @param file
 	 * @throws Exception
 	 */
@@ -86,8 +86,8 @@ public class ConfigManager {
 	}
 	
 	/**
-	 * ÀÌ¹Ì ·ÎµåµÈ ÇÁ·ÎÆÛÆ¼¸¦ °»½ÅÇÑ´Ù.
-	 * @param key ¼³Á¤ Å° ÀÌ¸§
+	 * ì´ë¯¸ ë¡œë“œëœ í”„ë¡œí¼í‹°ë¥¼ ê°±ì‹ í•œë‹¤.
+	 * @param key ì„¤ì • í‚¤ ì´ë¦„
 	 * @throws Exception
 	 */
 	public boolean reload(String key) throws Exception

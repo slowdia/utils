@@ -4,24 +4,24 @@ import org.sws.util.entity.Entity;
 
 public class PageUtil {
 
-	/** °Ô½Ã¹°ÀÇ ÃÑ °³¼ö */
+	/** ê²Œì‹œë¬¼ì˜ ì´ ê°œìˆ˜ */
 	private static int totalCount = 0;
-	/** ÇöÀç ÆäÀÌÁö */
+	/** í˜„ìž¬ íŽ˜ì´ì§€ */
 	private static int curPage = 1;
-	/** ÆäÀÌÁö´ç º¸¿©ÁÙ °Ô½Ã¹° ¼ö */
+	/** íŽ˜ì´ì§€ë‹¹ ë³´ì—¬ì¤„ ê²Œì‹œë¬¼ ìˆ˜ */
 	private static int npp = 10;
 	
-	/** °¡Á®¿Ã ½ÃÀÛ ¹øÈ£ */
+	/** ê°€ì ¸ì˜¬ ì‹œìž‘ ë²ˆí˜¸ */
 	private static int startNum = 0;
-	/** °¡Á®¿Ã ³¡ ¹øÈ£ */
+	/** ê°€ì ¸ì˜¬ ë ë²ˆí˜¸ */
 	private static int endNum = 0;
-	/** °¡Á®¿Ã °³¼ö */
+	/** ê°€ì ¸ì˜¬ ê°œìˆ˜ */
 	private static int listCount = 0;
-	/** Á¦¿Ü ½ÃÅ³ °³¼ö */
+	/** ì œì™¸ ì‹œí‚¬ ê°œìˆ˜ */
 	private static int offset = 0;
 	
 	/**
-	 * °¡Á®¿Ã ¸®½ºÆ®ÀÇ ½ÃÀÛ ¹øÈ£¸¦ ¹ÝÈ¯, ORACLE¿¡¼­ »ç¿ë
+	 * ê°€ì ¸ì˜¬ ë¦¬ìŠ¤íŠ¸ì˜ ì‹œìž‘ ë²ˆí˜¸ë¥¼ ë°˜í™˜, ORACLEì—ì„œ ì‚¬ìš©
 	 * @return
 	 */
 	public static int getStartNum() {
@@ -29,7 +29,7 @@ public class PageUtil {
 	}
 
 	/**
-	 * °¡Á®¿Ã ¸®½ºÆ®ÀÇ ³¡ ¹øÈ£¸¦ ¹ÝÈ¯, ORACLE, MS-SQL¿¡¼­ »ç¿ë
+	 * ê°€ì ¸ì˜¬ ë¦¬ìŠ¤íŠ¸ì˜ ë ë²ˆí˜¸ë¥¼ ë°˜í™˜, ORACLE, MS-SQLì—ì„œ ì‚¬ìš©
 	 * @return
 	 */
 	public static int getEndNum() {
@@ -37,7 +37,7 @@ public class PageUtil {
 	}
 
 	/**
-	 * °¡Á®¿Ã ¸®½ºÆ® °³¼ö, MS-SQL, MYSQL¿¡¼­ »ç¿ë
+	 * ê°€ì ¸ì˜¬ ë¦¬ìŠ¤íŠ¸ ê°œìˆ˜, MS-SQL, MYSQLì—ì„œ ì‚¬ìš©
 	 * @return
 	 */
 	public static int getListCount() {
@@ -45,7 +45,7 @@ public class PageUtil {
 	}
 
 	/**
-	 * Á¦¿ÜÇÒ ¸®½ºÆ® °³¼ö, MYSQL¿¡¼­ »ç¿ë
+	 * ì œì™¸í•  ë¦¬ìŠ¤íŠ¸ ê°œìˆ˜, MYSQLì—ì„œ ì‚¬ìš©
 	 * @return
 	 */
 	public static int getOffset() {
@@ -53,7 +53,7 @@ public class PageUtil {
 	}
 	
 	/**
-	 * Á¶È¸ Ä«¿îÆ® °ü·Ã Á¤º¸¸¦ ¿£Æ¼Æ¼¿¡ ´ã¾Æ¼­ ¸®ÅÏÇÑ´Ù.
+	 * ì¡°íšŒ ì¹´ìš´íŠ¸ ê´€ë ¨ ì •ë³´ë¥¼ ì—”í‹°í‹°ì— ë‹´ì•„ì„œ ë¦¬í„´í•œë‹¤.
 	 * @return
 	 */
 	public static Entity getEntity()
@@ -101,7 +101,7 @@ public class PageUtil {
 	
 	private static void calculate()
 	{
-	    int lastPage = 0 ; // ÀüÃ¼ ÆäÀÌÁö¼ö
+	    int lastPage = 0 ; // ì „ì²´ íŽ˜ì´ì§€ìˆ˜
 	    lastPage = totalCount / npp;
 	    if((totalCount % npp) > 0) {
 	        lastPage++;

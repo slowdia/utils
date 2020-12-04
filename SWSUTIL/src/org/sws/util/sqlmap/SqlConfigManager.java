@@ -20,24 +20,24 @@ public abstract class SqlConfigManager
 	private static Entity hmSql = new Entity();
 	
 	/**
-	 * »ı¼ºÀÚ
-	 * @param sqlMapName SqlMapClient ÀÌ¸§
-	 * @param param DB Á¤º¸
+	 * ìƒì„±ì
+	 * @param sqlMapName SqlMapClient ì´ë¦„
+	 * @param param DB ì •ë³´
 	 */
 	public SqlConfigManager(String sqlMapName, HashMap<String, String> param) {
 		hmSql.setValue(sqlMapName, setSqlMapClient(sqlMapName, param));
 	}
 	
 	/**
-	 * SqlMapClient ¸¦ »ı¼ºÇÑ´Ù.
-	 * @param sqlMapName SqlMapClient ÀÌ¸§
-	 * @param param DB Á¤º¸
+	 * SqlMapClient ë¥¼ ìƒì„±í•œë‹¤.
+	 * @param sqlMapName SqlMapClient ì´ë¦„
+	 * @param param DB ì •ë³´
 	 * @return
 	 */
 	public abstract SqlMapClient setSqlMapClient(String sqlMapName, HashMap<String, String> param);
 
 	/**
-	 * ÀÌ¸§À¸·Î ÀúÀåµÈ SqlMapClient¸¦ ¹İÈ¯ÇÑ´Ù.
+	 * ì´ë¦„ìœ¼ë¡œ ì €ì¥ëœ SqlMapClientë¥¼ ë°˜í™˜í•œë‹¤.
 	 * @param sqlMapName
 	 * @return
 	 */

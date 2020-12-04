@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -30,9 +29,9 @@ public class FileUtil {
 	public static final long ONE_TB = (long)ONE_KB * ONE_GB;
 	
 	/**
-	 * Æú´õ ³» ¸ğµç ÆÄÀÏ°ú ÇÏÀ§ Æú´õÀ» »èÁ¦ÇÑ´Ù.
-	 * @param dir ³»¿ëÀ» »èÁ¦ÇÒ Æú´õ
-	 * @return µğ·ºÅä¸® ³» ¸ğµç ÆÄÀÏÀ» »èÁ¦ÇÏ¿´À¸¸é true, »èÁ¦ÇÏÁö ¸øÇÏ¿´°Å³ª ÀÏºÎ¸¸ »èÁ¦ÇÏ¿´À¸¸é false
+	 * í´ë” ë‚´ ëª¨ë“  íŒŒì¼ê³¼ í•˜ìœ„ í´ë”ì„ ì‚­ì œí•œë‹¤.
+	 * @param dir ë‚´ìš©ì„ ì‚­ì œí•  í´ë”
+	 * @return ë””ë ‰í† ë¦¬ ë‚´ ëª¨ë“  íŒŒì¼ì„ ì‚­ì œí•˜ì˜€ìœ¼ë©´ true, ì‚­ì œí•˜ì§€ ëª»í•˜ì˜€ê±°ë‚˜ ì¼ë¶€ë§Œ ì‚­ì œí•˜ì˜€ìœ¼ë©´ false
 	 */
 	public static boolean clean(String dir) throws Exception
 	{
@@ -40,9 +39,9 @@ public class FileUtil {
 	}
 	
 	/**
-	 * Æú´õ ³» ¸ğµç ÆÄÀÏ°ú ÇÏÀ§ Æú´õÀ» »èÁ¦ÇÑ´Ù.
-	 * @param dir ³»¿ëÀ» »èÁ¦ÇÒ Æú´õ
-	 * @return µğ·ºÅä¸® ³» ¸ğµç ÆÄÀÏÀ» »èÁ¦ÇÏ¿´À¸¸é true, »èÁ¦ÇÏÁö ¸øÇÏ¿´°Å³ª ÀÏºÎ¸¸ »èÁ¦ÇÏ¿´À¸¸é false
+	 * í´ë” ë‚´ ëª¨ë“  íŒŒì¼ê³¼ í•˜ìœ„ í´ë”ì„ ì‚­ì œí•œë‹¤.
+	 * @param dir ë‚´ìš©ì„ ì‚­ì œí•  í´ë”
+	 * @return ë””ë ‰í† ë¦¬ ë‚´ ëª¨ë“  íŒŒì¼ì„ ì‚­ì œí•˜ì˜€ìœ¼ë©´ true, ì‚­ì œí•˜ì§€ ëª»í•˜ì˜€ê±°ë‚˜ ì¼ë¶€ë§Œ ì‚­ì œí•˜ì˜€ìœ¼ë©´ false
 	 */
 	public static boolean clean(File dir) throws Exception
 	{
@@ -50,10 +49,10 @@ public class FileUtil {
 	}
 	
 	/**
-	 * Æú´õ ³» ¸ğµç ÆÄÀÏÀ» »èÁ¦ÇÑ´Ù.
-	 * @param dir ³»¿ëÀ» »èÁ¦ÇÒ Æú´õ
-	 * @param incSubDir ÇÏÀ§ µğ·ºÅÍ¸® Æ÷ÇÔ »èÁ¦ ¿©ºÎ
-	 * @return µğ·ºÅä¸® ³» ¸ğµç ÆÄÀÏÀ» »èÁ¦ÇÏ¿´À¸¸é true, »èÁ¦ÇÏÁö ¸øÇÏ¿´°Å³ª ÀÏºÎ¸¸ »èÁ¦ÇÏ¿´À¸¸é false
+	 * í´ë” ë‚´ ëª¨ë“  íŒŒì¼ì„ ì‚­ì œí•œë‹¤.
+	 * @param dir ë‚´ìš©ì„ ì‚­ì œí•  í´ë”
+	 * @param incSubDir í•˜ìœ„ ë””ë ‰í„°ë¦¬ í¬í•¨ ì‚­ì œ ì—¬ë¶€
+	 * @return ë””ë ‰í† ë¦¬ ë‚´ ëª¨ë“  íŒŒì¼ì„ ì‚­ì œí•˜ì˜€ìœ¼ë©´ true, ì‚­ì œí•˜ì§€ ëª»í•˜ì˜€ê±°ë‚˜ ì¼ë¶€ë§Œ ì‚­ì œí•˜ì˜€ìœ¼ë©´ false
 	 */
 	public static boolean clean(String dir, boolean incSubDir) throws Exception
 	{
@@ -61,10 +60,10 @@ public class FileUtil {
 	}
 	
 	/**
-	 * Æú´õ ³» ¸ğµç ÆÄÀÏÀ» »èÁ¦ÇÑ´Ù.
-	 * @param dir ³»¿ëÀ» »èÁ¦ÇÒ Æú´õ
-	 * @param incSubDir ÇÏÀ§ µğ·ºÅÍ¸® Æ÷ÇÔ »èÁ¦ ¿©ºÎ
-	 * @return µğ·ºÅä¸® ³» ¸ğµç ÆÄÀÏÀ» »èÁ¦ÇÏ¿´À¸¸é true, »èÁ¦ÇÏÁö ¸øÇÏ¿´°Å³ª ÀÏºÎ¸¸ »èÁ¦ÇÏ¿´À¸¸é false
+	 * í´ë” ë‚´ ëª¨ë“  íŒŒì¼ì„ ì‚­ì œí•œë‹¤.
+	 * @param dir ë‚´ìš©ì„ ì‚­ì œí•  í´ë”
+	 * @param incSubDir í•˜ìœ„ ë””ë ‰í„°ë¦¬ í¬í•¨ ì‚­ì œ ì—¬ë¶€
+	 * @return ë””ë ‰í† ë¦¬ ë‚´ ëª¨ë“  íŒŒì¼ì„ ì‚­ì œí•˜ì˜€ìœ¼ë©´ true, ì‚­ì œí•˜ì§€ ëª»í•˜ì˜€ê±°ë‚˜ ì¼ë¶€ë§Œ ì‚­ì œí•˜ì˜€ìœ¼ë©´ false
 	 */
 	public static boolean clean(File dir, boolean incSubDir) throws Exception
 	{
@@ -77,15 +76,15 @@ public class FileUtil {
 		for (int i = 0 ; i < files.length ; i++) {
 			if (files[i].isDirectory()) {
 				if(incSubDir) {
-					if(clean(files[i], incSubDir)) { // ¼­ºê µğ·ºÅä¸® ³» ÆÄÀÏ »èÁ¦
+					if(clean(files[i], incSubDir)) { // ì„œë¸Œ ë””ë ‰í† ë¦¬ ë‚´ íŒŒì¼ ì‚­ì œ
 						b = false;
 					}
-					if(files[i].delete()) { // µğ·ºÅä¸® »èÁ¦
+					if(files[i].delete()) { // ë””ë ‰í† ë¦¬ ì‚­ì œ
 						b = false;
 					}
 				}
 			}else {
-				if(files[i].delete()) { // ÆÄÀÏ »èÁ¦
+				if(files[i].delete()) { // íŒŒì¼ ì‚­ì œ
 					b = false;
 				}
 			}
@@ -95,9 +94,9 @@ public class FileUtil {
 	}
 
 	/**
-	 * µğ·ºÅä¸® ³» ÆÄÀÏ¸®½ºÆ®¸¦ ¾ĞÃàÇÏ¿© ÀúÀåÇÑ´Ù.
-	 * @param srcDir ¿øº» ÆÄÀÏÀÌ ÀÖ´Â µğ·ºÅä¸®
-	 * @param targetFile Å¸°Ù ÆÄÀÏ¸í
+	 * ë””ë ‰í† ë¦¬ ë‚´ íŒŒì¼ë¦¬ìŠ¤íŠ¸ë¥¼ ì••ì¶•í•˜ì—¬ ì €ì¥í•œë‹¤.
+	 * @param srcDir ì›ë³¸ íŒŒì¼ì´ ìˆëŠ” ë””ë ‰í† ë¦¬
+	 * @param targetFile íƒ€ê²Ÿ íŒŒì¼ëª…
 	 * @throws Exception
 	 */
 	public static void compress(File srcDir, String targetFile) throws Exception
@@ -106,10 +105,10 @@ public class FileUtil {
 	}
 
 	/**
-	 * µğ·ºÅä¸® ³» ÆÄÀÏ¸®½ºÆ®¸¦ ¾ĞÃàÇÏ¿© ÀúÀåÇÑ´Ù.
-	 * @param srcDir ¿øº» ÆÄÀÏÀÌ ÀÖ´Â µğ·ºÅä¸®
-	 * @param targetFile Å¸°Ù ÆÄÀÏ¸í
-	 * @param incSubDir ÇÏÀ§ µğ·ºÅÍ¸® Æ÷ÇÔ ¿©ºÎ
+	 * ë””ë ‰í† ë¦¬ ë‚´ íŒŒì¼ë¦¬ìŠ¤íŠ¸ë¥¼ ì••ì¶•í•˜ì—¬ ì €ì¥í•œë‹¤.
+	 * @param srcDir ì›ë³¸ íŒŒì¼ì´ ìˆëŠ” ë””ë ‰í† ë¦¬
+	 * @param targetFile íƒ€ê²Ÿ íŒŒì¼ëª…
+	 * @param incSubDir í•˜ìœ„ ë””ë ‰í„°ë¦¬ í¬í•¨ ì—¬ë¶€
 	 * @throws Exception
 	 */
 	public static void compress(File srcDir, String targetFile, boolean incSubDir) throws Exception
@@ -142,9 +141,9 @@ public class FileUtil {
 	}
 	
 	/**
-	 * ÆÄÀÏ¸®½ºÆ®¸¦ ¾ĞÃàÇÏ¿© ÀúÀåÇÑ´Ù.
-	 * @param files ¿øº» ÆÄÀÏ ¸®½ºÆ®
-	 * @param targetFile Å¸°Ù ÆÄÀÏ¸í
+	 * íŒŒì¼ë¦¬ìŠ¤íŠ¸ë¥¼ ì••ì¶•í•˜ì—¬ ì €ì¥í•œë‹¤.
+	 * @param files ì›ë³¸ íŒŒì¼ ë¦¬ìŠ¤íŠ¸
+	 * @param targetFile íƒ€ê²Ÿ íŒŒì¼ëª…
 	 * @throws Exception
 	 */
 	public static void compress(File[] files, String targetFile) throws Exception
@@ -173,9 +172,9 @@ public class FileUtil {
 	}
 	
 	/**
-	 * ÆÄÀÏ¸®½ºÆ®¸¦ ¾ĞÃàÇÏ¿© ÀúÀåÇÑ´Ù.
-	 * @param files ¿øº» ÆÄÀÏ ¸®½ºÆ®
-	 * @param targetFile Å¸°Ù ÆÄÀÏ¸í
+	 * íŒŒì¼ë¦¬ìŠ¤íŠ¸ë¥¼ ì••ì¶•í•˜ì—¬ ì €ì¥í•œë‹¤.
+	 * @param files ì›ë³¸ íŒŒì¼ ë¦¬ìŠ¤íŠ¸
+	 * @param targetFile íƒ€ê²Ÿ íŒŒì¼ëª…
 	 * @throws Exception
 	 */
 	public static void compress(String[] files, String targetFile) throws Exception
@@ -203,8 +202,8 @@ public class FileUtil {
 	}
 	
 	/**
-	 * µ¿ÀÏ Æú´õ¿¡ ÆÄÀÏ¸í µÚ¿¡ _bak¸¦ ºÙ¿©¼­ ¹é¾÷ÇÑ´Ù.<br>
-	 * ¹é¾÷ ÆÄÀÏÀÌ Á¸Àç ÇÒ °æ¿ì _0~ ¼ıÀÚ¸¦ Ãß°¡·Î ºÙÀÎ´Ù.
+	 * ë™ì¼ í´ë”ì— íŒŒì¼ëª… ë’¤ì— _bakë¥¼ ë¶™ì—¬ì„œ ë°±ì—…í•œë‹¤.<br>
+	 * ë°±ì—… íŒŒì¼ì´ ì¡´ì¬ í•  ê²½ìš° _0~ ìˆ«ìë¥¼ ì¶”ê°€ë¡œ ë¶™ì¸ë‹¤.
 	 * @param pathName
 	 * @throws IOException
 	 */
@@ -222,9 +221,9 @@ public class FileUtil {
 	}
 	
 	/**
-	 * ÆÄÀÏÀ» º¹»ç ÇÑ´Ù.
-	 * @param pathName º¹»ç ÇÒ ¿øº» ÆÄÀÏ Àı´ë °æ·Î
-	 * @param newPathName º¹»ç µÉ ÆÄÀÏÀÇ Á¤´ë °æ·Î
+	 * íŒŒì¼ì„ ë³µì‚¬ í•œë‹¤.
+	 * @param pathName ë³µì‚¬ í•  ì›ë³¸ íŒŒì¼ ì ˆëŒ€ ê²½ë¡œ
+	 * @param newPathName ë³µì‚¬ ë  íŒŒì¼ì˜ ì •ëŒ€ ê²½ë¡œ
 	 * @throws IOException
 	 */
 	public static void copyFile(String pathName, String newPathName) throws IOException {
@@ -243,9 +242,9 @@ public class FileUtil {
 	}
 	
 	/**
-	 * ¾ĞÃà ÇØÁ¦
-	 * @param zipData ¾ĞÃà ÆÄÀÏ µ¥ÀÌÅÍ ¹ÙÀÌÆ® ¹è¿­
-	 * @param targetDir ¾ĞÃà ÇØÁ¦ Å¸°Ù Æú´õ
+	 * ì••ì¶• í•´ì œ
+	 * @param zipData ì••ì¶• íŒŒì¼ ë°ì´í„° ë°”ì´íŠ¸ ë°°ì—´
+	 * @param targetDir ì••ì¶• í•´ì œ íƒ€ê²Ÿ í´ë”
 	 * @return
 	 * @throws Exception
 	 */
@@ -301,9 +300,9 @@ public class FileUtil {
 	}
 
 	/**
-	 * ¾ĞÃà ÇØÁ¦
-	 * @param zipData ¾ĞÃà ÆÄÀÏ µ¥ÀÌÅÍ ¹ÙÀÌÆ® ¹è¿­
-	 * @param targetDir ¾ĞÃà ÇØÁ¦ Å¸°Ù Æú´õ
+	 * ì••ì¶• í•´ì œ
+	 * @param zipData ì••ì¶• íŒŒì¼ ë°ì´í„° ë°”ì´íŠ¸ ë°°ì—´
+	 * @param targetDir ì••ì¶• í•´ì œ íƒ€ê²Ÿ í´ë”
 	 * @return
 	 * @throws Exception
 	 */
@@ -313,9 +312,9 @@ public class FileUtil {
 	}
 
 	/**
-	 * ¾ĞÃà ÇØÁ¦
-	 * @param zipData ¾ĞÃà ÆÄÀÏ µ¥ÀÌÅÍ ¹ÙÀÌÆ® ¹è¿­
-	 * @param targetDir ¾ĞÃà ÇØÁ¦ Å¸°Ù Æú´õ
+	 * ì••ì¶• í•´ì œ
+	 * @param zipData ì••ì¶• íŒŒì¼ ë°ì´í„° ë°”ì´íŠ¸ ë°°ì—´
+	 * @param targetDir ì••ì¶• í•´ì œ íƒ€ê²Ÿ í´ë”
 	 * @return
 	 * @throws Exception
 	 */
@@ -373,7 +372,7 @@ public class FileUtil {
 	}
 	
 	/**
-	 * ÆÄÀÏ °æ·Î¿¡ Æ÷ÇÔµÈ »ó´ë °æ·Î¸¦ Á¦°ÅÇÑ´Ù.<br>
+	 * íŒŒì¼ ê²½ë¡œì— í¬í•¨ëœ ìƒëŒ€ ê²½ë¡œë¥¼ ì œê±°í•œë‹¤.<br>
 	 * c:\downlad/../..\aaa.txt => c:\downlad\aaa.txt<br>
 	 * /downlad/../..\aaa.txt => /downlad/aaa.txt
 	 * @param file
@@ -394,7 +393,7 @@ public class FileUtil {
 	}
 	
 	/**
-	 * °æ·Î¿Í È®ÀåÀÚ¸¦ Á¦¿ÜÇÑ ¼ø¼ö ÆÄÀÏ ÀÌ¸§ ÃßÃâ
+	 * ê²½ë¡œì™€ í™•ì¥ìë¥¼ ì œì™¸í•œ ìˆœìˆ˜ íŒŒì¼ ì´ë¦„ ì¶”ì¶œ
 	 * @param file
 	 * @return
 	 */
@@ -405,7 +404,7 @@ public class FileUtil {
 	}
 	
 	/**
-	 * °æ·Î¿Í È®ÀåÀÚ¸¦ Á¦¿ÜÇÑ ¼ø¼ö ÆÄÀÏ ÀÌ¸§ ÃßÃâ
+	 * ê²½ë¡œì™€ í™•ì¥ìë¥¼ ì œì™¸í•œ ìˆœìˆ˜ íŒŒì¼ ì´ë¦„ ì¶”ì¶œ
 	 * @param file
 	 * @return
 	 */
@@ -416,7 +415,7 @@ public class FileUtil {
 	}
 	
 	/**
-	 * ÆÄÀÏÀÇ È®ÀåÀÚ ÃßÃâ
+	 * íŒŒì¼ì˜ í™•ì¥ì ì¶”ì¶œ
 	 * @param file
 	 * @return
 	 */
@@ -427,7 +426,7 @@ public class FileUtil {
 	}
 	
 	/**
-	 * ÆÄÀÏÀÇ È®ÀåÀÚ ÃßÃâ
+	 * íŒŒì¼ì˜ í™•ì¥ì ì¶”ì¶œ
 	 * @param file
 	 * @return
 	 */
@@ -438,8 +437,8 @@ public class FileUtil {
 	}
 	
 	/**
-	 * °æ·Î¸¦ Á¦°ÅÇÑ ÆÄÀÏ ¸í¸¸À» ÃßÃâÇÑ´Ù.
-	 * @param file È®ÀåÀÚ Æ÷ÇÔ ÆÄÀÏ¸í
+	 * ê²½ë¡œë¥¼ ì œê±°í•œ íŒŒì¼ ëª…ë§Œì„ ì¶”ì¶œí•œë‹¤.
+	 * @param file í™•ì¥ì í¬í•¨ íŒŒì¼ëª…
 	 * @return
 	 */
 	public static String getName(String file) {
@@ -448,7 +447,7 @@ public class FileUtil {
 	}
 	
 	/**
-	 * ÆÄÀÏÀÌ Æ÷ÇÔµÈ µğ·ºÅä¸® °æ·Î¸¦ ÃßÃâÇÑ´Ù.
+	 * íŒŒì¼ì´ í¬í•¨ëœ ë””ë ‰í† ë¦¬ ê²½ë¡œë¥¼ ì¶”ì¶œí•œë‹¤.
 	 * @param file
 	 * @return
 	 */
@@ -461,7 +460,7 @@ public class FileUtil {
 	}
 	
 	/**
-	 * ÆÄÀÏ »çÀÌÁî¸¦ ¾ò´Â´Ù.
+	 * íŒŒì¼ ì‚¬ì´ì¦ˆë¥¼ ì–»ëŠ”ë‹¤.
 	 * @param file
 	 * @return
 	 */
@@ -471,9 +470,9 @@ public class FileUtil {
 	}
 	
 	/**
-	 * ÆÄÀÏ »çÀÌÁî¸¦ TB/GB/MB/KB/Bytes ´ÜÀ§·Î Ç¥ÇöÇÏ¿© ¹İÈ¯
+	 * íŒŒì¼ ì‚¬ì´ì¦ˆë¥¼ TB/GB/MB/KB/Bytes ë‹¨ìœ„ë¡œ í‘œí˜„í•˜ì—¬ ë°˜í™˜
 	 * @param file
-	 * @param decimalPoint ¼Ò¼öÁ¡ Ç¥Çö ÀÚ¸®¼ö - ÃÖ´ë 3
+	 * @param decimalPoint ì†Œìˆ˜ì  í‘œí˜„ ìë¦¬ìˆ˜ - ìµœëŒ€ 3
 	 * @return
 	 */
 	public static String getSizeFormat(File file, int decimalPoint)
@@ -541,8 +540,8 @@ public class FileUtil {
 	}
 	
 	/**
-	 * ´ÜÀ§ »çÀÌÁî¸¦ bytes »çÀÌÁî·Î º¯È¯ÇÑ´Ù.
-	 * @param srcSize ´ÜÀ§ Çü½Ä »çÀÌÁî (ex> 2TB/3GB/120MB)
+	 * ë‹¨ìœ„ ì‚¬ì´ì¦ˆë¥¼ bytes ì‚¬ì´ì¦ˆë¡œ ë³€í™˜í•œë‹¤.
+	 * @param srcSize ë‹¨ìœ„ í˜•ì‹ ì‚¬ì´ì¦ˆ (ex> 2TB/3GB/120MB)
 	 * @return
 	 */
 	public static long getSize(String srcSize)
@@ -573,10 +572,10 @@ public class FileUtil {
 	}
 	
 	/**
-	 * path°¡ ÆÄÀÏÀÎÁö ¿©ºÎ¸¦ È®ÀÎÇÑ´Ù.
+	 * pathê°€ íŒŒì¼ì¸ì§€ ì—¬ë¶€ë¥¼ í™•ì¸í•œë‹¤.
 	 *
-	 * @param path ÆÄÀÏÀÇ °æ·Î
-	 * @return ÆÄÀÏÀÎÁöÀÇ ¿©ºÎ
+	 * @param path íŒŒì¼ì˜ ê²½ë¡œ
+	 * @return íŒŒì¼ì¸ì§€ì˜ ì—¬ë¶€
 	 */
 	public static boolean isFile(String path) {
 
@@ -589,10 +588,10 @@ public class FileUtil {
 	}
 	
 	/**
-	 * path°¡ Æú´õÀÎÁö ¿©ºÎ¸¦ È®ÀÎÇÑ´Ù.
+	 * pathê°€ í´ë”ì¸ì§€ ì—¬ë¶€ë¥¼ í™•ì¸í•œë‹¤.
 	 *
-	 * @param path ÆÄÀÏÀÇ °æ·Î
-	 * @return µğ·ºÅä¸®ÀÎÁöÀÇ ¿©ºÎ
+	 * @param path íŒŒì¼ì˜ ê²½ë¡œ
+	 * @return ë””ë ‰í† ë¦¬ì¸ì§€ì˜ ì—¬ë¶€
 	 */
 	public static boolean isDirectory(String path) {
 
@@ -605,8 +604,8 @@ public class FileUtil {
 	}
 
 	/**
-	 * Æú´õ ³» ÇÏÀ§ Æú´õ Æ÷ÇÔ ÆÄÀÏ ¸®½ºÆ® Á¶È¸
-	 * @param srcDir ¼Ò½º Æú´õ
+	 * í´ë” ë‚´ í•˜ìœ„ í´ë” í¬í•¨ íŒŒì¼ ë¦¬ìŠ¤íŠ¸ ì¡°íšŒ
+	 * @param srcDir ì†ŒìŠ¤ í´ë”
 	 * @return
 	 */
 	public static String[] listFiles(File srcDir) {
@@ -614,9 +613,9 @@ public class FileUtil {
 	}
 	
 	/**
-	 * Æú´õ ³» ÆÄÀÏ ¸®½ºÆ® Á¶È¸
-	 * @param srcDir ¼Ò½º Æú´õ
-	 * @param incSubDir ÇÏÀ§ Æú´õ Æ÷ÇÔ ¿©ºÎ
+	 * í´ë” ë‚´ íŒŒì¼ ë¦¬ìŠ¤íŠ¸ ì¡°íšŒ
+	 * @param srcDir ì†ŒìŠ¤ í´ë”
+	 * @param incSubDir í•˜ìœ„ í´ë” í¬í•¨ ì—¬ë¶€
 	 * @return
 	 */
 	public static String[] listFiles(File srcDir, boolean incSubDir) {
@@ -641,7 +640,7 @@ public class FileUtil {
 	}
 	
 	/**
-	 * ÆÄÀÏÀ» ÀĞ¾î String À¸·Î ¹İÈ¯ÇÑ´Ù.
+	 * íŒŒì¼ì„ ì½ì–´ String ìœ¼ë¡œ ë°˜í™˜í•œë‹¤.
 	 * @param file
 	 * @return
 	 * @throws Exception
@@ -652,7 +651,7 @@ public class FileUtil {
 	}
 	
 	/**
-	 * ÆÄÀÏÀ» ÀĞ¾î String À¸·Î ¹İÈ¯ÇÑ´Ù.
+	 * íŒŒì¼ì„ ì½ì–´ String ìœ¼ë¡œ ë°˜í™˜í•œë‹¤.
 	 * @param file
 	 * @return
 	 * @throws Exception
@@ -663,7 +662,7 @@ public class FileUtil {
 	}
 	
 	/**
-	 * ÆÄÀÏÀ» ÀĞ¾î String À¸·Î ¹İÈ¯ÇÑ´Ù.
+	 * íŒŒì¼ì„ ì½ì–´ String ìœ¼ë¡œ ë°˜í™˜í•œë‹¤.
 	 * @param file
 	 * @return
 	 * @throws Exception
@@ -674,7 +673,7 @@ public class FileUtil {
 	}
 	
 	/**
-	 * ÆÄÀÏÀ» ÀĞ¾î String À¸·Î ¹İÈ¯ÇÑ´Ù.
+	 * íŒŒì¼ì„ ì½ì–´ String ìœ¼ë¡œ ë°˜í™˜í•œë‹¤.
 	 * @param file
 	 * @param charset
 	 * @return
@@ -708,8 +707,8 @@ public class FileUtil {
 	}
 	
 	/**
-	 * ÆÄÀÏÀ» ÀĞ¾î ¹ÙÀÌÆ® ¹è¿­·Î ¹İÈ¯ÇÑ´Ù.
-	 * @param file ÀĞÀ» ÆÄÀÏ
+	 * íŒŒì¼ì„ ì½ì–´ ë°”ì´íŠ¸ ë°°ì—´ë¡œ ë°˜í™˜í•œë‹¤.
+	 * @param file ì½ì„ íŒŒì¼
 	 * @return
 	 * @throws Exception
 	 */
@@ -719,8 +718,8 @@ public class FileUtil {
 	}
 	
 	/**
-	 * ÆÄÀÏÀ» ÀĞ¾î ¹ÙÀÌÆ® ¹è¿­·Î ¹İÈ¯ÇÑ´Ù.
-	 * @param file ÀĞÀ» ÆÄÀÏ
+	 * íŒŒì¼ì„ ì½ì–´ ë°”ì´íŠ¸ ë°°ì—´ë¡œ ë°˜í™˜í•œë‹¤.
+	 * @param file ì½ì„ íŒŒì¼
 	 * @return
 	 * @throws Exception
 	 */
@@ -756,9 +755,9 @@ public class FileUtil {
 	}
 	
 	/**
-	 * µ¥ÀÌÅÍ¸¦ ÆÄÀÏ·Î ¾´´Ù.
-	 * @param file ÆÄÀÏ ¸í
-	 * @param data ÆÄÀÏ ³»¿ë
+	 * ë°ì´í„°ë¥¼ íŒŒì¼ë¡œ ì“´ë‹¤.
+	 * @param file íŒŒì¼ ëª…
+	 * @param data íŒŒì¼ ë‚´ìš©
 	 * @throws Exception
 	 */
 	public static void write(String file, String data) throws Exception
@@ -767,10 +766,10 @@ public class FileUtil {
 	}
 	
 	/**
-	 * µ¥ÀÌÅÍ¸¦ ÆÄÀÏ·Î ¾´´Ù.
-	 * @param file ÆÄÀÏ ¸í
-	 * @param data ÆÄÀÏ ³»¿ë
-	 * @param charset Ä³¸¯ÅÍ ¼Â
+	 * ë°ì´í„°ë¥¼ íŒŒì¼ë¡œ ì“´ë‹¤.
+	 * @param file íŒŒì¼ ëª…
+	 * @param data íŒŒì¼ ë‚´ìš©
+	 * @param charset ìºë¦­í„° ì…‹
 	 * @throws Exception
 	 */
 	public static void write(String file, String data, String charset) throws Exception
@@ -779,9 +778,9 @@ public class FileUtil {
 	}
 	
 	/**
-	 * µ¥ÀÌÅÍ¸¦ ÆÄÀÏ·Î ¾´´Ù.
-	 * @param file ÆÄÀÏ ¸í
-	 * @param data ÆÄÀÏ ³»¿ë
+	 * ë°ì´í„°ë¥¼ íŒŒì¼ë¡œ ì“´ë‹¤.
+	 * @param file íŒŒì¼ ëª…
+	 * @param data íŒŒì¼ ë‚´ìš©
 	 * @throws Exception
 	 */
 	public static void write(String file, byte[] data) throws Exception
@@ -790,9 +789,9 @@ public class FileUtil {
 	}
 	
 	/**
-	 * µ¥ÀÌÅÍ¸¦ ÆÄÀÏ·Î ¾´´Ù.
-	 * @param file ÆÄÀÏ ¸í
-	 * @param data ÆÄÀÏ ³»¿ë
+	 * ë°ì´í„°ë¥¼ íŒŒì¼ë¡œ ì“´ë‹¤.
+	 * @param file íŒŒì¼ ëª…
+	 * @param data íŒŒì¼ ë‚´ìš©
 	 * @throws Exception
 	 */
 	public static void write(File file, String data) throws Exception
@@ -801,10 +800,10 @@ public class FileUtil {
 	}
 	
 	/**
-	 * µ¥ÀÌÅÍ¸¦ ÆÄÀÏ·Î ¾´´Ù.
-	 * @param file ÆÄÀÏ ¸í
-	 * @param data ÆÄÀÏ ³»¿ë
-	 * @param charset Ä³¸¯ÅÍ ¼Â
+	 * ë°ì´í„°ë¥¼ íŒŒì¼ë¡œ ì“´ë‹¤.
+	 * @param file íŒŒì¼ ëª…
+	 * @param data íŒŒì¼ ë‚´ìš©
+	 * @param charset ìºë¦­í„° ì…‹
 	 * @throws Exception
 	 */
 	public static void write(File file, String data, String charset) throws Exception
@@ -813,9 +812,9 @@ public class FileUtil {
 	}
 	
 	/**
-	 * µ¥ÀÌÅÍ¸¦ ÆÄÀÏ·Î ¾´´Ù.
-	 * @param file ÆÄÀÏ ¸í
-	 * @param data ÆÄÀÏ ³»¿ë
+	 * ë°ì´í„°ë¥¼ íŒŒì¼ë¡œ ì“´ë‹¤.
+	 * @param file íŒŒì¼ ëª…
+	 * @param data íŒŒì¼ ë‚´ìš©
 	 * @throws Exception
 	 */
 	public static void write(File file, byte[] data) throws Exception

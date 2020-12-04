@@ -8,10 +8,10 @@ import java.util.stream.Collectors;
 public class ArrayUtil {
 
 	/**
-	 * ¼ø¿­ ¸®½ºÆ®
-	 * @param prefix ºó ¹è¿­ new String[0]
-	 * @param array Á¶ÇÕ ÇÒ ¹è¿­ String[]
-	 * @param list °á°ú ÀúÀå ÇÒ ¸®½ºÆ®
+	 * ìˆœì—´
+	 * @param prefix ì´ˆê¸°ê°’ : ë¹ˆ ë°°ì—´ new String[0]
+	 * @param array ì¡°í•© í•  ì›ë³¸ ë°°ì—´ String[]
+	 * @param list ì¡°í•©ëœ ê²°ê³¼ ë¦¬ìŠ¤íŠ¸
 	 */
 	public static void Premutation(String[] prefix, String[] array, List<String[]> list){
 		if(prefix != null && prefix.length > 0){
@@ -29,11 +29,13 @@ public class ArrayUtil {
 	}
 	
 	public static void main(String[] args){
+		// ìˆœì—´ í…ŒìŠ¤íŠ¸ ===========================================
 		List<String[]> list = new ArrayList<>();
 		String[] array = {"a", "b", "c", "d"};
 		ArrayUtil.Premutation(new String[0], array, list);
 		for(String[] arr : list){
 			System.out.println(Arrays.stream(arr).collect(Collectors.joining(", ")));
 		}
+		// ìˆœì—´ í…ŒìŠ¤íŠ¸ ë ===========================================
 	}
 }
